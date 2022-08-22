@@ -4,6 +4,22 @@
 #include "types.h"
 
 
+/* TODO:
+ * - door choice
+ * - fast angle math e.g. sin 16-bit signed: bitshift(in, 1) - bitshift(abs(in), -7).*bitshift(in,-7) 
+ * - minimap update
+ * - sprite animations
+ * - surveillance quality
+ * - terminals
+ * - grenade radii
+ * - timed events
+ *   - gas
+ *   - stun
+ *   - alarm
+ * - time passing after exit
+ */
+
+
 enum Direction {
   TOP,
   TOPRIGHT,
@@ -32,6 +48,7 @@ struct Inventory {
   bool camera;
   bool kevlar_armor;
   bool safecracking_kit;
+  bool disguise;
   unsigned char bugs;
   unsigned char frags;
   unsigned char gasses;
@@ -50,6 +67,7 @@ protected:  // TODO?
   Inventory inv;
 private:
   void draw();
+  unsigned char max_guards;
   std::vector<Person> population;
 };
 

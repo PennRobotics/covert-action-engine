@@ -8,6 +8,7 @@
  * - door choice
  * - fast angle math e.g. sin 16-bit signed: bitshift(in, 1) - bitshift(abs(in), -7).*bitshift(in,-7) 
  * - minimap update
+ * - furniture sprites
  * - sprite animations
  * - surveillance quality
  * - terminals
@@ -59,6 +60,28 @@ struct Inventory {
   unsigned char mags;
   int accuracy_pct;
 };
+
+
+struct Room {
+  /*
+  room_type,
+  furniture_vector,
+  has_bug,  // How does surveillance factor change with multiple break-ins and over long times?
+  gas_active,  // Are the effects stronger with multiple active grenades?
+  gas_start_time,
+  */
+};
+
+
+struct Furniture {
+  /*
+  type,
+  is_opened,
+  is_photographed,
+  is_bugged,
+  */
+};
+  
 
 
 class MiniGameCombat {

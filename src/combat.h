@@ -11,7 +11,9 @@
  * - sprite animations
  * - surveillance quality
  * - terminals
+ * - booby traps
  * - grenade radii
+ *   - up to 3 adjacent tiles
  * - timed events
  *   - gas
  *   - stun

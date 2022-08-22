@@ -23,16 +23,24 @@ struct Car {
 };  // TODO: typedef?
 
 
+enum MissionGoal {
+  FOLLOW,
+  CAPTURE,
+  ESCAPE,
+};
+
+
 class MiniGameDriving {
 public:
   MiniGameDriving();
   int start(difficulty level);
 private:
   void draw();
-  bool is_predator;
+  MissionGoal mission_goal;
   Car car1;
   Car car2;  // own car when is_predator, otherwise enemy
   Car car3;
+  unsigned char unseen_timer;
 };
 
 

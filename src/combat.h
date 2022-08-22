@@ -5,10 +5,14 @@
 
 
 enum Direction {
-  U,
-  L,
-  R,
-  D,
+  TOP,
+  TOPRIGHT,
+  RIGHT,
+  BOTTOMRIGHT,
+  BOTTOM,
+  BOTTOMLEFT,
+  LEFT,
+  TOPLEFT,
 };
 
 

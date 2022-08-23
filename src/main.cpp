@@ -54,7 +54,6 @@
 
 
 
-static std::unique_ptr<MainMenu> mMainMenu;
 static std::unique_ptr<MiniGameCombat> mGameCombat;
 static std::unique_ptr<MiniGameDriving> mGameDriving;
 static std::unique_ptr<MiniGameCryptography> mGameCrypto;
@@ -63,7 +62,7 @@ static std::unique_ptr<MiniGameElectronics> mGameElec;
 typedef bool ScreenTODO;  // TODO
 typedef bool ScreenHotel;
 typedef bool ScreenMainMenu;
-static std::unique_ptr<MainMenu> scMainMenu;  /* added later */
+static std::unique_ptr<ScreenMainMenu> scMainMenu;  /* added later */
 static std::unique_ptr<ScreenTODO> scTypewriter;
 static std::unique_ptr<ScreenHotel> scHotel;
 static std::unique_ptr<ScreenTODO> scChief;

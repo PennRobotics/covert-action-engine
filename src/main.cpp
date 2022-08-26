@@ -83,6 +83,18 @@ int main()
   SDL_Window* window = NULL;
   SDL_Surface* screen_surface = NULL;
 
+///   SDL_Init(SDL_INIT_TIMER);  // timer subsystem
+  SDL_Init(SDL_INIT_AUDIO);  // audio subsystem
+///   SDL_Init(SDL_INIT_VIDEO);  // video subsystem; automatically initializes the events subsystem
+///   SDL_Init(SDL_INIT_JOYSTICK);  // joystick subsystem; automatically initializes the events subsystem
+///   SDL_Init(SDL_INIT_HAPTIC);  // haptic (force feedback) subsystem
+///   SDL_Init(SDL_INIT_GAMECONTROLLER);  // controller subsystem; automatically initializes the joystick subsystem
+///   SDL_Init(SDL_INIT_EVENTS);  // events subsystem
+///   SDL_Init(SDL_INIT_EVERYTHING);  // all of the above subsystems
+///   SDL_Init(SDL_INIT_NOPARACHUTE);  // compatibility; this flag is ignored
+
+  goto eject;
+
   std::cout << SDL_Init(SDL_INIT_TIMER | SDL_INIT_VIDEO) << "\n";
   //std::cout << TTF_Init() << "\n";
   window = SDL_CreateWindow("UP", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
@@ -93,6 +105,7 @@ int main()
 
   // TODO: audio, resources, etc.
 
+eject:
   SDL_Delay(4000);
 
   SDL_DestroyWindow(window);

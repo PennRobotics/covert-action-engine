@@ -112,7 +112,7 @@ eject:
 
   // for(;;){}
   //TTF_Quit();
-  SDL_Quit();
+  SDL_Quit();  // TODO: replace with each subsystem quit by ref?
 
   /*
   mGameCombat = std::make_unique<MiniGameCombat>();

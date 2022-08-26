@@ -1,6 +1,7 @@
 #include <SDL.h>
 
 #include <memory>
+#include <string>  // TODO-debug
 
 #include "types.h"
 
@@ -83,6 +84,9 @@ int main()
   SDL_Window* window = NULL;
   SDL_Surface* screen_surface = NULL;
 
+  SDL_AudioSpec want, have;
+  SDL_AudioDeviceID audiodev;
+
 ///   SDL_Init(SDL_INIT_TIMER);  // timer subsystem
   SDL_Init(SDL_INIT_AUDIO);  // audio subsystem
 ///   SDL_Init(SDL_INIT_VIDEO);  // video subsystem; automatically initializes the events subsystem
@@ -92,6 +96,31 @@ int main()
 ///   SDL_Init(SDL_INIT_EVENTS);  // events subsystem
 ///   SDL_Init(SDL_INIT_EVERYTHING);  // all of the above subsystems
 ///   SDL_Init(SDL_INIT_NOPARACHUTE);  // compatibility; this flag is ignored
+
+  // TODO-debug start
+  SDL_zero(want);
+  want.freq = 48000;
+  want.format = AUDIO_F32;
+  want.channels = 2;
+  want.samples = 4096;
+  want.callback = NULL;  // valid >= 2.0.4
+  audiodev = SDL_OpenAudioDevice(NULL, 0, &want, &have, SDL_AUDIO_ALLOW_ANY_CHANGE);
+
+  std::cout << "[" << audiodev << "]" << std::endl;
+
+  const int num_audio_devs = SDL_GetNumAudioDevices(0);
+  std::cout << "<" << num_audio_devs << ">" << std::endl;
+  for (int i = 0; i < num_audio_devs; ++i) {
+    std::string u8adname = SDL_GetAudioDeviceName(i, 0);
+    std::cout << " " << i;
+  }
+
+  uint8_t *a_buf;
+  uint32_t a_len;
+  SDL_LoadWAV("test.wav", &want, &a_buf, &a_len);
+  SDL_PauseAudio(0);
+  SDL_FreeWAV(a_buf);
+  // TODO-debug end
 
   goto eject;
 

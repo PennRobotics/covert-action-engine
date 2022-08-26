@@ -1,4 +1,7 @@
+#include <SDL_stdinc.h>
+
 #include <SDL.h>
+#include <SDL_mixer.h>
 
 #include <memory>
 #include <string>  // TODO-debug
@@ -79,13 +82,18 @@ static std::unique_ptr<ScreenTODO> scChooseDriving;
 #define SCREEN_WIDTH 320
 #define SCREEN_HEIGHT 200
 
+// TODO
+static Mix_Chunk *wave = NULL;
+
 int main()
 {
   SDL_Window* window = NULL;
   SDL_Surface* screen_surface = NULL;
 
-  SDL_AudioSpec want, have;
-  SDL_AudioDeviceID audiodev;
+  int audio_rate = MIX_DEFAULT_FREQUENCY;
+  uint16_t audio_fmt = MIX_DEFAULT_FORMAT;
+  int audio_chs = MIX_DEFAULT_CHANNELS;
+  int i;
 
 ///   SDL_Init(SDL_INIT_TIMER);  // timer subsystem
   SDL_Init(SDL_INIT_AUDIO);  // audio subsystem
@@ -98,31 +106,52 @@ int main()
 ///   SDL_Init(SDL_INIT_NOPARACHUTE);  // compatibility; this flag is ignored
 
   // TODO-debug start
-  SDL_zero(want);
-  want.freq = 48000;
-  want.format = AUDIO_F32;
-  want.channels = 2;
-  want.samples = 4096;
-  want.callback = NULL;  // valid >= 2.0.4
-  audiodev = SDL_OpenAudioDevice(NULL, 0, &want, &have, SDL_AUDIO_ALLOW_ANY_CHANGE);
-
-  std::cout << "[" << audiodev << "]" << std::endl;
-
-  const int num_audio_devs = SDL_GetNumAudioDevices(0);
-  std::cout << "<" << num_audio_devs << ">" << std::endl;
-  for (int i = 0; i < num_audio_devs; ++i) {
-    std::string u8adname = SDL_GetAudioDeviceName(i, 0);
-    std::cout << " " << i;
-  }
-
-  uint8_t *a_buf;
-  uint32_t a_len;
-  SDL_LoadWAV("test.wav", &want, &a_buf, &a_len);
-  SDL_PauseAudio(0);
-  SDL_FreeWAV(a_buf);
-  // TODO-debug end
+  Mix_OpenAudio(audio_rate, audio_fmt, audio_chs, 4096);
+  Mix_QuerySpec(&audio_rate, &audio_fmt, &audio_chs);
+  wave = Mix_LoadWAV("test.wav");
+  Mix_PlayChannel(0, wave, 0);
 
   goto eject;
+
+///   SDL_zero(want);
+///   want.freq = 48000;
+///   want.format = AUDIO_F32;
+///   want.channels = 2;
+///   want.samples = 4096;
+///   want.callback = NULL;  // valid >= 2.0.4
+///   audiodev = SDL_OpenAudioDevice(NULL, 0, &want, &have, SDL_AUDIO_ALLOW_ANY_CHANGE);
+/// 
+///   std::cout << "[" << audiodev << "]" << std::endl;
+/// 
+///   const int num_audio_devs = SDL_GetNumAudioDevices(0);
+///   std::cout << "<" << num_audio_devs << ">" << std::endl;
+///   for (int i = 0; i < num_audio_devs; ++i) {
+///     std::string u8adname = SDL_GetAudioDeviceName(i, 0);
+///     std::cout << " " << i;
+///   }
+/// 
+///   uint8_t *a_buf;
+///   uint32_t a_len;
+///   SDL_LoadWAV("test.wav", &have, &a_buf, &a_len);
+///   struct sample {
+///     uint8_t *data;
+///     uint32_t pos;
+///     uint32_t len;
+///   } samples;
+/// 
+///   SDL_AudioCVT cvt;
+///   SDL_BuildAudioCVT(&cvt, have.format, have.channels, have.freq, AUDIO_S16, 2, 22050);
+/// 
+///   SDL_LockAudio();
+/// 
+///   samples.data = cvt.buf;
+///   samples.len = cvt.len_cvt;
+///   samples.pos = 0;
+/// 
+///   SDL_PauseAudio(0);
+///   // TODO-debug end
+/// 
+///   goto eject;
 
   std::cout << SDL_Init(SDL_INIT_TIMER | SDL_INIT_VIDEO) << "\n";
   //std::cout << TTF_Init() << "\n";
@@ -136,7 +165,9 @@ int main()
 
 eject:
   SDL_Delay(4000);
-
+/// 
+///   SDL_UnlockAudio();
+///   SDL_FreeWAV(a_buf);
   SDL_DestroyWindow(window);
 
   // for(;;){}

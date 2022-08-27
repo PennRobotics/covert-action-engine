@@ -83,17 +83,18 @@ static std::unique_ptr<ScreenTODO> scChooseDriving;
 #define SCREEN_HEIGHT 200
 
 // TODO
-static Mix_Chunk *wave = NULL;
+const char* fnames[] = { "test.wav", };
+static Mix_Chunk *wave[1];
 
 int main()
 {
-  SDL_Window* window = NULL;
-  SDL_Surface* screen_surface = NULL;
+///   SDL_Window* window = NULL;
+///   SDL_Surface* screen_surface = NULL;
 
-  int audio_rate = MIX_DEFAULT_FREQUENCY;
-  uint16_t audio_fmt = MIX_DEFAULT_FORMAT;
-  int audio_chs = MIX_DEFAULT_CHANNELS;
-  int i;
+///   int audio_rate = MIX_DEFAULT_FREQUENCY;
+///   uint16_t audio_fmt = MIX_DEFAULT_FORMAT;
+///   int audio_chs = MIX_DEFAULT_CHANNELS;
+///   int i;
 
 ///   SDL_Init(SDL_INIT_TIMER);  // timer subsystem
   SDL_Init(SDL_INIT_AUDIO);  // audio subsystem
@@ -105,11 +106,17 @@ int main()
 ///   SDL_Init(SDL_INIT_EVERYTHING);  // all of the above subsystems
 ///   SDL_Init(SDL_INIT_NOPARACHUTE);  // compatibility; this flag is ignored
 
+  memset(wave, 0, sizeof(wave));
+
+  Mix_OpenAudio(48000, AUDIO_S16SYS, 2, 512);  // TODO: determine why static occurs when set to 44100
+  Mix_AllocateChannels(4);
+  wave[0] = Mix_LoadWAV(fnames[0]);
+
   // TODO-debug start
-  Mix_OpenAudio(audio_rate, audio_fmt, audio_chs, 4096);
-  Mix_QuerySpec(&audio_rate, &audio_fmt, &audio_chs);
-  wave = Mix_LoadWAV("test.wav");
-  Mix_PlayChannel(0, wave, 0);
+///   Mix_OpenAudio(audio_rate, audio_fmt, audio_chs, 4096);
+///   Mix_QuerySpec(&audio_rate, &audio_fmt, &audio_chs);
+///   wave = Mix_LoadWAV("test.wav");
+  Mix_PlayChannel(-1, wave[0], 0);
 
   goto eject;
 
@@ -153,22 +160,25 @@ int main()
 /// 
 ///   goto eject;
 
-  std::cout << SDL_Init(SDL_INIT_TIMER | SDL_INIT_VIDEO) << "\n";
-  //std::cout << TTF_Init() << "\n";
-  window = SDL_CreateWindow("UP", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-  screen_surface = SDL_GetWindowSurface(window);
-
-  SDL_FillRect(screen_surface, NULL, SDL_MapRGB(screen_surface->format, 0xEF, 0xFF, 0xEF));
-  SDL_UpdateWindowSurface(window);
+///   std::cout << SDL_Init(SDL_INIT_TIMER | SDL_INIT_VIDEO) << "\n";
+///   //std::cout << TTF_Init() << "\n";
+///   window = SDL_CreateWindow("UP", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+///   screen_surface = SDL_GetWindowSurface(window);
+/// 
+///   SDL_FillRect(screen_surface, NULL, SDL_MapRGB(screen_surface->format, 0xEF, 0xFF, 0xEF));
+///   SDL_UpdateWindowSurface(window);
 
   // TODO: audio, resources, etc.
 
 eject:
   SDL_Delay(4000);
-/// 
+
+  Mix_FreeChunk(wave[0]);
+  Mix_CloseAudio();
+
 ///   SDL_UnlockAudio();
 ///   SDL_FreeWAV(a_buf);
-  SDL_DestroyWindow(window);
+///   SDL_DestroyWindow(window);
 
   // for(;;){}
   //TTF_Quit();

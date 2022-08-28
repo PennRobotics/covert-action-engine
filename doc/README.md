@@ -1,7 +1,7 @@
 SPNA
 ====
 
-Pronounced S. P. N. A., or _"Espiona"_
+Pronounced S. P. N. A., or _"Espionah"_
 
 This is a clone of the engine for the MPS Labs game, _Covert Action_.
 

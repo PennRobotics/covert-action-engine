@@ -38,6 +38,7 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 - [ ] Building exterior
 - [ ] Car chase minigame
 - [ ] Combat minigame
+  - [ ] Terminal password list
 - [ ] Name and face generator
 - [ ] Room generator
   - Are the rooms/layouts truly random or in any way predictable?

@@ -15,6 +15,7 @@ class Theatre {
   std::vector<city> cities;
   std::vector<org> orgs;
   image atlas;
+  std::vector<mastermind> at_large;
 };
 class America : Theater  {};
 class Africa : Theater  {};

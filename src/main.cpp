@@ -2,6 +2,7 @@
 
 #include <SDL.h>
 #include <SDL_mixer.h>
+#include <SDL_ttf.h>
 
 #include <memory>
 #include <string>  // TODO-debug
@@ -88,8 +89,8 @@ static Mix_Chunk *wave[1];
 
 int main()
 {
-///   SDL_Window* window = NULL;
-///   SDL_Surface* screen_surface = NULL;
+  SDL_Window* window = NULL;
+  SDL_Surface* screen_surface = NULL;
 
 ///   int audio_rate = MIX_DEFAULT_FREQUENCY;
 ///   uint16_t audio_fmt = MIX_DEFAULT_FORMAT;
@@ -103,8 +104,17 @@ int main()
 ///   SDL_Init(SDL_INIT_HAPTIC);  // haptic (force feedback) subsystem
 ///   SDL_Init(SDL_INIT_GAMECONTROLLER);  // controller subsystem; automatically initializes the joystick subsystem
 ///   SDL_Init(SDL_INIT_EVENTS);  // events subsystem
-///   SDL_Init(SDL_INIT_EVERYTHING);  // all of the above subsystems
+  SDL_Init(SDL_INIT_EVERYTHING);  // all of the above subsystems
 ///   SDL_Init(SDL_INIT_NOPARACHUTE);  // compatibility; this flag is ignored
+
+  const char* fname = "test.ttf";
+  SDL_RWops* rwops = SDL_RWFromFile(fname, "rb");
+  TTF_Font* ttf = TTF_OpenFontRW(rwops, 1, 18);
+
+  SDL_Color test = {255, 0, 255, 255};
+  SDL_Renderer* renderer;
+  SDL_SetRenderDrawColor(renderer, 255, 0, 255, 255);
+  SDL_RenderClear(renderer);
 
   memset(wave, 0, sizeof(wave));
 
@@ -160,17 +170,17 @@ int main()
 /// 
 ///   goto eject;
 
-///   std::cout << SDL_Init(SDL_INIT_TIMER | SDL_INIT_VIDEO) << "\n";
-///   //std::cout << TTF_Init() << "\n";
-///   window = SDL_CreateWindow("UP", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-///   screen_surface = SDL_GetWindowSurface(window);
-/// 
-///   SDL_FillRect(screen_surface, NULL, SDL_MapRGB(screen_surface->format, 0xEF, 0xFF, 0xEF));
-///   SDL_UpdateWindowSurface(window);
+eject:
+  std::cout << SDL_Init(SDL_INIT_TIMER | SDL_INIT_VIDEO) << "\n";
+  //std::cout << TTF_Init() << "\n";
+  window = SDL_CreateWindow("UP", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+  screen_surface = SDL_GetWindowSurface(window);
+
+  SDL_FillRect(screen_surface, NULL, SDL_MapRGB(screen_surface->format, 0xEF, 0xFF, 0xEF));
+  SDL_UpdateWindowSurface(window);
 
   // TODO: audio, resources, etc.
 
-eject:
   SDL_Delay(4000);
 
   Mix_FreeChunk(wave[0]);

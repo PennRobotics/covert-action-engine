@@ -9,6 +9,8 @@
 
 #include "types.h"
 
+extern int case_gen();
+
 #include "combat.h"
 #include "driving.h"
 #include "cryptography.h"
@@ -89,6 +91,8 @@ static Mix_Chunk *wave[1];
 
 int main()
 {
+  case_gen();
+
   SDL_Window* window = NULL;
   SDL_Surface* screen_surface = NULL;
 

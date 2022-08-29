@@ -33,7 +33,7 @@ enum MissionGoal {
 class MiniGameDriving {
 public:
   MiniGameDriving();
-  int start(difficulty level);
+  int start(Difficulty level);
 private:
   void draw();
   MissionGoal mission_goal;

@@ -6,7 +6,7 @@ MiniGameDriving::MiniGameDriving() {
 }
 
 
-int MiniGameDriving::start(difficulty level) {
+int MiniGameDriving::start(Difficulty level) {
   // TODO
   return 0;
 }

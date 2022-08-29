@@ -1,11 +1,11 @@
 #ifndef __TYPES_H
 #define __TYPES_H
 
-enum class difficulty {
-  LEVEL1 = 1,
-  LEVEL2 = 2,
-  LEVEL3 = 3,
-  LEVEL4 = 4
+enum class Difficulty {
+  Level1 = 1,
+  Level2 = 2,
+  Level3 = 3,
+  Level4 = 4
 };
 
 #endif

@@ -87,7 +87,7 @@ struct Furniture {
 class MiniGameCombat {
 public:
   MiniGameCombat();
-  int start(difficulty level);
+  int start(Difficulty level);
 protected:  // TODO?
   Inventory inv;
 private:

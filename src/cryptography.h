@@ -10,7 +10,7 @@
 class MiniGameCryptography {
 public:
   MiniGameCryptography();  // TODO = default;
-  int start(difficulty level);
+  int start(Difficulty level);
 private:
   void test_convert_message(const auto& key);
   time_t start_time;  // TODO

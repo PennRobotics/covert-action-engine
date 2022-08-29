@@ -6,7 +6,7 @@ MiniGameCryptography::MiniGameCryptography() {
 }
 
 
-int MiniGameCryptography::start(difficulty level) {
+int MiniGameCryptography::start(Difficulty level) {
   letter_counts.fill(0);
   user_decipher.fill(' ');
 

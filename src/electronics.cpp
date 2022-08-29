@@ -7,7 +7,7 @@ MiniGameElectronics::MiniGameElectronics() {
 }
 
 
-int MiniGameElectronics::start(difficulty level) {
+int MiniGameElectronics::start(Difficulty level) {
   int num_locked;
   int num_hidden;
   int num_alarms;

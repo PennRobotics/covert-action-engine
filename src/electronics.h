@@ -32,7 +32,7 @@ struct Junc {
 class MiniGameElectronics {
 public:
   MiniGameElectronics();
-  int start(difficulty level);
+  int start(Difficulty level);
 private:
   void draw();
   unsigned char sx;

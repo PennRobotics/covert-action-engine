@@ -204,10 +204,10 @@ eject:
   mGameCrypto = std::make_unique<MiniGameCryptography>();
   mGameElec = std::make_unique<MiniGameElectronics>();
 
-  mGameCombat->start(difficulty::LEVEL2);
-  mGameDriving->start(difficulty::LEVEL2);
-  mGameCrypto->start(difficulty::LEVEL2);
-  mGameElec->start(difficulty::LEVEL2);
+  mGameCombat->start(Difficulty::Level2);
+  mGameDriving->start(Difficulty::Level2);
+  mGameCrypto->start(Difficulty::Level2);
+  mGameElec->start(Difficulty::Level2);
   */
 
   return 0;

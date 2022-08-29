@@ -6,7 +6,7 @@ MiniGameCombat::MiniGameCombat() {
 }
 
 
-int MiniGameCombat::start(difficulty level) {
+int MiniGameCombat::start(Difficulty level) {
   inv.uzi = false;
   inv.gas_mask = false;
   inv.motion_detector = false;

@@ -33,7 +33,7 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 - [ ] Define connections between each screen
 - [ ] Hotel
 - [ ] Intelligence HQ
-- [ ] Cryptology minigame
+- [ ] Cryptography minigame
 - [ ] Electronics minigame
 - [ ] Building exterior
 - [ ] Car chase minigame

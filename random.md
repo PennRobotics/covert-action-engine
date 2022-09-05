@@ -10,8 +10,9 @@ Generate palette of faces and facial components (hair, eyes, accessories, skin t
 
 ### Getting the colors right
 
-- `convert infile.png -resize 80x80 +dither -remap Windows_16colors_palette.png outfile.png`
-- `convert infile.png -resize 80x80 -remap Windows_16colors_palette.png outfile.png`
+- `convert xc:#000000 xc:#0000aa xc:#00aa00 xc:#00aaaa xc:#aa0000 xc:#000000 xc:#aa5500 xc:#aaaaaa xc:#555555 xc:#5555ff xc:#55ff55 xc:#55ffff xc:#ff5555 xc:#ff55ff xc:#ffff55 xc:#ffffff +append ca15.png`
+- `convert infile.png -resize 80x80 +dither -remap ca15.png outfile.png`
+- `convert infile.png -resize 80x80 -remap ca15.png outfile.png`
 - GIMP: scale image, Image>Mode>Indexed>Use custom palette>Default(23) (then further downsample the greys and dark purple)
   - alternatively, create an accurate C. A. palette
   - use the various dithering algorithms (normal, reduced bleeding, positional, etc.)

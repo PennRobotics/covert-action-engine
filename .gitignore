@@ -1,4 +1,5 @@
 .gitignore
+cmake-build-debug/
 data/
 re/
 out

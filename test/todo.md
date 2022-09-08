@@ -1,0 +1,21 @@
+# Test Plan
+
+- [ ] Create Menu
+- [ ] Load/Save random binary data
+- [ ] Load/Save actual game data
+- [ ] Each minigame type
+  - [ ] Combat
+  - [ ] Driving
+  - [ ] Cryptography
+  - [ ] Electronics
+  - **Is having an inherited class helpful?**
+- [ ] Full state machine of game transitions
+- [ ] Font loader
+- [ ] Custom font
+- [ ] Game skill calculation
+- [ ] Accurate timer elapsed after playing known sound
+- [ ] Pic loader (mini test file)
+- [ ] Point ++ operator
+- [ ] Keyboard events
+- [ ] Sprite animation
+- [ ] Panorama format?

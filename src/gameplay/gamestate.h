@@ -20,24 +20,30 @@ static std::unique_ptr<MiniGameElectronics> mGameElec;
 
 class GameState {
 public:
-    GameState() = default;
-    ~GameState() = default;
-    GameState(const GameState&) = delete;
-    GameState& operator=(const GameState&) = delete;
+  GameState() = default;
 
-    void initMiniGameClasses();
-    void enterMiniGame(MiniGameType miniGame);
-    GameScreen getNextScreen(ScreenExitCondition condition = ScreenExitCondition::None);
+  ~GameState() = default;
+
+  GameState(const GameState&) = delete;
+
+  GameState& operator=(const GameState&) = delete;
+
+  void initMiniGameClasses();
+
+  void enterMiniGame(MiniGameType miniGame);
+
+  GameScreen getNextScreen(ScreenExitCondition condition = ScreenExitCondition::None);
+
 /// protected:
-    bool inMiniGame;
-    MiniGameType currentMiniGame { MiniGameType::Inactive };
-    GameScreen currentScreen { GameScreen::Splash1 };
+  bool inMiniGame;
+  MiniGameType currentMiniGame{MiniGameType::Inactive};
+  GameScreen currentScreen{GameScreen::Splash1};
+  bool isTwelve { true };
 /// private:
   int selectedChoice;
+  OriginScreen comingFrom{OriginScreen::UNKNOWNORIGIN};
+  int modalSequence { 0 };
 };
-
-
-
 
 
 #endif //SPNA_GAME_GAMESTATE_H

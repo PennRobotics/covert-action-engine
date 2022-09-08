@@ -97,7 +97,7 @@ void GUI::createGUI(GameScreen screen) {
     case GameScreen::Splash2:
     case GameScreen::CityMainMenu:
     case GameScreen::Chief:
-    case GameScreen::CIAMain:
+    case GameScreen::CIAMainMenu:
     case GameScreen::CIASam:
     case GameScreen::CIACrypto:
     case GameScreen::CombatArrest:

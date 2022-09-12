@@ -1,0 +1,21 @@
+- Participant list
+- Black profile of Mastermind
+- Background color change (turned)
+- Draw over (detained)
+- Add item(s) in corner
+- Blackout (hiding)
+- Chronology
+  - Date
+  - Case
+    - Messages
+      - Sender (Role) Org/Loc "sent message to" Receiver (Role) Org/Loc
+  	- Contents
+    - Meetings
+    - Minors
+    - Majors
+    - Item Handoff
+    - Events (hiding + circumstances e.g. success/failure)
+  - Max
+    - Travel
+	- Detain / Turn
+	- Entry

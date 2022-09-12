@@ -1,0 +1,5 @@
+- Number and locations of opponents (1 to 8)
+- Location revealed
+  - Also when captured?
+- What is the probability of an ambush? And from which orgs?
+- Start kit: kevlar, 4 frag

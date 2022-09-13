@@ -36,11 +36,11 @@ _These offsets need to be double-checked!_
 
 #### Types
 
-- 2. Sent message (paired with 3)
-- 3. Received message (paired with 2)
-- 8. Met with (paired with 9)
-- 9. Was met by (paired with 8)
-- 20. Crime  [20h or decimal 20?]
+- 2 - Sent message (paired with 3)
+- 3 - Received message (paired with 2)
+- 8 - Met with (paired with 9)
+- 9 - Was met by (paired with 8)
+- 20 - Crime  [20h or decimal 20?]
 
 ### Blank event entry (qty. 1)
 
@@ -57,21 +57,21 @@ _These offsets need to be double-checked!_
 
 #### Icons
 
-- 0. Processed drugs
-- 1. Sniper rifle / Weapons
-- 2. Raw drugs
-- 3. Chemicals / Supplies
-- 4. Explosives
-- 5. Alarm Bypass / Product
-- 6. Photographs
-- 7. Hostage / Pilot / Escapee
-- 8. Bomb
-- 9. Payoff / $1,000,000 / Gold coin
-- 10. Photographs
-- 11. Camera
-- 12. Blueprints / Mission plans
-- 13. Stolen goods / Jeep / Sample item / Forgery / Equipment
-- 14. Passwords
+- 0 - Processed drugs
+- 1 - Sniper rifle / Weapons
+- 2 - Raw drugs
+- 3 - Chemicals / Supplies
+- 4 - Explosives
+- 5 - Alarm Bypass / Product
+- 6 - Photographs
+- 7 - Hostage / Pilot / Escapee
+- 8 - Bomb
+- 9 - Payoff / $1,000,000 / Gold coin
+- 10 - Photographs
+- 11 - Camera
+- 12 - Blueprints / Mission plans
+- 13 - Stolen goods / Jeep / Sample item / Forgery / Equipment
+- 14 - Passwords
 
 ## TODO
 

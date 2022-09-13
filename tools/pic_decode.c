@@ -20,6 +20,7 @@ int main() {
   do {
     count++;
     c = fgetc(picfile);
+    if (c == 0x90)  { printf("(possible) RLE marker\n"); }
   } while (c != EOF);
 
   printf("%d\n", count - 1);

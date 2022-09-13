@@ -43,6 +43,7 @@ public:
 /// private:
     TTF_Font* ttf;
     Uint64 next_screen_tick;
+    DialogType dialogType { DialogType::INFOTIMER };
 };
 
 

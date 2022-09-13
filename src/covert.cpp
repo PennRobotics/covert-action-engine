@@ -70,6 +70,10 @@ std::unique_ptr<GameState> gameState;
 /// MiniGameElectronics& miniGameElec()  { static MiniGameElectronics mg {}; return mg; }
 
 
+static const SDL_Keycode mapDOWN = SDLK_DOWN;  // TODO: key mapping
+static const SDL_Keycode mapUP = SDLK_UP;
+
+void keyboard_handler(SDL_Event& e);
 
 #include "minigame/combat.h"
 int do_covert()
@@ -102,7 +106,16 @@ int do_covert()
       gui->updateGUI();
     }
     while(SDL_PollEvent(&e) != 0) {
-      if (e.type == SDL_QUIT)  { quit = true; }
+      switch (e.type) {
+        case SDL_QUIT:
+          quit = true;
+          break;
+        case SDL_KEYDOWN:
+          keyboard_handler(e);
+          break;
+        default:
+          break;
+      }  // e->type
     }
 
 ///     if (SDL_GetTicks64() > gui->next_screen_tick) {
@@ -117,3 +130,42 @@ int do_covert()
   return EXIT_SUCCESS;
 }
 
+void keyboard_handler(SDL_Event& e) {
+  switch (gui->dialogType) {
+    case DialogType::INFOTIMER:
+    case DialogType::INFO:
+      switch (e.key.keysym.sym) {
+        default:
+          printf("%ld\n", static_cast<unsigned long>(e.key.keysym.sym));  // TODO: clean this shit up
+          break;
+      }
+      break;
+    case DialogType::MENU:
+    case DialogType::MINIMENU:
+      switch (e.key.keysym.sym) {
+        case mapDOWN:
+          printf("down\n");
+          break;
+        case mapUP:
+          printf("up\n");
+          break;
+      }  // ...keysym.sym
+      break;
+    case DialogType::TEXTENTRY:
+      // TODO
+      break;
+    case DialogType::SKILLSELECT:
+      switch (e.key.keysym.sym) {  // TODO
+        case mapDOWN:
+          printf("down\n");
+          break;
+        case mapUP:
+          printf("up\n");
+          break;
+      }  // ...keysym.sym
+      break;
+    case DialogType::MINIGAME:
+    default:
+      break;
+  }  // gui->DialogType
+}

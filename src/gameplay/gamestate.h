@@ -28,14 +28,14 @@ public:
 
 /// protected:
   bool inMiniGame;
-  MiniGameType currentMiniGame{MiniGameType::Inactive};
-  GameScreen currentScreen{GameScreen::Splash1};
+  MiniGameType currentMiniGame { MiniGameType::Inactive };
+  GameScreen currentScreen { GameScreen::Splash1 };
   bool isTwelve { true };
   Difficulty getGameDifficulty();  // TODO
 
 /// private:
   int selectedChoice;
-  OriginScreen comingFrom{OriginScreen::UNKNOWNORIGIN};
+  OriginScreen comingFrom { OriginScreen::UNKNOWNORIGIN };
   int modalSequence { 0 };
   Difficulty gameDifficulty;
 

@@ -67,7 +67,7 @@ void GUI::setBGColor(SDL_Color c) {
 }
 
 
-bool GUI::refreshNow()  { return SDL_GetTicks64() >= next_screen_tick; }
+bool GUI::refreshNow()  { return dialogType == DialogType::INFOTIMER && SDL_GetTicks64() >= next_screen_tick; }
 
 
 void GUI::updateGUI() {
@@ -138,6 +138,25 @@ void GUI::createGUI(GameScreen screen) {
       SDL_DestroyTexture(textTexture);
       SDL_RenderPresent(renderer);
       break;
+    case GameScreen::BeginMenu:
+      dialogType = DialogType::MINIMENU;
+      // TODO: Create menu
+      break;
+    case GameScreen::NewCharacter:
+      dialogType = DialogType::TEXTENTRY;
+      break;
+    case GameScreen::SkillUpgrade:
+      dialogType = DialogType::SKILLSELECT;
+      break;
+    case GameScreen::Load:
+      dialogType = DialogType::MENU;
+      break;
+    case GameScreen::SkillPractice:
+      dialogType = DialogType::MINIMENU;
+      break;
+    case GameScreen::HallOfFame:
+      dialogType = DialogType::INFO;
+      break;
     case GameScreen::CIAData:
       xy = {40, 120};
 ///       createGUIMenu(buildMenu(
@@ -151,11 +170,14 @@ void GUI::createGUI(GameScreen screen) {
       break;
 
       /* UNUSED CASES */
-    case GameScreen::CityMainMenu:
     case GameScreen::Chief:
+    case GameScreen::MastermindLineup:
+    case GameScreen::ShowNewClues:
+    case GameScreen::CIAContact:
     case GameScreen::CIAMainMenu:
     case GameScreen::CIASam:
     case GameScreen::CIACrypto:
+    case GameScreen::CityMainMenu:
     case GameScreen::CombatArrest:
     case GameScreen::CombatRecover:
     case GameScreen::CombatCaptive:

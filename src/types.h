@@ -48,12 +48,12 @@ enum class GameScreen : int {
   ReviewCity,
   ReviewActivity,
   CIAIntel,
+  CIABanned,
   ReviewWiretaps,
   CIASam,
   CIACrypto,
   CodedMessages,
   CrimeChronology,
-  CIABanned,
   CityMainMenu,
   Airport,
   Hotel,
@@ -63,15 +63,16 @@ enum class GameScreen : int {
   Building3,
   Building4,
   Building5,
+  Typewriter,
+  MiniGameCombatStart,
   CombatArrest,
   CombatRecover,
   CombatCaptive,
-  Typewriter,
-  GameExit,
-  MiniGameCombatStart,
   MiniGameDrivingStart,
+  DrivingCarSelect,
   MiniGameCryptoStart,
   MiniGameElecStart,
+  GameExit,
   UNKNOWN = -1,
 };
 
@@ -90,6 +91,16 @@ enum class ScreenExitCondition {
     Win = 1,
     Arrest,
     Shot,
+};
+
+enum class DialogType {
+  INFOTIMER,
+  INFO,
+  MENU,
+  MINIMENU,
+  TEXTENTRY,
+  SKILLSELECT,
+  MINIGAME,
 };
 
 enum class AtlasAlignment {

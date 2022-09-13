@@ -28,6 +28,11 @@ namespace CAColor {
     SDL_Color WHITE = { 0xFF, 0xFF, 0xFF };
 }
 
+static const std::array<SDL_Color, 16> colors = {
+    CAColor::BLACK, CAColor::DKRED, CAColor::DKGREEN, CAColor::BROWN,
+    CAColor::DKBLUE, CAColor::BLACK, CAColor::DKCYAN, CAColor::GREY,
+    CAColor::DKGREY, CAColor::RED, CAColor::GREEN, CAColor::YELLOW,
+    CAColor::BLUE, CAColor::MAGENTA, CAColor::CYAN, CAColor::WHITE };
 
 void GUI::initGUI() {
 ///   SDL_Init(SDL_INIT_EVERYTHING);  // all of the above subsystems
@@ -49,10 +54,6 @@ void GUI::initGUI() {
 // */
 
   /*
-  SDL_Color colorlist[16] = {CAColor::BLACK, CAColor::DKRED, CAColor::DKGREEN, CAColor::BROWN,
-                             CAColor::DKBLUE, CAColor::BLACK, CAColor::DKCYAN, CAColor::GREY,
-                             CAColor::DKGREY, CAColor::RED, CAColor::GREEN, CAColor::YELLOW,
-                             CAColor::BLUE, CAColor::MAGENTA, CAColor::CYAN, CAColor::WHITE};
 // */
 
 ///   SDL_Palette* palette16 = SDL_AllocPalette(16);

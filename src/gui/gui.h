@@ -5,6 +5,7 @@
 #define SCREEN_HEIGHT 200
 #define SCREEN_SCALE 5
 
+#include <array>
 #include <string>
 #include <vector>
 

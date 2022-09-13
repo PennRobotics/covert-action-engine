@@ -1,5 +1,7 @@
 # CAE
 
+*"CAE" is not a reference to a company name or engineering term.*
+
 I made this repository to practice in several domains:
 
 - C++ standard library and some newer C++ functionality

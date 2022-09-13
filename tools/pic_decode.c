@@ -1,5 +1,5 @@
 #define  HEAD_N  0x40
-#define  DEBUGGING  0
+#define  DEBUGGING  1
 
 #if DEBUGGING==1
 #define  DEBUG  if(DEBUGGING)printf
@@ -15,7 +15,7 @@ int main() {
   FILE *picfile;
   picfile = fopen("LABS.PIC", "rb");
 
-  /*
+  //*
   c = fgetc(picfile);
   DEBUG("Looks %s\n", (c == 0x07 || c == 0x0F) ? "valid!" : "sketchy");
   fgetc(picfile);
@@ -25,23 +25,25 @@ int main() {
   c = (uint8_t)fgetc(picfile);
   c += (uint8_t)fgetc(picfile) << 8;
   DEBUG("%d\n", c);
+  for (int i = 0x6; i < 0x16; ++i)  { fgetc(picfile); }
   // */
 
-  uint16_t count = 6;
-  count = 0;  // TODO-debug
+  c = (uint8_t)fgetc(picfile);
+  if (c == 0x0B)  { DEBUG("Max LZW dict size is %d bits\n", c); }
+
+  uint16_t space = 0;
   do {
-    count++;
+    space++;
     c = fgetc(picfile);
     if (c == 0x90)  { printf("(possible) RLE marker\n"); }
-    if (count > HEAD_N)  { break; }
-    printf("%02X", (uint8_t)c);
-    if (count % 2 == 0)  { printf(" "); }
-    if (count % 16 == 0)  { printf("\n"); }
+    if (space > HEAD_N)  { break; }
+    printf("%02X ", (uint8_t)c);
+    if (space % 16 == 0)  { printf("\n"); }
   } while (c != EOF);
 
-  if (count % 16 != 1)  { printf("\n"); }
+  if (space % 16 != 1)  { printf("\n"); }
 
-  DEBUG("%d\n", count - 1);
+  DEBUG("%d\n", space - 1);
 
   return 0;
 }

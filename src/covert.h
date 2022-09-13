@@ -6,7 +6,7 @@
 //#include <string>  // TODO-debug
 
 /// #include "gui/menu.h"
-/// #include "gui/gui.h"
+#include "gui/gui.h"
 #include "gameplay/gamestate.h"
 /// #include "disk/loadsave.h"
 #include "sound/music.h"

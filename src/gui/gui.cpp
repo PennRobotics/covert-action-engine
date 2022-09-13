@@ -2,20 +2,42 @@
 // Created by wright on 05/09/22.
 //
 
+#define SDL_MAIN_HANDLED
 #include <SDL_image.h>
 #include "gui.h"
 
+namespace CAColor {
+    SDL_Color BLACK = { 0x00, 0x00, 0x00 };
+    SDL_Color DKRED = { 0xAA, 0x00, 0x00 };
+    SDL_Color DKGREEN = { 0x00, 0xAA, 0x00 };
+    SDL_Color BROWN = { 0xAA, 0x55, 0x00 };
+    SDL_Color DKBLUE = { 0x00, 0x00, 0xAA };
+    SDL_Color UNK = { 0x00, 0x00, 0x00 };
+    SDL_Color DKCYAN = { 0x00, 0xAA, 0xAA };
+    SDL_Color GREY = { 0xAA, 0xAA, 0xAA };
+    SDL_Color DKGREY = { 0x55, 0x55, 0x55 };
+    SDL_Color RED = { 0xFF, 0x55, 0x55 };
+    SDL_Color GREEN = { 0x55, 0xFF, 0x55 };
+    SDL_Color YELLOW = { 0xFF, 0xFF, 0x55 };
+    SDL_Color BLUE = { 0x55, 0x55, 0xFF };
+    SDL_Color MAGENTA = { 0xFF, 0x55, 0xFF };
+    SDL_Color CYAN = { 0x55, 0xFF, 0xFF };
+    SDL_Color WHITE = { 0xFF, 0xFF, 0xFF };
+}
+
+
 void GUI::initGUI() {
-  SDL_Init(SDL_INIT_EVERYTHING);  // all of the above subsystems
+///   SDL_Init(SDL_INIT_EVERYTHING);  // all of the above subsystems
 
   SDL_CreateWindowAndRenderer(SCREEN_SCALE * SCREEN_WIDTH, SCREEN_SCALE * SCREEN_HEIGHT, 0, &window, &renderer);
 ///   SDL_RenderSetScale(renderer, SCREEN_SCALE, SCREEN_SCALE);
   SDL_RenderSetLogicalSize(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
 
-///   TTF_Init();  // TODO: move to Font class
+  TTF_Init();  // TODO: move to Font class
 
-/* TODO-debug
-  const char* fname = "/usr/share/fonts/liberation-mono/LiberationMono-Regular.ttf";
+//* TODO-debug
+//  const char* fname = "/usr/share/fonts/liberation-mono/LiberationMono-Regular.ttf";
+  const char* fname = "C:\\Windows\\Fonts\\LiberationMono-Regular.ttf";
   ttf = TTF_OpenFont(fname, 16);
   if (ttf == NULL) {
     fprintf(stderr, "fonterr\n");
@@ -23,10 +45,12 @@ void GUI::initGUI() {
   }
 // */
 
-  SDL_Color colorlist[16] = {Color::BLACK, Color::DKRED, Color::DKGREEN, Color::BROWN,
-                             Color::DKBLUE, Color::BLACK, Color::DKCYAN, Color::GREY,
-                             Color::DKGREY, Color::RED, Color::GREEN, Color::YELLOW,
-                             Color::BLUE, Color::MAGENTA, Color::CYAN, Color::WHITE};
+  /*
+  SDL_Color colorlist[16] = {CAColor::BLACK, CAColor::DKRED, CAColor::DKGREEN, CAColor::BROWN,
+                             CAColor::DKBLUE, CAColor::BLACK, CAColor::DKCYAN, CAColor::GREY,
+                             CAColor::DKGREY, CAColor::RED, CAColor::GREEN, CAColor::YELLOW,
+                             CAColor::BLUE, CAColor::MAGENTA, CAColor::CYAN, CAColor::WHITE};
+// */
 
 ///   SDL_Palette* palette16 = SDL_AllocPalette(16);
 ///   SDL_SetPaletteColors(palette16, colorlist, 0, 16);
@@ -68,7 +92,7 @@ void GUI::createGUI(GameScreen screen) {
       break;
     case GameScreen::Splash1:
       next_screen_tick = 2000 + SDL_GetTicks64();
-///       textSurface = TTF_RenderText(ttf, titleText, Color::WHITE, Color::DKGREEN);
+      textSurface = TTF_RenderText(ttf, titleText, CAColor::WHITE, CAColor::DKGREEN);
       textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
       SDL_FreeSurface(textSurface);
       int w, h;

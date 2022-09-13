@@ -1,9 +1,10 @@
+#define SDL_MAIN_HANDLED
 #include <SDL_stdinc.h>
 
 #include <SDL.h>
-#include <SDL_ttf.h>
-#include <SDL_mixer.h>
-#include <SDL_image.h>
+/// #include <SDL_ttf.h>
+/// #include <SDL_mixer.h>
+/// #include <SDL_image.h>
 
 extern int case_gen();
 
@@ -54,17 +55,17 @@ extern int case_gen();
 
 
 /// #include "minigame/combat.h"
-#include "minigame/cryptography.h"
+/// #include "minigame/cryptography.h"
 /// #include "minigame/driving.h"
 /// #include "minigame/electronics.h"
 
 // TODO
 std::unique_ptr<MainChar> mainChar;
-/// std::unique_ptr<GUI> gui;
+std::unique_ptr<GUI> gui;
 std::unique_ptr<GameState> gameState;
 
 /// MiniGameCombat& miniGameCombat()  { static MiniGameCombat mg {}; return mg; }
-MiniGameCryptography& miniGameCrypto()  { static MiniGameCryptography mg {}; return mg; }
+/// MiniGameCryptography& miniGameCrypto()  { static MiniGameCryptography mg {}; return mg; }
 /// MiniGameDriving& miniGameDriving()  { static MiniGameDriving mg {}; return mg; }
 /// MiniGameElectronics& miniGameElec()  { static MiniGameElectronics mg {}; return mg; }
 
@@ -79,14 +80,18 @@ int do_covert()
   gameState->initMiniGameClasses();
 
 ///   miniGameCombat().start(Difficulty::Level1);
-  miniGameCrypto().start(Difficulty::Level1);
+///   miniGameCrypto().start(Difficulty::Level1);
 ///   miniGameDriving().start(Difficulty::Level1);
 ///   miniGameElec().start(Difficulty::Level1);
 
-  MiniGameCombat::Instance().start(Difficulty::Level1);
-///   gui = std::make_unique<GUI>();
-///   gui->initGUI();
-///   gui->createGUI(gameState->currentScreen);
+///   MiniGameCombat::Instance().start(Difficulty::Level1);
+
+  SDL_SetMainReady();
+  SDL_Init(SDL_INIT_EVERYTHING);
+
+  gui = std::make_unique<GUI>();
+  gui->initGUI();
+  gui->createGUI(gameState->currentScreen);
 
   play_music();
 

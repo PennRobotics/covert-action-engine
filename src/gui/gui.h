@@ -37,7 +37,7 @@ public:
     SDL_Surface* screen_surface = nullptr;
 ///   /* TODO: surfaces and textures and etc. */
 /// private:
-///     TTF_Font* ttf;
+    TTF_Font* ttf;
     Uint64 next_screen_tick;
 };
 

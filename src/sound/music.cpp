@@ -1,5 +1,6 @@
+#define SDL_MAIN_HANDLED
 #include <SDL_mixer.h>
-#include <SDL.h>
+/// #include <SDL.h>
 
 #include "music.h"
 

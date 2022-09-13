@@ -1,19 +1,27 @@
+#ifndef CA_CASE_H
+#define CA_CASE_H
+
+#include <vector>
+
+/// #include "../types.h"
+
 /* TODO: determine best city structure */
 
 class Theater {
-  std::vector<city> cities;
-  std::vector<org> orgs;
-  image atlas;
-  std::vector<mastermind> at_large;
+public:
+  Theater();
+  void populateCityList();
+  std::vector<City> cities;
+  std::vector<Org> orgs;
+  Image atlasImage;
+  std::vector<Mastermind> atLarge;
 };
-class America : Theater  {};
 class Africa : Theater  {};
+class America : Theater  {};
 class Europe : Theater  {};
+
+
 
 // TODO: distance between each city (xy-derived or table?)
 
-
-
-
-
-
+#endif

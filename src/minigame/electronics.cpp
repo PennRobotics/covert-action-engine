@@ -1,9 +1,12 @@
 #include "electronics.h"
-#include <string>  // TODO-debug
 
-
+    #if defined(TEST_ACTIVE)
+    #include <iostream>
+    #endif
 MiniGameElectronics::MiniGameElectronics() {
-  std::cout << "EL\n";
+#if defined(TEST_ACTIVE)
+  std::cout << "ELECTRONICS MINIGAME CLASS CREATED\n";
+#endif
 }
 
 
@@ -33,7 +36,7 @@ int MiniGameElectronics::start(Difficulty level) {
 
   // Randomize crossings
 
-  std::cout << "L" << (int)level << std::endl;
+///   std::cout << "L" << (int)level << std::endl;
   return 0;
 }
 
@@ -55,8 +58,28 @@ void MiniGameElectronics::draw() {
       }
       if (elem.hidden)  { s = "[ ]"; }
       if (elem.locked)  { s = ">" + s.substr(1,1) + "<"; }
-      std::cout << s;
+///       std::cout << s;
     }
-    std::cout << std::endl;
+///     std::cout << std::endl;
   }
+}
+
+
+Difficulty MiniGameElectronics::getGameDifficulty() {
+  Difficulty d;
+
+///   d = gameState->getGameDifficulty();
+
+  if (d == Difficulty::Level1) {
+    return Difficulty::Level1;
+  }
+
+///   int dcast = (int)d + (int)mainChar->getElecAptitude();
+///   dcast = (dcast < 1) ? 1 : dcast;
+///   dcast = (dcast > 4) ? 4 : dcast;
+
+///   d = static_cast<Difficulty>(dcast);
+
+  return Difficulty::Level1;  // TODO
+///   return d;
 }

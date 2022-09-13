@@ -1,8 +1,13 @@
 #include "driving.h"
 
 
+    #if defined(TEST_ACTIVE)
+    #include <iostream>
+    #endif
 MiniGameDriving::MiniGameDriving() {
-  std::cout << "DR\n";
+#if defined(TEST_ACTIVE)
+  std::cout << "DRIVING MINIGAME CLASS CREATED\n";
+#endif
 }
 
 
@@ -13,5 +18,9 @@ int MiniGameDriving::start(Difficulty level) {
 
 void MiniGameDriving::draw() {
   // TODO
+}
+
+Difficulty MiniGameDriving::getGameDifficulty() {
+  return Difficulty::Level1;  // TODO
 }
 

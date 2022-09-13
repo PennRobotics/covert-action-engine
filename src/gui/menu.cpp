@@ -1,5 +1,3 @@
-#include <string>
-#include <vector>
 #include "menu.h"
 
 std::vector<MenuChoice> buildMenu(std::vector<std::string> choice_strings) {

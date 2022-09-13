@@ -1,8 +1,7 @@
-#ifndef __CASEGENERATOR_H
-#define __CASEGENERATOR_H
+#ifndef CA_CASEGENERATOR_H
+#define CA_CASEGENERATOR_H
 
 #include <fstream>
-#include <iostream>
 //#include <string>
 #include <vector>
 
@@ -109,11 +108,11 @@ public:
 
 
 void Mission::printOverview() {
-  std::cout << this->name << std::endl;
-  std::cout << std::string(this->name.length(), '=') << std::endl;
-  for (auto& party : this->participants) {
-    std::cout << party.getName() << ", " << party.getRole() << std::endl;
-  }
+///   std::cout << this->name << std::endl;
+///   std::cout << std::string(this->name.length(), '=') << std::endl;
+///   for (auto& party : this->participants) {
+///     std::cout << party.getName() << ", " << party.getRole() << std::endl;
+///   }
 }
 
 std::vector<Mission> missions;  // TODO: switch to a set type with name as key

@@ -1,11 +1,13 @@
+#ifndef CA_CRYPTOGRAPHY_H
+#define CA_CRYPTOGRAPHY_H
+
 #include <algorithm>
 #include <array>
 #include <ctime>
-#include <iostream>  // TODO-debug
 #include <numeric>
 #include <string>
+#include <memory>
 
-#include "../types.h"
 #include "minigame.h"
 
 class MiniGameCryptography : public MiniGame {
@@ -14,6 +16,7 @@ public:
   virtual ~MiniGameCryptography();
   int start(Difficulty level);
   void draw() override;
+  Difficulty getGameDifficulty() override;
 private:
   void test_convert_message(const auto& key);
   time_t start_time;  // TODO
@@ -24,3 +27,4 @@ private:
   std::array<unsigned int, 26> letter_counts;
 };
 
+#endif

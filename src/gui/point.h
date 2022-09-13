@@ -1,10 +1,5 @@
-//
-// Created by wright on 05/09/22.
-//
-
-#ifndef SPNA_GAME_POINT_H
-#define SPNA_GAME_POINT_H
-
+#ifndef CA_POINT_H
+#define CA_POINT_H
 
 #include <SDL_rect.h>
 
@@ -24,4 +19,4 @@ public:
 };
 
 
-#endif //SPNA_GAME_POINT_H
+#endif

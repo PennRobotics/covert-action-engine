@@ -1,4 +1,7 @@
-#include "../gfx/gfx.h"
+#ifndef CA_DISCOVER_H
+#define CA_DISCOVER_H
+
+/// #include "../gfx/gfx.h"
 
 /* Iterate through info potentially discoverable through scans and info already discovered */
 /* Perhaps guard level of known locations is linked to activity score? */
@@ -42,3 +45,5 @@ uint16_t get_org_score(auto/*TODO*/ org) {
   // TODO: iterator-sum for local scan data for each city in an org
   return -1;
 }
+
+#endif

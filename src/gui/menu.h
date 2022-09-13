@@ -1,3 +1,9 @@
+#ifndef CA_MENU_H
+#define CA_MENU_H
+
+#include <string>
+#include <vector>
+
 /* TODO: add menu defs, font, keyboard handler, anims, etc. */
 
 struct MenuChoice {
@@ -8,3 +14,5 @@ struct MenuChoice {
 };
 
 std::vector<MenuChoice> buildMenu(std::vector<std::string> choice_strings);
+
+#endif

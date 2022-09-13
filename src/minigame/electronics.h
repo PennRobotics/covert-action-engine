@@ -1,11 +1,16 @@
-#include <iostream>
+#ifndef CA_ELECTRONICS_H
+#define CA_ELECTRONICS_H
+
 #include <random>
 //#include <utility>
 #include <array>
 
-#include "../types.h"
 #include "minigame.h"
+/// #include "../gameplay/gamestate.h"
+/// #include "../covert.h"
 
+
+/// #include "../covert.h"
 
 enum Junction {
   STRAIGHT = 1,
@@ -33,9 +38,11 @@ struct Junc {
 class MiniGameElectronics : public MiniGame {
 public:
   MiniGameElectronics();
+  ~MiniGameElectronics() = default;  // TODO
   int start(Difficulty level);
-private:
   void draw() override;
+  Difficulty getGameDifficulty() override;
+private:
   unsigned char sx;
   unsigned char sy;
   std::array<std::array<Junc, 7>, 5> junction_matrix;
@@ -43,4 +50,4 @@ private:
   Junc holding;
 };
 
-
+#endif

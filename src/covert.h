@@ -1,18 +1,22 @@
-#ifndef SPNA_GAME_COVERT_H
-#define SPNA_GAME_COVERT_H
+#ifndef CA_COVERT_H
+#define CA_COVERT_H
 
 #include <utility>
+#include <memory>
+//#include <string>  // TODO-debug
 
 /// #include "gui/menu.h"
-#include "gui/gui.h"
+/// #include "gui/gui.h"
 #include "gameplay/gamestate.h"
-#include "disk/loadsave.h"
+/// #include "disk/loadsave.h"
 #include "sound/music.h"
-
 #include "types.h"
 
+class MainChar;
 
-
+    #if defined(TEST_ACTIVE)
+    #include <iostream>
+    #endif
 class MainChar {
 public:
     MainChar() = default;
@@ -31,6 +35,9 @@ public:
     void setCallsign(std::string s)  { this->callsign = s; }
     void setRank(int rank)  { this->rank = rank; }
     void setSkillLevels(Aptitude co, Aptitude dr, Aptitude cr, Aptitude el) {
+        #if defined(TEST_ACTIVE)
+        std::cout << "Setting character aptitudes\n";
+        #endif
         this->apt_combat = co;
         this->apt_driving = dr;
         this->apt_crypto = cr;
@@ -56,12 +63,6 @@ public:
     Aptitude apt_elec {Aptitude::Average};
 };
 
-
-
-
-
-
-
 int do_covert();
 
-#endif //SPNA_GAME_COVERT_H
+#endif

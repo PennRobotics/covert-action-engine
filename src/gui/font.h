@@ -1,8 +1,6 @@
-//
-// Created by wright on 05/09/22.
-//
+#ifndef CA_FONT_H
+#define CA_FONT_H
 
-#ifndef SPNA_GAME_FONT_H
-#define SPNA_GAME_FONT_H
+int createFontTable();  // TODO: formerly main()
 
-#endif //SPNA_GAME_FONT_H
+#endif

@@ -5,25 +5,27 @@ set(CMAKE_CXX_STANDARD 20)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/../cmake/Modules)
 
-
+add_compile_definitions(TEST_ACTIVE)
 
 add_executable(
         ${PROJECT_NAME}
         ../src/covert.cpp
+        ../src/disk/loadsave.cpp
+        ../src/gameplay/agentgenerator.cpp
+        ../src/gameplay/case.cpp
         ../src/gameplay/casegenerator.cpp
+        ../src/gameplay/gamestate.cpp
+        ../src/gfx/picloader.cpp
+        ../src/gui/font.cpp
+        ../src/gui/gui.cpp
+        ../src/gui/menu.cpp
+        ../src/gui/point.cpp
         ../src/minigame/combat.cpp
         ../src/minigame/driving.cpp
         ../src/minigame/cryptography.cpp
         ../src/minigame/electronics.cpp
-        ../src/disk/loadsave.cpp
         ../src/sound/fx.cpp
         ../src/sound/music.cpp
-        ../src/gfx/picloader.cpp
-        ../src/gui/gui.cpp
-        ../src/gui/point.cpp
-        ../src/gameplay/gamestate.cpp
-        ../src/gameplay/agentgenerator.cpp
-        ../src/gui/menu.cpp
         test.cpp
 )
 

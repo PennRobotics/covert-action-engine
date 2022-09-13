@@ -1,7 +1,6 @@
-#ifndef SPNA_GAME_LOADSAVE_H
-#define SPNA_GAME_LOADSAVE_H
+#ifndef CA_LOADSAVE_H
+#define CA_LOADSAVE_H
 
-#include <iostream>  // TODO-debug
 #include <stdexcept>
 #include <string>  // TODO-debug
 #include <vector>
@@ -19,4 +18,4 @@ FileStatus load_game(int game_idx);
 
 int save_game(const char* fname);
 
-#endif //SPNA_GAME_LOADSAVE_H
+#endif

@@ -5,13 +5,9 @@
 #include <SDL_mixer.h>
 #include <SDL_image.h>
 
-#include <memory>
-#include <string>  // TODO-debug
-
 extern int case_gen();
 
 #include "covert.h"
-
 
 
 /*
@@ -57,13 +53,24 @@ extern int case_gen();
 // TODO: consistency in spec (unique_ptr vs new)
 
 
-
-static std::unique_ptr<MainChar> mainChar;
-static std::unique_ptr<GUI> gui;
-static std::unique_ptr<GameState> gameState;
+/// #include "minigame/combat.h"
+#include "minigame/cryptography.h"
+/// #include "minigame/driving.h"
+/// #include "minigame/electronics.h"
 
 // TODO
+std::unique_ptr<MainChar> mainChar;
+/// std::unique_ptr<GUI> gui;
+std::unique_ptr<GameState> gameState;
 
+/// MiniGameCombat& miniGameCombat()  { static MiniGameCombat mg {}; return mg; }
+MiniGameCryptography& miniGameCrypto()  { static MiniGameCryptography mg {}; return mg; }
+/// MiniGameDriving& miniGameDriving()  { static MiniGameDriving mg {}; return mg; }
+/// MiniGameElectronics& miniGameElec()  { static MiniGameElectronics mg {}; return mg; }
+
+
+
+#include "minigame/combat.h"
 int do_covert()
 {
   mainChar = std::make_unique<MainChar>();
@@ -71,9 +78,15 @@ int do_covert()
   gameState = std::make_unique<GameState>();
   gameState->initMiniGameClasses();
 
-  gui = std::make_unique<GUI>();
-  gui->initGUI();
-  gui->createGUI(gameState->currentScreen);
+///   miniGameCombat().start(Difficulty::Level1);
+  miniGameCrypto().start(Difficulty::Level1);
+///   miniGameDriving().start(Difficulty::Level1);
+///   miniGameElec().start(Difficulty::Level1);
+
+  MiniGameCombat::Instance().start(Difficulty::Level1);
+///   gui = std::make_unique<GUI>();
+///   gui->initGUI();
+///   gui->createGUI(gameState->currentScreen);
 
   play_music();
 
@@ -84,13 +97,13 @@ int do_covert()
       if (e.type == SDL_QUIT)  { quit = true; }
     }
 
-    if (SDL_GetTicks64() > gui->next_screen_tick) {
-      gameState->currentScreen = gameState->getNextScreen();  // TODO: gameState++;
-      gui->createGUI(gameState->currentScreen);  // TODO: remove argument
-    }
+///     if (SDL_GetTicks64() > gui->next_screen_tick) {
+///       gameState->currentScreen = gameState->getNextScreen();  // TODO: gameState++;
+///       gui->createGUI(gameState->currentScreen);  // TODO: remove argument
+///     }
   }
 
-  TTF_Quit();
+///   TTF_Quit();
   SDL_Quit();  // TODO: replace with each subsystem quit by ref?
 
   return EXIT_SUCCESS;

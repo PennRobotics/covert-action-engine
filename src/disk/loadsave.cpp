@@ -35,7 +35,7 @@ FileStatus load_game(int game_idx) {
     reader = SDL_RWFromFile(fname, "rb");
     if (reader == nullptr) {
         // Save file does not exist
-        std::cout << fname << std::endl;
+///         std::cout << fname << std::endl;
         return FileStatus::NotFound;
     }
     SDL_RWclose(reader);

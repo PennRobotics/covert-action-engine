@@ -1,12 +1,18 @@
 #include <typeinfo>
 #include "cryptography.h"
 
+    #if defined(TEST_ACTIVE)
+    #include <iostream>
+    #endif
 MiniGameCryptography::MiniGameCryptography() {
-  std::cout << "CR\n";
+#if defined(TEST_ACTIVE)
+  std::cout << "CRYPTOGRAPHY MINIGAME CLASS CREATED\n";
+#endif
 }
 
-
+#include "combat.h"
 int MiniGameCryptography::start(Difficulty level) {
+  MiniGameCombat::Instance().start(Difficulty::Level1);
   letter_counts.fill(0);
   user_decipher.fill(' ');
 
@@ -42,6 +48,8 @@ int MiniGameCryptography::start(Difficulty level) {
 
 
 void MiniGameCryptography::test_convert_message(const auto& key) {
+// TODO
+/*
   int l = 0;
   // std::string test_msg = "AB. CA";
   std::string test_msg = "MI6 IS READY TO REWARD YOU FOR YOUR SUCCESS.  THE ALARM SYSTEM AT A LARGE INDUSTRIAL WAREHOUSE IS A BETA MODEL HUGHES ELECTROMASTER. THIS MONTHS ACCESS CODE WORD IS ROSEBUD.  OUT PROJECT HERE IN NASSAU PROCEEDS ON SCHEDULE. NONE DOUBT YOUR LOYALTY. WE ARE CONFIDENT YOUR WORK IN MEDELLIN WILL CONTINUE ON SCHEDULE. FELLOW WARRIORS OF THE FLN NOW IS THE TIME FOR ACTION.";
@@ -74,6 +82,7 @@ void MiniGameCryptography::test_convert_message(const auto& key) {
     std::cout << "\n" << user_decipher[l] << " " << (char)('A' + l) << " " << letter_counts[l]; ++l;
   }
   std::cout << std::endl;
+  // */
 }
 
 MiniGameCryptography::~MiniGameCryptography()  {}
@@ -82,6 +91,6 @@ void MiniGameCryptography::draw() {
     // TODO
 }
 
-
-
-
+Difficulty MiniGameCryptography::getGameDifficulty() {
+  return Difficulty::Level1;  // TODO
+}

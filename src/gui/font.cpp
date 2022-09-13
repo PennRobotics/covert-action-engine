@@ -1,4 +1,3 @@
-#include <iostream>
 #include <string>
 #include <unordered_map>
 #include <vector>
@@ -14,7 +13,7 @@ static std::string outputrow[8];
 void render_char_ascii(char);
 void endl_ascii();
 
-int main() {
+int createFontTable() {
   alphabet.reserve(70);
   alphabet['A'].vrows = {0x0E,0x38,0xC8,0xC8,0x38,0x0E,0};
   alphabet['B'].vrows = {0xBE,0x92,0x92,0x92,0x92,0x6C,0};
@@ -133,7 +132,7 @@ void render_char_ascii(char c) {
 
 void endl_ascii() {
   for (int i = 0; i < 8; ++i) {
-    std::cout << outputrow[i] << std::endl;
+    /// std::cout << outputrow[i] << std::endl;
     outputrow[i].clear();
   }
 }

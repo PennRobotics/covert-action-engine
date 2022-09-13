@@ -5,10 +5,6 @@
 #include "gamestate.h"
 
 void GameState::initMiniGameClasses() {
-  mGameCombat = std::make_unique<MiniGameCombat>();
-  mGameDriving = std::make_unique<MiniGameDriving>();
-  mGameCrypto = std::make_unique<MiniGameCryptography>();
-  mGameElec = std::make_unique<MiniGameElectronics>();
 }
 
 GameScreen GameState::getNextScreen(ScreenExitCondition condition) {
@@ -129,7 +125,6 @@ GameScreen GameState::getNextScreen(ScreenExitCondition condition) {
         break;
       case GameScreen::CIABanned:
         return GameScreen::CityMainMenu;
-        break;
       case GameScreen::CityMainMenu:
         // TODO: airport, hotel, ..., data
         break;
@@ -173,8 +168,6 @@ GameScreen GameState::getNextScreen(ScreenExitCondition condition) {
         break;
       case GameScreen::GameExit:
         break;
-      default:
-        return GameScreen::GameExit;  // TODO
       case GameScreen::ReviewWiretaps:
         break;
       case GameScreen::MiniGameCombatStart:
@@ -185,8 +178,9 @@ GameScreen GameState::getNextScreen(ScreenExitCondition condition) {
         break;
       case GameScreen::MiniGameElecStart:
         break;
-      case GameScreen::UNKNOWN:
-        break;
+      case GameScreen::UNKNOWN:  // TODO
+      default:
+        return GameScreen::GameExit;  // TODO
     }
   }
   // TODO: throw something; (should never reach this point)
@@ -194,6 +188,7 @@ GameScreen GameState::getNextScreen(ScreenExitCondition condition) {
 }
 
 void GameState::enterMiniGame(MiniGameType miniGame) {
+  /* TODO-debug
   this->currentMiniGame = miniGame;
   this->inMiniGame = true;
   switch (miniGame) {
@@ -211,5 +206,13 @@ void GameState::enterMiniGame(MiniGameType miniGame) {
       break;
   }
 
+// */
+}
 
+Difficulty GameState::getGameDifficulty() {
+  return this->gameDifficulty;
+}
+
+void GameState::setGameDifficulty(Difficulty gd) {
+  this->gameDifficulty = gd;
 }

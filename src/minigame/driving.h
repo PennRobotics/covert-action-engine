@@ -1,7 +1,8 @@
-#include <iostream>
+#ifndef CA_DRIVING_H
+#define CA_DRIVING_H
+
 #include <random>
 
-#include "../types.h"
 #include "minigame.h"
 
 
@@ -35,8 +36,9 @@ class MiniGameDriving : public MiniGame {
 public:
   MiniGameDriving();
   int start(Difficulty level);
-private:
   void draw() override;
+  Difficulty getGameDifficulty() override;
+private:
   MissionGoal mission_goal;
   Car car1;
   Car car2;  // own car when is_predator, otherwise enemy
@@ -44,6 +46,4 @@ private:
   unsigned char unseen_timer;
 };
 
-
-
-
+#endif

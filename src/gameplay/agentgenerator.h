@@ -1,10 +1,5 @@
-//
-// Created by wright on 06/09/22.
-//
-
-#ifndef SPNA_GAME_AGENTGENERATOR_H
-#define SPNA_GAME_AGENTGENERATOR_H
-
+#ifndef CA_AGENTGENERATOR_H
+#define CA_AGENTGENERATOR_H
 
 #include <cstdint>
 #include <string>
@@ -40,4 +35,4 @@ struct Agent {
     casedata Data;
 } agent;
 
-#endif //SPNA_GAME_AGENTGENERATOR_H
+#endif

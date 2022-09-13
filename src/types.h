@@ -1,26 +1,28 @@
-#ifndef __TYPES_H
-#define __TYPES_H
+#ifndef CA_TYPES_H
+#define CA_TYPES_H
 
-enum class Aptitude {
+#include <string>
+
+enum class Aptitude : int {
     Average   = -1,
     Good      =  0,
     Excellent =  1,
     Awesome   =  2,
 };
 
-enum class Difficulty {
+enum class Difficulty : int {
   Level1 = 1,
   Level2 = 2,
   Level3 = 3,
   Level4 = 4
 };
 
-enum class MiniGameType {
+enum class MiniGameType : int {
   Combat,
   Driving,
   Crypto,
   Elec,
-  Inactive,
+  Inactive = 0,
 };
 
 enum class GameScreen : int {
@@ -88,6 +90,32 @@ enum class ScreenExitCondition {
     Win = 1,
     Arrest,
     Shot,
+};
+
+enum class AtlasAlignment {
+  TEXT_R,
+  TEXT_L,
+  TEXT_x,  // TODO: remove
+};
+
+struct City {
+  std::string name;
+  std::string country;
+  int x;
+  int y;
+  AtlasAlignment align;
+};
+
+enum class Org {
+  TODO,  // TODO
+};
+
+enum class Image {
+  TODO,  // TODO
+};
+
+enum class Mastermind {
+  TODO,  // TODO
 };
 
 #endif

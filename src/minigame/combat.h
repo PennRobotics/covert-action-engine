@@ -1,7 +1,8 @@
-#include <iostream>
+#ifndef CA_COMBAT_H
+#define CA_COMBAT_H
+
 #include <vector>
 
-#include "../types.h"
 #include "minigame.h"
 
 
@@ -87,13 +88,20 @@ struct Furniture {
 
 class MiniGameCombat : public MiniGame {
 public:
-  MiniGameCombat();
+  MiniGameCombat(MiniGameCombat&) = delete;
+  void operator=(const MiniGameCombat) = delete;
+  static MiniGameCombat& Instance();
   int start(Difficulty level);
 protected:  // TODO?
   Inventory inv;
 private:
+  MiniGameCombat();
+  void operator delete(void*) {};
+
   void draw() override;
+  Difficulty getGameDifficulty() override;
   unsigned char max_guards;
   std::vector<Person> population;
 };
 
+#endif

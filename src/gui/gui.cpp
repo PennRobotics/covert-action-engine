@@ -92,11 +92,11 @@ void GUI::createGUI(GameScreen screen) {
       break;
     case GameScreen::Splash1:
       next_screen_tick = 2000 + SDL_GetTicks64();
-      textSurface = TTF_RenderText(ttf, titleText, CAColor::WHITE, CAColor::DKGREEN);
+      textSurface = TTF_RenderText_Solid(ttf, titleText, CAColor::WHITE);
       textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
       SDL_FreeSurface(textSurface);
       int w, h;
-///       TTF_SizeText(ttf, titleText, &w, &h);
+      TTF_SizeText(ttf, titleText, &w, &h);
       textRect.h = h;
       textRect.w = w;
       textRect.x = (SCREEN_WIDTH - w) >> 1;

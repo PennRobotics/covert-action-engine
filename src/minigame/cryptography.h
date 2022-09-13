@@ -7,6 +7,7 @@
 #include <numeric>
 #include <string>
 #include <memory>
+#include <random>
 
 #include "minigame.h"
 

@@ -2,7 +2,7 @@
 #define CA_CASEGENERATOR_H
 
 #include <fstream>
-//#include <string>
+#include <string>
 #include <vector>
 
 #define NUM_MISSION_TYPES 13

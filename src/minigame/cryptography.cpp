@@ -12,7 +12,11 @@ MiniGameCryptography::MiniGameCryptography() {
 
 #include "combat.h"
 int MiniGameCryptography::start(Difficulty level) {
-  MiniGameCombat::Instance().start(Difficulty::Level1);
+  MiniGameCombat::Instance().start(Difficulty::Level1);  // TODO-debug
+
+  std::random_device seeder;
+  std::mt19937 rng(seeder());
+
   letter_counts.fill(0);
   user_decipher.fill(' ');
 
@@ -21,13 +25,13 @@ int MiniGameCryptography::start(Difficulty level) {
   std::iota(ascii_base.begin(), ascii_base.end(), 'A');
   std::reverse(ascii_base.begin(), ascii_base.end());
 
-  std::srand(std::time(nullptr));  // RNG seed
+  std::srand(static_cast<unsigned int>(std::time(nullptr)));  // RNG seed
 
   int cipher_idx = 0;
   for (auto& c : cipher_key) {
     // Shuffle when the next cipher letter matches the original letter or last cipher letter will be Z.
     while (cipher_idx == ascii_base.back() - 'A' || ascii_base[0] == 'Z') {
-      std::random_shuffle(ascii_base.begin(), ascii_base.end());
+      std::shuffle(ascii_base.begin(), ascii_base.end(), rng);
     }
 
     c = ascii_base.back();  // Assign a cipher letter

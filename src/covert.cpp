@@ -98,6 +98,9 @@ int do_covert()
   bool quit = false;
   SDL_Event e;
   while(!quit) {
+    if (gui->refreshNow()) {
+      gui->updateGUI();
+    }
     while(SDL_PollEvent(&e) != 0) {
       if (e.type == SDL_QUIT)  { quit = true; }
     }

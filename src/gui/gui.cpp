@@ -6,6 +6,9 @@
 #include <SDL_image.h>
 #include "gui.h"
 
+extern std::unique_ptr<GameState> gameState;
+extern std::unique_ptr<GUI> gui;
+
 namespace CAColor {
     SDL_Color BLACK = { 0x00, 0x00, 0x00 };
     SDL_Color DKRED = { 0xAA, 0x00, 0x00 };
@@ -36,8 +39,8 @@ void GUI::initGUI() {
   TTF_Init();  // TODO: move to Font class
 
 //* TODO-debug
-//  const char* fname = "/usr/share/fonts/liberation-mono/LiberationMono-Regular.ttf";
-  const char* fname = "C:\\Windows\\Fonts\\LiberationMono-Regular.ttf";
+  const char* fname = "/usr/share/fonts/liberation-mono/LiberationMono-Regular.ttf";
+//  const char* fname = "C:\\Windows\\Fonts\\LiberationMono-Regular.ttf";
   ttf = TTF_OpenFont(fname, 16);
   if (ttf == NULL) {
     fprintf(stderr, "fonterr\n");
@@ -55,16 +58,31 @@ void GUI::initGUI() {
 ///   SDL_Palette* palette16 = SDL_AllocPalette(16);
 ///   SDL_SetPaletteColors(palette16, colorlist, 0, 16);
 
-  SDL_SetRenderDrawColor(renderer, 0, 170, 0, 255);  // TODO: use a colorlist element
-  SDL_RenderClear(renderer);
 
 }
+
+void GUI::setBGColor(SDL_Color c) {
+  SDL_SetRenderDrawColor(renderer, c.r, c.g, c.b, c.a);  // TODO: use a colorlist element
+  SDL_RenderClear(renderer);
+}
+
+
+bool GUI::refreshNow()  { return SDL_GetTicks64() >= next_screen_tick; }
+
+
+void GUI::updateGUI() {
+  gameState->currentScreen = gameState->getNextScreen();  // TODO: assign as part of fn  // TODO: can this just be gameState++;?
+  gui->createGUI(gameState->currentScreen);
+}
+
 
 void GUI::createGUI(GameScreen screen) {
 ///   std::vector<MenuChoice> choices;
   std::vector<std::string> choice_strings;
 
   const char* titleText = "Covert Action";
+  const char* titleTextB = "Credits";
+  int w, h;
 
   SDL_Surface* textSurface;
   SDL_Texture* textTexture;
@@ -91,12 +109,27 @@ void GUI::createGUI(GameScreen screen) {
       // TODO: After user chooses an item: load_game(n); where n = <0..4>
       break;
     case GameScreen::Splash1:
+      setBGColor(CAColor::GREEN);
       next_screen_tick = 2000 + SDL_GetTicks64();
       textSurface = TTF_RenderText_Solid(ttf, titleText, CAColor::WHITE);
       textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
       SDL_FreeSurface(textSurface);
-      int w, h;
       TTF_SizeText(ttf, titleText, &w, &h);
+      textRect.h = h;
+      textRect.w = w;
+      textRect.x = (SCREEN_WIDTH - w) >> 1;
+      textRect.y = 5;
+      SDL_RenderCopy(renderer, textTexture, nullptr, &textRect);
+      SDL_DestroyTexture(textTexture);
+      SDL_RenderPresent(renderer);
+      break;
+    case GameScreen::Splash2:
+      setBGColor(CAColor::BLUE);
+      next_screen_tick = 2000 + SDL_GetTicks64();
+      textSurface = TTF_RenderText_Solid(ttf, titleTextB, CAColor::WHITE);
+      textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
+      SDL_FreeSurface(textSurface);
+      TTF_SizeText(ttf, titleTextB, &w, &h);
       textRect.h = h;
       textRect.w = w;
       textRect.x = (SCREEN_WIDTH - w) >> 1;
@@ -118,7 +151,6 @@ void GUI::createGUI(GameScreen screen) {
       break;
 
       /* UNUSED CASES */
-    case GameScreen::Splash2:
     case GameScreen::CityMainMenu:
     case GameScreen::Chief:
     case GameScreen::CIAMainMenu:

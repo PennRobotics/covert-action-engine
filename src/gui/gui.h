@@ -16,6 +16,8 @@
 /// #include "point.h"
 /// #include "menu.h"
 
+#include "../gameplay/gamestate.h"
+
 
 class GUI {
 public:
@@ -28,8 +30,10 @@ public:
 ///     void createGUIMenu(std::vector<std::string> choice_strings, Point pt);
 ///     void createGUIMenu(std::vector<MenuChoice> choices, Point pt);
 ///     void createGUIText(std::string txt, Point pt);
+    void setBGColor(SDL_Color c);
     void updateGUI();
     void displayFrame();
+    bool refreshNow();
 ///   void /*TODO*/choiceS  electionCallback()  { NULL; }
 /// protected:
     SDL_Window* window = nullptr;

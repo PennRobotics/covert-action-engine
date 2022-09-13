@@ -6,7 +6,6 @@ int main() {
   FILE *picfile;
   picfile = fopen("LABS.PIC", "rb");
 
-  uint16_t count = 0;
   c = fgetc(picfile);
   printf("Looks %s\n", (c == 0x07 || c == 0x0F) ? "valid!" : "sketchy");
   fgetc(picfile);
@@ -17,6 +16,7 @@ int main() {
   c += (uint8_t)fgetc(picfile) << 8;
   printf("%d\n", c);
 
+  uint16_t count = 6;
   do {
     count++;
     c = fgetc(picfile);

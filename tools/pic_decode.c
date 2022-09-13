@@ -3,7 +3,7 @@
 int main() {
   int c;
   FILE *picfile;
-  picfile = fopen("LABS.PIC", "r");
+  picfile = fopen("LABS.PIC", "rb");
 
   int count = 0;
   do {

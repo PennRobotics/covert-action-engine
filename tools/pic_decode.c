@@ -20,10 +20,9 @@ int main() {
   do {
     count++;
     c = fgetc(picfile);
-    printf("%c", (char)c);
   } while (c != EOF);
 
-  printf("\n%d\n", count - 1);
+  printf("%d\n", count - 1);
 
   return 0;
 }

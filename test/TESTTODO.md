@@ -1,6 +1,6 @@
 # Test Plan
 
-- [ ] Create Menu
+- [ ] Create a menu
 - [ ] Load/Save random binary data
 - [ ] Load/Save actual game data
 - [ ] Each minigame type

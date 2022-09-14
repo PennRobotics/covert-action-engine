@@ -35,6 +35,9 @@ TODO
 - [ ] nextscreen is probably not needed. directly assign the next screen based on provided condition argument
 - [ ] generate *n* double agents
 - [ ] add remaining original font glyphs
+- [ ] remove debug-related inheritance (used for testing Singleton instantiation and access)
+  - [ ] **covert.cpp** should not include **combat.h**
+  - [ ] **cryptography.cpp** should not include **combat.h**
 
 ## Still Missing
 

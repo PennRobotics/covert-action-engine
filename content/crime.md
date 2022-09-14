@@ -9,19 +9,31 @@
 
 ### Participant entry
 
-    FF FF ?? 00 nn nn nn nn nn nn nn nn nn nn nn nn
+    FF FF xx 00 nn nn nn nn nn nn nn nn nn nn nn nn
     nn nn nn nn nn nn nn nn nn nn nn nn nn nn nn nn
-    nn nn nn nn ?? ?? mm ?? 00 00 ?? 00 rr 00 ?? 00
+    nn nn nn nn ?? ?? mm ?? 00 00 uu 00 rr 00 ?? 00
 
+- xx = exposure field (always 0 for mastermind)
 - nn = name of role (32 bytes)
 - mm = mastermind if 1
+- uu = clue type
 - rr = participant rank
+
+#### Clue Type
+- 00 vehicle
+- 01 weapon
+- 02 address
+- 03 airline ticket
+- 04 telegram
+- 05 money (hundreds USD)
+- 06 money (thousands USD)
+- 07 identity document
 
 ### Event entry (qty. ee)
 
     ll 00 00 00 cc 00 ss ss ss ss ss ss ss ss ss ss
     ss ss ss ss ss ss ss ss ss ss ss ss ss ss ss ss
-    ss ss ss ss ss ss dd tt bb xx vv vv
+    ss ss ss ss ss ss dd tt bb zz vv vv
 
 _These offsets need to be double-checked!_
 
@@ -31,7 +43,7 @@ _These offsets need to be double-checked!_
 - dd = Event destination/target/recipient
 - tt = Type
 - bb = Bitmask for received item (bit # = item #)
-- xx = Bitmask for destroyed item
+- zz = Bitmask for destroyed item
 - vv = Value of event. Multiply by 40 to get score.
 
 #### Types

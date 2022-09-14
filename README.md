@@ -29,3 +29,9 @@ I also have some stretch goals, but these are not active until the project is fu
 - improve the engine's state machine and case generators to be a more readable, script-driven format
 - fix bugs in the original program
 - localization (non-Latin): Arabic, Chinese, Hebrew, Japanese, Korean, Russian
+
+## Doxygen for inheritance diagrams
+
+```sh
+doxygen dox.cfg
+```

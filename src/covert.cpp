@@ -4,7 +4,7 @@
 
 #include "gameplay/gamestate.h"
 #include "gameplay/mainchar.h"
-#include "gui/gui.h"
+/// #include "gui/gui.h"
 
 #include <SDL_stdinc.h>
 #include <SDL.h>
@@ -12,46 +12,12 @@
 /// #include <SDL_mixer.h>
 /// #include <SDL_image.h>
 
+//TODO-debug
+#include <iostream>
+
 extern int case_gen();
+extern Agent agent_gen();
 
-
-/*
- * TODO:
- * - Main character statistics
- *   - Global Difficulty, Skill Modifiers
- *   - Character Level
- * - Room Generation (Combat)
- *   - Bug details
- *   - Password chart
- *   - Modification for ambush, break-out, etc.
- * - HQ
- *   - Intelligence Menu
- *   - Surveillance
- *   - Clues
- *   - Activity reports
- *   - Agent states
- * - Populate all possible messages (or generative phrases)
- * - Hotel
- *   - Gossip
- * - Building Exteriors
- * - Clock
- * - Airport
- *   - World map
- * - Mission
- *   - Participant organizational chart
- *   - Debrief
- *   - Scoring
- *   - Loading from data files
- *   - Save / Load functionality?
- * - User Interface
- *   - Menus, easily implemented
- *   - Graphics / Picture display / Fonts / # colors
- *   - Sound
- *   - Input devices
- * - Error Handling
- * - Cross-Platform
- * -   ... and much, much more!
- */
 
 // TODO: enforce variable casing
 // TODO: style guide
@@ -72,6 +38,7 @@ std::unique_ptr<GameState> gameState;
 /// MiniGameDriving& miniGameDriving()  { static MiniGameDriving mg {}; return mg; }
 /// MiniGameElectronics& miniGameElec()  { static MiniGameElectronics mg {}; return mg; }
 
+extern void play_music(MidiFile);
 
 static const SDL_Keycode mapDOWN = SDLK_DOWN;  // TODO: key mapping
 static const SDL_Keycode mapUP = SDLK_UP;
@@ -91,6 +58,10 @@ int do_covert()
   SDL_Init(SDL_INIT_EVERYTHING);
 
   play_music(MidiFile::Intro);
+
+  // TODO-debug
+  Agent q = agent_gen();
+  std::cout << q.Name << std::endl;
 
   bool quit = false;
   SDL_Event e;

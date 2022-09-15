@@ -1,9 +1,8 @@
 #ifndef CA_GAMESTATE_H
 #define CA_GAMESTATE_H
 
-#include <functional>
-#include <memory>
-#include "../types.h"
+/// #include <functional>
+/// #include <memory>
 #include "../gui/gui.h"
 
 class GameState : public GUI {

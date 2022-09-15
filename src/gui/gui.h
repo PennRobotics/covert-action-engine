@@ -32,7 +32,6 @@ public:
 ///     void createGUIMenu(std::vector<MenuChoice> choices, Point pt);
 ///     void createGUIText(std::string txt, Point pt);
     void setBGColor(SDL_Color c);
-    void guiUpdate();
     void displayFrame();
     bool guiShouldRefresh();
 ///   void /*TODO*/choiceS  electionCallback()  { NULL; }

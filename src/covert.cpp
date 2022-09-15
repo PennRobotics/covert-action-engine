@@ -96,7 +96,8 @@ int do_covert()
   SDL_Event e;
   while(!quit) {
     if ( gameState->guiShouldRefresh() ) {  // TODO-debug
-      gameState->guiUpdate();
+      gameState->getNextScreen();
+      gameState->createGUI(gameState->currentScreen);
     }
     while(SDL_PollEvent(&e) != 0) {
       switch (e.type) {
@@ -109,11 +110,6 @@ int do_covert()
         default:
           break;
       }  // e->type
-    }
-
-    if ( SDL_GetTicks64() > gameState->next_screen_tick/*TODO:switch to pqueue*/ ) {
-      gameState->getNextScreen();
-      gameState->guiUpdate();
     }
   }
 

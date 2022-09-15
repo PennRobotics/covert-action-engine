@@ -70,12 +70,6 @@ void GUI::setBGColor(SDL_Color c) {
 bool GUI::guiShouldRefresh()  { return dialogType == DialogType::INFOTIMER && SDL_GetTicks64() >= next_screen_tick; }
 
 
-void GUI::guiUpdate() {
-///   gameState->currentScreen = gameState->getNextScreen();  // TODO: assign as part of fn  // TODO: can this just be gameState++;?
-///   gui->createGUI(gameState->currentScreen);
-}
-
-
 void GUI::createGUI(GameScreen screen) {
 ///   std::vector<MenuChoice> choices;
   std::vector<std::string> choice_strings;

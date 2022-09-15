@@ -1,8 +1,5 @@
-# currently BROKEN
-
-(GUI no longer displays as a result of object restructuring)
-
-/# CAE
+CAE
+===
 
 *"CAE" is not a reference to a company name or engineering term.*
 

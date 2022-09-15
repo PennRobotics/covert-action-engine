@@ -1,6 +1,8 @@
-# CAE
+# currently BROKEN
 
-<font style="color:#FF0000">ok</font>
+(GUI no longer displays as a result of object restructuring)
+
+/# CAE
 
 *"CAE" is not a reference to a company name or engineering term.*
 

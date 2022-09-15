@@ -1,7 +1,24 @@
 #ifndef CA_TYPES_H
 #define CA_TYPES_H
 
+#include <functional>
 #include <string>
+
+struct GfxFns {
+    std::function<void()> drawBG = [](){},
+    std::function<void()> drawBox = [](){},
+    std::function<void()> drawText = [](){},
+    std::function<void()> drawImage = [](){},
+    std::function<void()> drawAnimation = [](){},
+    std::function<void()> drawSprite = [](){},
+};
+
+struct GUIFns {
+    std::function<void()> initGUI = [](){},
+    std::function<void()> shouldRefresh = [](){},
+    std::function<void()> updateGUI = [](){},
+    std::function<void()> destroyGUI = [](){},
+};
 
 enum class Aptitude : int {
     Average   = -1,

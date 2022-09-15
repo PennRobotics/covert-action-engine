@@ -11,6 +11,7 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 
 ## TODO
 
+- [ ] Change name of project but also all references e.g. BUILD.md URL
 - [ ] Documentation
 - [ ] Font
 - [ ] Sound

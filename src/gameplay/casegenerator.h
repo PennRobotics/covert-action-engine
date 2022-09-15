@@ -9,22 +9,62 @@
 
 int case_gen();
 
-typedef std::string Organization;
-
-
-class OClass {
-public:
-  OClass()  { this->org = "TODORG"; }
-protected:
-  std::string org;
+struct Organization {
+  std::string full_name;
+  std::string abrv;
+  char id_char;  // TODO: type
 };
+
+Organization ownOrg = Organization{"CIA", "CIA", '?'};
+
+static const std::array<Organization, 3> alliedOrg {
+  Organization{"KGB", "KGB", '!'},
+  Organization{"MI6", "MI6", '@'},
+  Organization{"Mossad", "Mossd", '#'},
+};  
+
+enum {
+  AMAZON_CARTEL = 'a',  // TODO: better this way?
+  COLUMBIAN_CARTEL = 'b',
+};
+
+static const std::array<Organization, 26> crimeOrg {
+  Organization{"Amazon Cartel", "?", 'a'},  // TODO: assign the correct letters and abbrevs
+  Organization{"Colombian Cartel", "?", COLUMBIAN_CARTEL},
+  Organization{"Death Squads", "?", 'c'},
+  Organization{"Dignity Battalion", "?", 'd'},
+  Organization{"Direct Action", "DActn", 'e'},
+  Organization{"FLN", "?", 'f'},
+  Organization{"Haitian Junta", "?", 'g'},
+  Organization{"IraqiSP", "IrqSP", 'h'},
+  Organization{"Jamaican Gang", "?", 'i'},
+  Organization{"Libyan Embassy", "LibEb", 'j'},
+  Organization{"M18", "M18", 'k'},
+  Organization{"Mafia", "Mafia", 'l'},
+  Organization{"Marxists", "Mrxst", 'm'},
+  Organization{"Mercenaries", "?", 'n'},
+  Organization{"Muslim Jihad", "?", 'o'},
+  Organization{"PIFA", "PIFA", 'p'},
+  Organization{"PFO", "PFO", 'q'},
+  Organization{"PRC", "PRC", 'r'},
+  Organization{"Red Army", "RArmy", 's'},
+  Organization{"Red Battalion", "RedBt", 't'},
+  Organization{"Red September", "?", 'u'},
+  Organization{"Revolutionary Guards", "?", 'v'},
+  Organization{"Shining Way", "?", 'w'},
+  Organization{"Stassi", "Stasi", 'x'},
+  Organization{"Tupamaros", "?", 'y'},
+  Organization{"UnionCorsique", "Union", 'z'},
+};   
 
 
 std::string generateName(Organization org) {
-  if (org == "TODORG") {
-    return std::string("Alice Todo");
+  switch (org.id_char) {
+    case COLUMBIAN_CARTEL:
+      return std::string("Anita Todo");
+    default:
+      return std::string("Mark Todo");  // TODO: will the compiler complain if this isn't at the function end?
   }
-  return std::string("Mark Todo");
 }
 
 

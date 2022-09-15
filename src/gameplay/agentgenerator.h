@@ -16,23 +16,23 @@ struct Face {
     uint8_t accessory_id;
 };
 
-typedef std::string callsign;
-typedef std::vector<uint8_t> city;  // TODO: change this type and all below
-typedef std::vector<uint8_t> org;
-typedef std::vector<uint8_t> rank;
-typedef std::vector<uint8_t> role;
-typedef std::vector<uint8_t> casedata;
+using callsign_t = std::string;
+using city_t = std::vector<uint8_t>;  // TODO: change this type and all below
+using org_t = std::vector<uint8_t>;
+using rank_t = std::vector<uint8_t>;
+using role_t = std::vector<uint8_t>;
+using casedata_t = std::vector<uint8_t>;
 
 struct Agent {
-    callsign Name;
+    callsign_t Name;
     Face Photo;
-    city Location;
-    org Affiliation;
-    rank Rank;
-    role Role;
-    city RecruitedIn;
+    city_t Location;
+    org_t Affiliation;
+    rank_t Rank;
+    role_t Role;
+    city_t RecruitedIn;
     Agent* RecruitedBy;
-    casedata Data;
+    casedata_t Data;
 } agent;
 
 #endif

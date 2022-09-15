@@ -1,5 +1,9 @@
 #include "loadsave.h"
 
+#include <SDL.h>
+
+#include <stdexcept>
+
 #define SAVE_FILE_LIST {"CV0.SVE", "CV1.SVE", "CV2.SVE", "CV3.SVE", "CV4.SVE"}
 
 std::vector<std::string> show_game_files() {

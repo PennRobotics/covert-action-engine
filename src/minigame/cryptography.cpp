@@ -10,10 +10,7 @@ MiniGameCryptography::MiniGameCryptography() {
 #endif
 }
 
-#include "combat.h"
 int MiniGameCryptography::start(Difficulty level) {
-  MiniGameCombat::Instance().start(Difficulty::Level1);  // TODO-debug
-
   std::random_device seeder;
   std::mt19937 rng(seeder());
 

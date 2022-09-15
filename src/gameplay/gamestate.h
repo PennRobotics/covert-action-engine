@@ -22,6 +22,7 @@ public:
   GameState& operator=(const GameState&) = delete;
 
   void initMiniGameClasses();
+  void startGUI();
 
   void enterMiniGame(MiniGameType miniGame);
   GameScreen getNextScreen(ScreenExitCondition condition = ScreenExitCondition::None);

@@ -7,6 +7,14 @@
 void GameState::initMiniGameClasses() {
 }
 
+
+void GameState::startGUI() {
+///   gui = std::make_unique<GUI>();
+///   gui->initGUI();
+///   gui->createGUI(gameState->currentScreen);
+}
+
+
 GameScreen GameState::getNextScreen(ScreenExitCondition condition) {
   GameScreen nextscreen;  // TODO: what is `nextscreen`?
   // TODO: possibly clear `comingFrom` and set an overrideable default

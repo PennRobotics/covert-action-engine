@@ -1,14 +1,17 @@
-#define SDL_MAIN_HANDLED
-#include <SDL_stdinc.h>
+#define SDL_MAIN_HANDLED  // TODO: needed?
 
+#include "covert.h"
+
+#include "gameplay/gamestate.h"
+#include "gui/gui.h"
+
+#include <SDL_stdinc.h>
 #include <SDL.h>
 /// #include <SDL_ttf.h>
 /// #include <SDL_mixer.h>
 /// #include <SDL_image.h>
 
 extern int case_gen();
-
-#include "covert.h"
 
 
 /*
@@ -61,7 +64,6 @@ extern int case_gen();
 
 // TODO
 std::unique_ptr<MainChar> mainChar;
-std::unique_ptr<GUI> gui;
 std::unique_ptr<GameState> gameState;
 
 /// MiniGameCombat& miniGameCombat()  { static MiniGameCombat mg {}; return mg; }
@@ -75,7 +77,6 @@ static const SDL_Keycode mapUP = SDLK_UP;
 
 void keyboard_handler(SDL_Event& e);
 
-#include "minigame/combat.h"
 int do_covert()
 {
   mainChar = std::make_unique<MainChar>();
@@ -83,28 +84,17 @@ int do_covert()
   gameState = std::make_unique<GameState>();
   gameState->initMiniGameClasses();
 
-///   miniGameCombat().start(Difficulty::Level1);
-///   miniGameCrypto().start(Difficulty::Level1);
-///   miniGameDriving().start(Difficulty::Level1);
-///   miniGameElec().start(Difficulty::Level1);
-
-///   MiniGameCombat::Instance().start(Difficulty::Level1);
-
   SDL_SetMainReady();
   SDL_Init(SDL_INIT_EVERYTHING);
-
-  gui = std::make_unique<GUI>();
-  gui->initGUI();
-  gui->createGUI(gameState->currentScreen);
 
   play_music();
 
   bool quit = false;
   SDL_Event e;
   while(!quit) {
-    if (gui->refreshNow()) {
-      gui->updateGUI();
-    }
+///     if (gui->refreshNow()) {  // TODO-debug
+///       gui->updateGUI();
+///     }
     while(SDL_PollEvent(&e) != 0) {
       switch (e.type) {
         case SDL_QUIT:
@@ -131,7 +121,9 @@ int do_covert()
 }
 
 void keyboard_handler(SDL_Event& e) {
-  switch (gui->dialogType) {
+  const DialogType debug = DialogType::INFO;  // TODO-debug
+//  switch (gui->dialogType) {  // TODO-debug
+  switch (debug) {  // TODO-debug
     case DialogType::INFOTIMER:
     case DialogType::INFO:
       switch (e.key.keysym.sym) {

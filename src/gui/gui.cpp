@@ -1,13 +1,11 @@
-//
-// Created by wright on 05/09/22.
-//
+// TODO: Anything at all graphics related needs to be in gfx.h. GUI should be independent of graphics. This would allow a console-only mode.
 
-#define SDL_MAIN_HANDLED
-#include <SDL_image.h>
+/// #define SDL_MAIN_HANDLED
+/// #include <SDL_image.h>
 #include "gui.h"
 
-extern std::unique_ptr<GameState> gameState;
-extern std::unique_ptr<GUI> gui;
+/// extern std::unique_ptr<GameState> gameState;
+std::unique_ptr<GUI> gui;
 
 namespace CAColor {
     SDL_Color BLACK = { 0x00, 0x00, 0x00 };
@@ -72,8 +70,8 @@ bool GUI::refreshNow()  { return dialogType == DialogType::INFOTIMER && SDL_GetT
 
 
 void GUI::updateGUI() {
-  gameState->currentScreen = gameState->getNextScreen();  // TODO: assign as part of fn  // TODO: can this just be gameState++;?
-  gui->createGUI(gameState->currentScreen);
+///   gameState->currentScreen = gameState->getNextScreen();  // TODO: assign as part of fn  // TODO: can this just be gameState++;?
+///   gui->createGUI(gameState->currentScreen);
 }
 
 

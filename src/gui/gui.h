@@ -6,8 +6,9 @@
 #define SCREEN_SCALE 5
 
 #include <array>
-#include <string>
+/// #include <string>
 #include <vector>
+#include <memory>
 
 #include <SDL_ttf.h>
 
@@ -17,8 +18,7 @@
 /// #include "point.h"
 /// #include "menu.h"
 
-#include "../gameplay/gamestate.h"
-
+/// #include "../gameplay/gamestate.h"
 
 class GUI {
 public:

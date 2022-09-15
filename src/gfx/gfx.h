@@ -1,7 +1,7 @@
 #ifndef CA_GFX_H
 #define CA_GFX_H
 
-#include <string>
+/// #include <string>
 
 #include <SDL_image.h>
 

@@ -7,7 +7,7 @@
 const char* fnames[] = { "test.wav", };
 static Mix_Chunk *wave[1];
 
-void play_music() {
+void play_music(MidiFile midi) {
   std::memset(wave, 0, sizeof(wave));
 
   Mix_OpenAudio(48000, AUDIO_S16SYS, 2, 512);  // TODO: determine why sporadic static noise occurs when set to 44100

@@ -1,20 +1,12 @@
 #ifndef CA_GAMESTATE_H
 #define CA_GAMESTATE_H
 
+#include <functional>
 #include <memory>
 #include "../types.h"
+#include "../gui/gui.h"
 
-/// #include "../minigame/combat.h"
-/// #include "../minigame/driving.h"
-/// #include "../minigame/cryptography.h"
-/// #include "../minigame/electronics.h"
-
-/// std::unique_ptr<MiniGameCombat> mGameCombat;
-/// std::unique_ptr<MiniGameDriving> mGameDriving;
-/// std::unique_ptr<MiniGameCryptography> mGameCrypto;
-/// std::unique_ptr<MiniGameElectronics> mGameElec;
-
-class GameState {
+class GameState : public GUI {
 public:
   GameState() = default;
   ~GameState() = default;
@@ -23,24 +15,19 @@ public:
 
   void initMiniGameClasses();
   void startGUI();
-
   void enterMiniGame(MiniGameType miniGame);
-  GameScreen getNextScreen(ScreenExitCondition condition = ScreenExitCondition::None);
+  void getNextScreen(ScreenExitCondition condition = ScreenExitCondition::None);
+  Difficulty getGameDifficulty();  // TODO
+  void setGameDifficulty(Difficulty gameDifficulty);
 
-/// protected:
-  bool inMiniGame;
   MiniGameType currentMiniGame { MiniGameType::Inactive };
   GameScreen currentScreen { GameScreen::Splash1 };
+  bool inMiniGame;
   bool isTwelve { true };
-  Difficulty getGameDifficulty();  // TODO
-
-/// private:
   int selectedChoice;
   OriginScreen comingFrom { OriginScreen::UNKNOWNORIGIN };
   int modalSequence { 0 };
   Difficulty gameDifficulty;
-
-  void setGameDifficulty(Difficulty gameDifficulty);
 };
 
 

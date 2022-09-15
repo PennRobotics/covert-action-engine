@@ -4,21 +4,25 @@
 #include <functional>
 #include <string>
 
-struct GfxFns {
-    std::function<void()> drawBG = [](){},
-    std::function<void()> drawBox = [](){},
-    std::function<void()> drawText = [](){},
-    std::function<void()> drawImage = [](){},
-    std::function<void()> drawAnimation = [](){},
-    std::function<void()> drawSprite = [](){},
+enum class DialogType {
+  INFOTIMER,
+  INFO,
+  MENU,
+  MINIMENU,
+  TEXTENTRY,
+  SKILLSELECT,
+  MINIGAME,
 };
 
-struct GUIFns {
-    std::function<void()> initGUI = [](){},
-    std::function<void()> shouldRefresh = [](){},
-    std::function<void()> updateGUI = [](){},
-    std::function<void()> destroyGUI = [](){},
+struct GfxFns {
+    std::function<void()> drawBG = [](){};
+    std::function<void()> drawBox = [](){};
+    std::function<void()> drawText = [](){};
+    std::function<void()> drawImage = [](){};
+    std::function<void()> drawAnimation = [](){};
+    std::function<void()> drawSprite = [](){};
 };
+
 
 enum class Aptitude : int {
     Average   = -1,
@@ -110,16 +114,6 @@ enum class ScreenExitCondition {
     Shot,
 };
 
-enum class DialogType {
-  INFOTIMER,
-  INFO,
-  MENU,
-  MINIMENU,
-  TEXTENTRY,
-  SKILLSELECT,
-  MINIGAME,
-};
-
 enum class AtlasAlignment {
   TEXT_R,
   TEXT_L,
@@ -144,6 +138,10 @@ enum class Image {
 
 enum class Mastermind {
   TODO,  // TODO
+};
+
+enum class MidiFile {
+  Intro,  // TODO
 };
 
 #endif

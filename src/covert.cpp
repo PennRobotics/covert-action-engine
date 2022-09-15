@@ -3,6 +3,7 @@
 #include "covert.h"
 
 #include "gameplay/gamestate.h"
+#include "gameplay/mainchar.h"
 #include "gui/gui.h"
 
 #include <SDL_stdinc.h>
@@ -83,7 +84,8 @@ int do_covert()
 
   gameState = std::make_unique<GameState>();
 ///   gameState->initMiniGameClasses();
-  gameState->guiInit();
+  gameState->initGUI();
+  gameState->createGUI(gameState->currentScreen);
 
   SDL_SetMainReady();
   SDL_Init(SDL_INIT_EVERYTHING);
@@ -109,11 +111,9 @@ int do_covert()
       }  // e->type
     }
 
-    if ( SDL_GetTicks64() > gameState->guiGetNextUpdateTick() ) {
-      gameState++;
-// TODO: try to operator overload:      
-//      gameState->currentScreen = gameState->getNextScreen();
-//      gameState->guiUpdateGUI(gameState->currentScreen);
+    if ( SDL_GetTicks64() > gameState->next_screen_tick/*TODO:switch to pqueue*/ ) {
+      gameState->getNextScreen();
+      gameState->guiUpdate();
     }
   }
 
@@ -124,7 +124,7 @@ int do_covert()
 }
 
 void keyboard_handler(SDL_Event& e) {
-  switch (gameState->guiGetDialogType) {
+  switch ( gameState->dialogType ) {
     case DialogType::INFOTIMER:
     case DialogType::INFO:
       switch (e.key.keysym.sym) {

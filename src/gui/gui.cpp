@@ -32,6 +32,7 @@ static const std::array<SDL_Color, 16> colors = {
     CAColor::DKGREY, CAColor::RED, CAColor::GREEN, CAColor::YELLOW,
     CAColor::BLUE, CAColor::MAGENTA, CAColor::CYAN, CAColor::WHITE };
 
+
 void GUI::initGUI() {
 ///   SDL_Init(SDL_INIT_EVERYTHING);  // all of the above subsystems
 
@@ -66,10 +67,10 @@ void GUI::setBGColor(SDL_Color c) {
 }
 
 
-bool GUI::refreshNow()  { return dialogType == DialogType::INFOTIMER && SDL_GetTicks64() >= next_screen_tick; }
+bool GUI::guiShouldRefresh()  { return dialogType == DialogType::INFOTIMER && SDL_GetTicks64() >= next_screen_tick; }
 
 
-void GUI::updateGUI() {
+void GUI::guiUpdate() {
 ///   gameState->currentScreen = gameState->getNextScreen();  // TODO: assign as part of fn  // TODO: can this just be gameState++;?
 ///   gui->createGUI(gameState->currentScreen);
 }

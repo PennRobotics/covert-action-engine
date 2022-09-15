@@ -32,12 +32,12 @@ public:
 ///     void createGUIMenu(std::vector<MenuChoice> choices, Point pt);
 ///     void createGUIText(std::string txt, Point pt);
     void setBGColor(SDL_Color c);
-    void updateGUI();
+    void guiUpdate();
     void displayFrame();
-    bool refreshNow();
+    bool guiShouldRefresh();
 ///   void /*TODO*/choiceS  electionCallback()  { NULL; }
 /// protected:
-    SDL_Window* window = nullptr;
+    SDL_Window* window;
     SDL_Renderer* renderer;
     SDL_Surface* screen_surface = nullptr;
 ///   /* TODO: surfaces and textures and etc. */

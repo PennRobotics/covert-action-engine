@@ -82,19 +82,20 @@ int do_covert()
   mainChar = std::make_unique<MainChar>();
 
   gameState = std::make_unique<GameState>();
-  gameState->initMiniGameClasses();
+///   gameState->initMiniGameClasses();
+  gameState->guiInit();
 
   SDL_SetMainReady();
   SDL_Init(SDL_INIT_EVERYTHING);
 
-  play_music();
+  play_music(MidiFile::Intro);
 
   bool quit = false;
   SDL_Event e;
   while(!quit) {
-///     if (gui->refreshNow()) {  // TODO-debug
-///       gui->updateGUI();
-///     }
+    if ( gameState->guiShouldRefresh() ) {  // TODO-debug
+      gameState->guiUpdate();
+    }
     while(SDL_PollEvent(&e) != 0) {
       switch (e.type) {
         case SDL_QUIT:
@@ -108,10 +109,12 @@ int do_covert()
       }  // e->type
     }
 
-///     if (SDL_GetTicks64() > gui->next_screen_tick) {
-///       gameState->currentScreen = gameState->getNextScreen();  // TODO: gameState++;
-///       gui->createGUI(gameState->currentScreen);  // TODO: remove argument
-///     }
+    if ( SDL_GetTicks64() > gameState->guiGetNextUpdateTick() ) {
+      gameState++;
+// TODO: try to operator overload:      
+//      gameState->currentScreen = gameState->getNextScreen();
+//      gameState->guiUpdateGUI(gameState->currentScreen);
+    }
   }
 
 ///   TTF_Quit();
@@ -121,9 +124,7 @@ int do_covert()
 }
 
 void keyboard_handler(SDL_Event& e) {
-  const DialogType debug = DialogType::INFO;  // TODO-debug
-//  switch (gui->dialogType) {  // TODO-debug
-  switch (debug) {  // TODO-debug
+  switch (gameState->guiGetDialogType) {
     case DialogType::INFOTIMER:
     case DialogType::INFO:
       switch (e.key.keysym.sym) {
@@ -159,5 +160,5 @@ void keyboard_handler(SDL_Event& e) {
     case DialogType::MINIGAME:
     default:
       break;
-  }  // gui->DialogType
+  }  // gameState->guiGetDialogType
 }

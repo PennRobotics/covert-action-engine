@@ -34,7 +34,7 @@ int main() {
   // */
 
   c = (uint8_t)fgetc(picfile);
-  if (c == 0x0B)  { DEBUG("Max LZW dict size is %d bits\n", c); }
+  if (c == 0x0B)  { DEBUG("Max LZW dict size is %d bits (%d entries)\n", c, 1<<c); }
 
   uint8_t lzwdict[1<<11];
   DEBUG("Allocated in lzwdict: %d\n", sizeof(lzwdict));

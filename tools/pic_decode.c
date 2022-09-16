@@ -50,20 +50,8 @@ int get9bits(FILE *fh) {
   return result;
 }
 
-int main() {
-  FILE *testfile;
-  testfile = fopen("ninetest.bin", "rb");
-  int x;
-  while (1) {
-    x = get9bits(testfile);
-    if (x == EOF)  { break; }
-    printf("%03X ", x);
-  }
-  printf("\n");
-  return 0;
-}
 
-int testmain() {
+int main() {
   int height = 200;
   int width = 320;
 
@@ -111,10 +99,9 @@ int testmain() {
     z++;
     c = get9bits(picfile);
     if (c == EOF)  { break; }
-    p = 0x21;
     if (c == 0x90) {
       // RLE Marker
-      /// c = fgetc(picfile);
+      c = fgetc(picfile);
       if (c == 0x00) {
         p = 0x90;
         printf("XX");
@@ -125,12 +112,12 @@ int testmain() {
         } while (c--);
       }
     } else if (c < 0x100) {
-      p = 0x21;
+      p = c;
       DRAWPIXELPAIR();
     } else {
-///       // TODO: decode
-///       // TODO: draw pixels
-///       printf("3.");
+      // TODO: decode
+      // TODO: draw pixels
+      printf("3.");
       DRAWPIXELPAIR();
     }
   }

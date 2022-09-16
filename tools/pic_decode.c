@@ -18,17 +18,52 @@ unsigned char* createBitmapInfoHeader(int height, int width);
 const int BYTES_PER_PIXEL = 3; /// red, green, & blue
 
 #define  DRAWPIXELPAIR()  do { \
-    image[i][j][2]=((c>>6)&1)*0xFF; \
-    image[i][j][1]=((c>>5)&1)*0xFF; \
-    image[i][j][0]=((c>>4)&1)*0xFF; \
-    image[i][++j][2]=((c>>2)&1)*0xFF; \
-    image[i][j][1]=((c>>1)&1)*0xFF; \
-    image[i][j][0]=(c&1)*0xFF; \
+    image[i][j][2]=((p>>6)&1)*0xFF; \
+    image[i][j][1]=((p>>5)&1)*0xFF; \
+    image[i][j][0]=((p>>4)&1)*0xFF; \
+    image[i][++j][2]=((p>>2)&1)*0xFF; \
+    image[i][j][1]=((p>>1)&1)*0xFF; \
+    image[i][j][0]=(p&1)*0xFF; \
     i+=(++j==width); \
     j=j%width; }  while(0)
 
 
+long queued_data = 0;
+int bits_in_queue = 0;
+int current_read = 0;
+
+int get9bits(FILE *fh) {
+  if (bits_in_queue == 0) {
+    queued_data = fgetc(fh);
+    if (queued_data == EOF)  { return EOF; }
+    bits_in_queue += 8;
+  }
+
+  current_read = fgetc(fh);
+  if (current_read == EOF)  { return EOF; }
+
+  queued_data += (current_read << bits_in_queue);
+  bits_in_queue--;
+
+  int result = queued_data & 0x1FF;
+  queued_data >>= 9;
+  return result;
+}
+
 int main() {
+  FILE *testfile;
+  testfile = fopen("ninetest.bin", "rb");
+  int x;
+  while (1) {
+    x = get9bits(testfile);
+    if (x == EOF)  { break; }
+    printf("%03X ", x);
+  }
+  printf("\n");
+  return 0;
+}
+
+int testmain() {
   int height = 200;
   int width = 320;
 
@@ -56,6 +91,7 @@ int main() {
   DEBUG("%d\n", height);
 
   unsigned char image[height][width][BYTES_PER_PIXEL];  // Dynamic assignment?? (TODO)
+  memset(image, 0, sizeof(image));
 
   for (int i = 0x6; i < 0x16; ++i)  { fgetc(picfile); }  // These bytes contain CGA info
   // */
@@ -69,28 +105,37 @@ int main() {
 
   int i = 0;
   int j = 0;
-  uint8_t pixel;
-  do {
-    c = fgetc(picfile);
+  uint8_t p;
+  int z = 0;
+  while(1) {
+    z++;
+    c = get9bits(picfile);
+    if (c == EOF)  { break; }
+    p = 0x21;
     if (c == 0x90) {
       // RLE Marker
-      c = fgetc(picfile);
+      /// c = fgetc(picfile);
       if (c == 0x00) {
-        pixel = 0x90;
+        p = 0x90;
+        printf("XX");
       } else {
         do {
+          printf(".");
           DRAWPIXELPAIR();
         } while (c--);
       }
     } else if (c < 0x100) {
+      p = 0x21;
       DRAWPIXELPAIR();
     } else {
-      // TODO: decode
-      // TODO: draw pixels
+///       // TODO: decode
+///       // TODO: draw pixels
+///       printf("3.");
       DRAWPIXELPAIR();
     }
-  } while (c != EOF);
+  }
 
+  DEBUG("%d\n", z);
   DEBUG("i (height) ended at %d\n", i);
   DEBUG("j (width) ended at %d\n", j);
 

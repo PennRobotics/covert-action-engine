@@ -87,21 +87,22 @@ int main() {
   c = (uint8_t)fgetc(picfile);
   if (c == 0x0B)  { DEBUG("Max LZW dict size is %d bits (%d entries)\n", c, 1<<c); }
 
-  uint8_t lzwdict[1<<11];
+  uint8_t lzwdict[(1<<11) - 0x100];
   DEBUG("Allocated in lzwdict: %d\n", sizeof(lzwdict));
-  memset(lzwdict, 0, sizeof(lzwdict));
+  memset(lzwdict, 0x0, sizeof(lzwdict));
 
   int i = 0;
   int j = 0;
   uint8_t p;
   int z = 0;
+  int dictsz = 0x100;
   while(1) {
     z++;
     c = get9bits(picfile);
     if (c == EOF)  { break; }
     if (c == 0x90) {
       // RLE Marker
-      c = fgetc(picfile);
+      c = get9bits(picfile);
       if (c == 0x00) {
         p = 0x90;
         printf("XX");
@@ -115,6 +116,9 @@ int main() {
       p = c;
       DRAWPIXELPAIR();
     } else {
+      if (c >= dictsz) {  // add to dict
+        // TODO TODO
+      }
       // TODO: decode
       // TODO: draw pixels
       printf("3.");

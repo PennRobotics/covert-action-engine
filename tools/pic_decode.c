@@ -91,6 +91,37 @@ int main() {
   DEBUG("Allocated in lzwdict: %d\n", sizeof(lzwdict));
   memset(lzwdict, 0x0, sizeof(lzwdict));
 
+  // TIFF 6.0 Specification
+  // ======================
+  // while ((Code = GetNextCode()) != EoiCode) {
+  //   if (Code == ClearCode) {
+  //     InitializeTable();
+  //     Code = GetNextCode();
+  //     if (Code == EoiCode)
+  //       break;
+  //     WriteString(StringFromCode(Code));
+  //     OldCode = Code;
+  //   }
+  //   else {
+  //     if (IsInTable(Code)) {
+  //       WriteString(StringFromCode(Code));
+  //       AddStringToTable(StringFromCode(OldCode)+FirstChar(StringFromCode(Code)));
+  //       OldCode = Code;
+  //     } else {
+  //       OutString = StringFromCode(OldCode) + FirstChar(StringFromCode(OldCode));
+  //       WriteString(OutString);
+  //       AddStringToTable(OutString);
+  //       OldCode = Code;
+  //     }
+  //   } /* end of not-ClearCode case */
+  // } /* end of while loop */
+  // ----------------------
+  // The table (probably) resets when full, so the "== ClearCode" section is likely unnecessary but does need to be
+  // replaced with the reset case. It is possible reads begin at 9 bits and need to be shifted to 10 at string #510 and
+  // to 11 at string #1022.
+
+
+
   int i = 0;
   int j = 0;
   uint8_t p;

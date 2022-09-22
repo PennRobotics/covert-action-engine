@@ -1,4 +1,4 @@
-// TODO: Anything at all graphics related needs to be in gfx.h. GUI should be independent of graphics. This would allow a console-only mode.
+// TODO: Anything at all non-graphics related needs to be in a ui.h. GUI should only be the graphics components of UI. This would allow a console-only mode.
 
 /// #define SDL_MAIN_HANDLED
 /// #include <SDL_image.h>

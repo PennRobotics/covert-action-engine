@@ -6,6 +6,95 @@ void GameState::initMiniGameClasses() {
 }
 
 
+/*! \mainpage
+ *
+ *  Screen State Transition Chart
+ *  \dot
+ *  digraph GameScreenFSM {
+ *    node [shape = ellipse];
+ *
+ *    Splash1;
+ *    Splash2;
+ *    BeginMenu;
+ *    NewCharacter;
+ *    Load;
+ *    SkillPractice;
+ *    HallOfFame;
+ *    SkillUpgrade;
+ *    Chief;
+ *    MastermindLineup;
+ *    ShowNewClues;
+ *    CIAContact;
+ *    CIAMainMenu;
+ *    CIAData;
+ *    Data;
+ *    ReviewClues;
+ *    ReviewSuspects;
+ *    ReviewInsideInfo;
+ *    ReviewNews;
+ *    ReviewOrg;
+ *    ReviewCity;
+ *    ReviewActivity;
+ *    CIAIntel;
+ *    CIABanned;
+ *    ReviewWiretaps;
+ *    CIASam;
+ *    CIACrypto;
+ *    CodedMessages;
+ *    CrimeChronology;
+ *    CityMainMenu;
+ *    Airport;
+ *    Hotel;
+ *    LoadSave;
+ *    BuildingExterior;
+ *    BuildingWatch;
+ *    Typewriter;
+ *    MiniGameCombatStart;
+ *    CombatArrest;
+ *    CombatRecover;
+ *    CombatCaptive;
+ *    MiniGameDrivingStart;
+ *    DrivingCarSelect;
+ *    MiniGameCryptoStart;
+ *    MiniGameElecStart;
+ *    GameExit;
+ *
+ *    node [shape = box3d];
+ *
+ *    Combat
+ *    Driving
+ *    Cryptography
+ *    Electronics
+ *
+ *    Splash1 -> Splash2 -> BeginMenu -> {NewCharacter, Load, SkillPractice, HallOfFame};
+ *    HallOfFame -> BeginMenu;
+ *    SkillPractice -> {MiniGameCombatStart, MiniGameDrivingStart, MiniGameCryptoStart, MiniGameElecStart};
+ *
+ *    BuildingExterior -> {MiniGameElecStart, MiniGameCombatStart, BuildingWatch, Data, CityMainMenu};
+ *    BuildingWatch -> {BuildingWatch, MiniGameDrivingStart, MiniGameElecStart, Data};
+ *
+ *    MiniGameCombatStart -> Combat;
+ *    Combat -> {CombatArrest, CombatRecover, CombatCaptive, CityMainMenu, BeginMenu};
+ *    MiniGameDrivingStart -> DrivingCarSelect -> Driving;
+ *    MiniGameCryptoStart -> Cryptography;
+ *    MiniGameElecStart -> Electronics;
+ *
+ *    NewCharacter -> SkillUpgrade -> Chief;
+ *    Chief -> MastermindLineup;
+ *    MastermindLineup -> Chief;
+ *    Chief -> ShowNewClues -> CIAContact -> {CIASam, CIAMainMenu};
+ *
+ *    CIAMainMenu -> {CIAData, CIAIntel, CIACrypto};
+ *    CIAData -> {ReviewClues, ReviewSuspects, ReviewInsideInfo, ReviewNews, ReviewOrg, ReviewCity, ReviewActivity};
+ *    Data -> {ReviewClues, ReviewSuspects, ReviewInsideInfo, ReviewNews, ReviewOrg, ReviewCity, ReviewActivity};
+ *
+ *    CityMainMenu -> {Airport, Hotel, CIAContact, CIABanned, BuildingObserve};
+ *    Hotel -> {CityMenu, Load, GameExit}
+ *  }
+ *  \enddot
+ */
+
+
 void GameState::getNextScreen(ScreenExitCondition condition) {
   // TODO: possibly clear `comingFrom` and set an overrideable default
 

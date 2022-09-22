@@ -78,7 +78,7 @@ enum class GameScreen : int {
   Airport,
   Hotel,
   LoadSave,
-  Building1,
+  Building1,  // TODO: replace with a single Building screen and condition for building type
   Building2,
   Building3,
   Building4,

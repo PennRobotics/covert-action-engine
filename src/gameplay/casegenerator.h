@@ -1,5 +1,4 @@
-#ifndef CA_CASEGENERATOR_H
-#define CA_CASEGENERATOR_H
+#pragma once
 
 #include <array>
 #include <fstream>
@@ -157,5 +156,3 @@ void Mission::printOverview() {
 }
 
 std::vector<Mission> missions;  // TODO: switch to a set type with name as key
-
-#endif

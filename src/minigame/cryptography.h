@@ -1,5 +1,4 @@
-#ifndef CA_CRYPTOGRAPHY_H
-#define CA_CRYPTOGRAPHY_H
+#pragma once
 
 #include <algorithm>
 #include <array>
@@ -27,5 +26,3 @@ private:
   std::array<char, 26> user_decipher{};
   std::array<unsigned int, 26> letter_counts;
 };
-
-#endif

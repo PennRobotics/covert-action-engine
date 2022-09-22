@@ -1,5 +1,4 @@
-#ifndef CA_DISCOVER_H
-#define CA_DISCOVER_H
+#pragma once
 
 /// #include "../gfx/gfx.h"
 
@@ -45,5 +44,3 @@ uint16_t get_org_score(auto/*TODO*/ org) {
   // TODO: iterator-sum for local scan data for each city in an org
   return -1;
 }
-
-#endif

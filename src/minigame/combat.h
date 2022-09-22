@@ -1,5 +1,4 @@
-#ifndef CA_COMBAT_H
-#define CA_COMBAT_H
+#pragma once
 
 #include <vector>
 
@@ -103,5 +102,3 @@ private:
   unsigned char max_guards;
   std::vector<Person> population;
 };
-
-#endif

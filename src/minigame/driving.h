@@ -1,5 +1,4 @@
-#ifndef CA_DRIVING_H
-#define CA_DRIVING_H
+#pragma once
 
 #include <random>
 
@@ -45,5 +44,3 @@ private:
   Car car3;
   unsigned char unseen_timer;
 };
-
-#endif

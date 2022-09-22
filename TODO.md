@@ -4,7 +4,7 @@ TODO
 ## Implementation
 
 - [ ] remove duplicated (and old) files from directory structure
-- [ ] `#pragma once` rather than include guards
+- [x] `#pragma once` rather than include guards
 - [ ] single random generator
 - [ ] only `#include` what is needed, and use a better order: own header, project header, third-party, system
 - [ ] nearly completely separate out the various subsystems so they can be selectively replaced e.g. GUI with console interaction

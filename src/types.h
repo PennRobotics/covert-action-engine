@@ -1,5 +1,4 @@
-#ifndef CA_TYPES_H
-#define CA_TYPES_H
+#pragma once
 
 #include <functional>
 #include <string>
@@ -171,5 +170,3 @@ struct Agent {
     Agent* RecruitedBy;
     casedata_t Data;
 };
-
-#endif

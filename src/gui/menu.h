@@ -1,5 +1,4 @@
-#ifndef CA_MENU_H
-#define CA_MENU_H
+#pragma once
 
 #include <string>
 #include <vector>
@@ -14,5 +13,3 @@ struct MenuChoice {
 };
 
 std::vector<MenuChoice> buildMenu(std::vector<std::string> choice_strings);
-
-#endif

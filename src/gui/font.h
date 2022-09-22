@@ -1,6 +1,3 @@
-#ifndef CA_FONT_H
-#define CA_FONT_H
+#pragma once
 
 int createFontTable();  // TODO: formerly main()
-
-#endif

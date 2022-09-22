@@ -1,5 +1,4 @@
-#ifndef CA_COVERT_H
-#define CA_COVERT_H
+#pragma once
 
 //#include <memory>
 //#include <string>  // TODO-debug
@@ -12,5 +11,3 @@
 #include <utility>
 
 int do_covert();
-
-#endif

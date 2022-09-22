@@ -1,5 +1,4 @@
-#ifndef CA_POINT_H
-#define CA_POINT_H
+#pragma once
 
 #include <SDL_rect.h>
 
@@ -17,6 +16,3 @@ public:
 /// private:
     SDL_Rect dstRect {0, 0, 320, 200};
 };
-
-
-#endif

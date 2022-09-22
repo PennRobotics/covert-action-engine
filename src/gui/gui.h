@@ -1,5 +1,4 @@
-#ifndef CA_GUI_H
-#define CA_GUI_H
+#pragma once
 
 #define SCREEN_WIDTH 320
 #define SCREEN_HEIGHT 200
@@ -45,7 +44,3 @@ public:
     Uint64 next_screen_tick;
     DialogType dialogType { DialogType::INFOTIMER };
 };
-
-
-
-#endif

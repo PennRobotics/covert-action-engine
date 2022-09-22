@@ -1,5 +1,4 @@
-#ifndef CA_GAMESTATE_H
-#define CA_GAMESTATE_H
+#pragma once
 
 /// #include <functional>
 /// #include <memory>
@@ -28,6 +27,3 @@ public:
   int modalSequence { 0 };
   Difficulty gameDifficulty;
 };
-
-
-#endif

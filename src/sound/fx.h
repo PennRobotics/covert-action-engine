@@ -1,12 +1,7 @@
-#ifndef CA_FX_H
-#define CA_FX_H
-
+#pragma once
 
 #include "sound.h"
 
 class Fx : Sound {
-
+	// TODO
 };
-
-
-#endif

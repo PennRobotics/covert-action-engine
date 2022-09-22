@@ -1,10 +1,5 @@
-#ifndef CA_SOUND_H
-#define CA_SOUND_H
-
+#pragma once
 
 class Sound {
-
+	// TODO
 };
-
-
-#endif

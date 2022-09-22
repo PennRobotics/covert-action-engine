@@ -1,5 +1,4 @@
-#ifndef CA_ELECTRONICS_H
-#define CA_ELECTRONICS_H
+#pragma once
 
 #include <random>
 //#include <utility>
@@ -49,5 +48,3 @@ private:
   std::array<std::array<bool, 6>, 8> crossing_matrix;
   Junc holding;
 };
-
-#endif

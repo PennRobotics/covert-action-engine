@@ -1,5 +1,4 @@
-#ifndef CA_MINIGAME_H
-#define CA_MINIGAME_H
+#pragma once
 
 #include "../types.h"
 
@@ -11,5 +10,3 @@ class MiniGame {
 protected:
     MiniGame() = default;
 };
-
-#endif

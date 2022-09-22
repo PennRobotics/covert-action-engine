@@ -1,10 +1,6 @@
-#ifndef CA_PICLOADER_H
-#define CA_PICLOADER_H
+#pragma once
 
 
 class PicLoader {
-
+	// TODO
 };
-
-
-#endif

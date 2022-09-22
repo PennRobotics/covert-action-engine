@@ -1,5 +1,4 @@
-#ifndef CA_LOADSAVE_H
-#define CA_LOADSAVE_H
+#pragma once
 
 #include <string>  // TODO-debug
 #include <vector>
@@ -14,5 +13,3 @@ std::vector<std::string> show_game_files();
 FileStatus load_game(int game_idx);
 
 int save_game(const char* fname);
-
-#endif

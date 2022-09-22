@@ -1,5 +1,4 @@
-#ifndef CA_MUSIC_H
-#define CA_MUSIC_H
+#pragma once
 
 #include "sound.h"
 #include "../types.h"
@@ -10,9 +9,7 @@
 
 
 class Music : Sound {
-
+	// TODO
 };
 
 void play_music(MidiFile midi);
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef CA_CASE_H
-#define CA_CASE_H
+#pragma once
 
 #include <vector>
 
@@ -23,5 +22,3 @@ class Europe : Theater  {};
 
 
 // TODO: distance between each city (xy-derived or table?)
-
-#endif

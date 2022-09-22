@@ -1,5 +1,4 @@
-#ifndef CA_MAINCHAR_H
-#define CA_MAINCHAR_H
+#pragma once
 
 class MainChar {
 public:
@@ -40,5 +39,3 @@ public:
     Aptitude apt_crypto {Aptitude::Average};
     Aptitude apt_elec {Aptitude::Average};
 };
-
-#endif

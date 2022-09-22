@@ -30,7 +30,9 @@ extern void play_music(MidiFile);
 static const SDL_Keycode mapDOWN = SDLK_DOWN;  // TODO: key mapping
 static const SDL_Keycode mapUP = SDLK_UP;
 
-void keyboard_handler(SDL_Event& e);
+namespace kbd {
+void handler(SDL_Event& e);
+}
 
 int do_covert()
 {
@@ -62,7 +64,7 @@ int do_covert()
           quit = true;
           break;
         case SDL_KEYDOWN:
-          keyboard_handler(e);
+          kbd::handler(e);
           break;
         default:
           break;
@@ -75,7 +77,8 @@ int do_covert()
   return EXIT_SUCCESS;
 }
 
-void keyboard_handler(SDL_Event& e) {
+namespace kbd {
+void handler(SDL_Event& e) {
   switch ( gameState->dialogType ) {
     case DialogType::INFOTIMER:
     case DialogType::INFO:
@@ -113,4 +116,5 @@ void keyboard_handler(SDL_Event& e) {
     default:
       break;
   }  // gameState->guiGetDialogType
+}
 }

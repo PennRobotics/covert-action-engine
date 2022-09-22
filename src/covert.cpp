@@ -8,9 +8,6 @@
 
 #include <SDL_stdinc.h>
 #include <SDL.h>
-/// #include <SDL_ttf.h>
-/// #include <SDL_mixer.h>
-/// #include <SDL_image.h>
 
 //TODO-debug
 #include <iostream>
@@ -24,19 +21,9 @@ extern Agent agent_gen();
 // TODO: consistency in spec (unique_ptr vs new)
 
 
-/// #include "minigame/combat.h"
-/// #include "minigame/cryptography.h"
-/// #include "minigame/driving.h"
-/// #include "minigame/electronics.h"
-
 // TODO
 std::unique_ptr<MainChar> mainChar;
 std::unique_ptr<GameState> gameState;
-
-/// MiniGameCombat& miniGameCombat()  { static MiniGameCombat mg {}; return mg; }
-/// MiniGameCryptography& miniGameCrypto()  { static MiniGameCryptography mg {}; return mg; }
-/// MiniGameDriving& miniGameDriving()  { static MiniGameDriving mg {}; return mg; }
-/// MiniGameElectronics& miniGameElec()  { static MiniGameElectronics mg {}; return mg; }
 
 extern void play_music(MidiFile);
 
@@ -50,7 +37,6 @@ int do_covert()
   mainChar = std::make_unique<MainChar>();
 
   gameState = std::make_unique<GameState>();
-///   gameState->initMiniGameClasses();
   gameState->initGUI();
   gameState->createGUI(gameState->currentScreen);
 
@@ -84,7 +70,6 @@ int do_covert()
     }
   }
 
-///   TTF_Quit();
   SDL_Quit();  // TODO: replace with each subsystem quit by ref?
 
   return EXIT_SUCCESS;

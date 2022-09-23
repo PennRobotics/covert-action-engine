@@ -9,7 +9,7 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 
 ## Original TODO list
 
-- [ ] Change name of project but also all references e.g. BUILD.md URL
+- [x] Change name of project but also all references e.g. BUILD.md URL
 - [ ] Documentation
 - [ ] Font
 - [ ] Sound
@@ -50,7 +50,7 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 
 ## Implementation
 
-- [ ] remove duplicated (and old) files from directory structure
+- [x] remove duplicated (and old) files from directory structure
 - [x] `#pragma once` rather than include guards
 - [ ] single random generator
 - [ ] only `#include` what is needed, and use a better order: own header, project header, third-party, system
@@ -60,6 +60,10 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 - [ ] fix access and scope (`static`, `public:`, `private:`, `protected:`)
 - [ ] think about `default`, `delete`, `override`/`virtual`
 - [ ] singletons? A good struct only called once?
+  - Need one and only one main character
+  - Need one and only one game state
+  - Need one and only one renderer/window
+  - Need one and only one keymap
 - [ ] does it make the most sense for the state machine and GUI generator to have a few functions with named arguments?
 - [ ] figure out why test sometimes throws a segmentation fault (custom types being cast? actual memory allocation/call order problems?)
 - [ ] does every function have a reasonable return type? reference vs move vs copy?
@@ -118,6 +122,7 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 - [ ] remove debug-related inheritance (used for testing Singleton instantiation and access)
   - [ ] **covert.cpp** should not include **combat.h**
   - [ ] **cryptography.cpp** should not include **combat.h**
+- [ ] Building1, Building2, etc. should just be Building with building type passed as an enum (simplifies menu creation and screen back-reference)
 
 ## Still Missing
 
@@ -130,3 +135,12 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 ## Ideas
 
 - [ ] add ENHANCEMENTS and FIX_ORIGINAL macros early, so these can be selectively (and independently) activated during build
+- [ ] (F. Bouthillier) Enable mouse/touch on electronics game
+- [ ] (F. Bouthillier) Add random NPC traffic to driving game
+- [ ] (F. Bouthillier) Allow driving as an interceptor as part of the __Tailed Victim__ role
+- [ ] (F. Bouthillier) NPCs have more than one health
+- [ ] (F. Bouthillier) Agents move inside house, possibly with bodyguard
+- [ ] (F. Bouthillier) Accurate mission movement of character e.g. agent gets up to leave for meeting, can be followed, meets with other agent, etc.
+- [ ] (F. Bouthillier) Better furniture layouts
+- [ ] (F. Bouthillier) Safecracking mini-minigame
+- [ ] (F. Bouthillier) Surveillance cameras inside buildings (interacts with Electronics skill)

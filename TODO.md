@@ -144,3 +144,4 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 - [ ] (F. Bouthillier) Better furniture layouts
 - [ ] (F. Bouthillier) Safecracking mini-minigame
 - [ ] (F. Bouthillier) Surveillance cameras inside buildings (interacts with Electronics skill)
+- [ ] (F. Bouthillier) Main character starts outside building and enters at own convenience

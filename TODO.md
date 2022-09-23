@@ -7,7 +7,15 @@ The plan is to develop tools for extracting package data from the original game 
 
 Bases for the development of the engine are the source codes for Freeciv, Master of Orion, C-Dogs SDL, SDLPop (Prince of Persia), cc94 and FreeCol (Colonization), Crown and Cutlass (Pirates!), GE211 by Jesse A. Tov, flat by Linus Probert, Cataclysm-DDA, SuperTux, and devilutionX. These other projects provide guidance in the form of folder/header/object structure, memory management, build technique, data manipulation, object interaction, and ideal layout of SDL calls.
 
-## Original TODO list
+# BEST IDENTIFIED BLOCKER-BREAKER
+
+  -- Create image/animation placeholder, enabled via preprocessor macro, to fill places where graphics will eventually go --
+
+# SECOND-BEST
+
+  -- Create the entire state machine that advances to the next default on any keypress --
+
+# TODO
 
 - [x] Change name of project but also all references e.g. BUILD.md URL
 - [ ] Documentation

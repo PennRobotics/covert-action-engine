@@ -80,36 +80,36 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 - [ ] NPC movement algorithms during minigames
 - [ ] what is randomizable in the face/body generator?
 - [ ] Main character statistics
-  - [ ] - Global Difficulty, Skill Modifiers
-  - [ ] - Character Level
+  - [ ] Global Difficulty, Skill Modifiers
+  - [ ] Character Level
 - [ ] Room Generation (Combat)
-  - [ ] - Bug details
-  - [ ] - Password chart
-  - [ ] - Modification for ambush, break-out, etc.
+  - [ ] Bug details
+  - [ ] Password chart
+  - [ ] Modification for ambush, break-out, etc.
 - [ ] HQ
-  - [ ] - Intelligence Menu
-  - [ ] - Surveillance
-  - [ ] - Clues
-  - [ ] - Activity reports
-  - [ ] - Agent states
+  - [ ] Intelligence Menu
+  - [ ] Surveillance
+  - [ ] Clues
+  - [ ] Activity reports
+  - [ ] Agent states
 - [ ] Populate all possible messages (or generative phrases)
 - [ ] Hotel
-  - [ ] - Gossip
+  - [ ] Gossip
 - [ ] Building Exteriors
 - [ ] Clock
 - [ ] Airport
-  - [ ] - World map
+  - [ ] World map
 - [ ] Mission
-  - [ ] - Participant organizational chart
-  - [ ] - Debrief
-  - [ ] - Scoring
-  - [ ] - Loading from data files
-  - [ ] - Save / Load functionality?
+  - [ ] Participant organizational chart
+  - [ ] Debrief
+  - [ ] Scoring
+  - [ ] Loading from data files
+  - [ ] Save / Load functionality?
 - [ ] User Interface
-  - [ ] - Menus, easily implemented
-  - [ ] - Graphics / Picture display / Fonts / # colors
-  - [ ] - Sound
-  - [ ] - Input devices
+  - [ ] Menus, easily implemented
+  - [ ] Graphics / Picture display / Fonts / # colors
+  - [ ] Sound
+  - [ ] Input devices
 - [ ] Error Handling
 - [ ] Cross-Platform
 

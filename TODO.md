@@ -134,7 +134,17 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 
 ## Ideas
 
+*These are some stretch goals, but these are not active until the project is fully on track to be complete*
+
+- [ ] localization: French, German, Italian, Portuguese, Spanish
 - [ ] add ENHANCEMENTS and FIX_ORIGINAL macros early, so these can be selectively (and independently) activated during build
+- [ ] creating a legal .ogg/.mp3 of the theme music using the original Roland MT-32 sounds (or a very convincing Soundfont with the original MIDI)
+- [ ] converting low-res sprites to vector representations or high-res, high-frame-rate sprites or model-generated objects
+- [ ] 3d display of airport scene
+- [ ] 3d replay of the 2d minigame (it would probably be cool to do realtime 3d, but this might not be playable because of visibility differences between 2d and 3d, and developing a renderer and models for 3d would be extremely time consuming.)
+- [ ] improve the engine's state machine and case generators to be a more readable, script-driven format
+- [ ] fix bugs in the original program
+- [ ] localization (non-Latin): Arabic, Chinese, Hebrew, Japanese, Korean, Russian
 - [ ] (F. Bouthillier) Enable mouse/touch on electronics game
 - [ ] (F. Bouthillier) Add random NPC traffic to driving game
 - [ ] (F. Bouthillier) Allow driving as an interceptor as part of the __Tailed Victim__ role

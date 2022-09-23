@@ -26,10 +26,10 @@ doxygen dox.cfg
 
 ## More Info
 
-[BUILD.md](BUILD.md) - contains commands for compiling from source
-[RANDOM.md](RANDOM.md) - assorted thoughts on content creation to avoid copyright/license violation
-[REFERENCES.md](REFERENCES.md) - links to resources useful during programming
-[TODO.md](TODO.md) - checklist of identified improvement areas
-[TESTTODO.md](./test/TESTTODO.md) - checklist of changes needed in the test suite
-[content/](./content/) - directory with summaries of each data storage method
+[BUILD.md](BUILD.md) - contains commands for compiling from source  
+[RANDOM.md](RANDOM.md) - assorted thoughts on content creation to avoid copyright/license violation  
+[REFERENCES.md](REFERENCES.md) - links to resources useful during programming  
+[TODO.md](TODO.md) - checklist of identified improvement areas  
+[TESTTODO.md](./test/TESTTODO.md) - checklist of changes needed in the test suite  
+[content/](./content/) - directory with summaries of each data storage method  
 

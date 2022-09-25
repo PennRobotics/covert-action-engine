@@ -31,7 +31,8 @@ static const SDL_Color colors[] = {
 };
 
 
-void GUI::initGUI() {
+void GUI::initGUI()
+{
   SDL_CreateWindowAndRenderer(SCREEN_SCALE * SCREEN_WIDTH, SCREEN_SCALE * SCREEN_HEIGHT, 0, &window, &renderer);
   SDL_RenderSetLogicalSize(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
 
@@ -50,19 +51,23 @@ void GUI::initGUI() {
   SDL_SetPaletteColors(palette16, colors, 0, 16);  // TODO: figure this out
 }
 
-void GUI::setBGColor(const SDL_Color c) {
+
+void GUI::setBGColor(const SDL_Color c)
+{
   SDL_SetRenderDrawColor(renderer, c.r, c.g, c.b, c.a);  // TODO: use a colorlist element
   SDL_RenderClear(renderer);
 }
 
 
-void GUI::fillBox(const SDL_Color c, const SDL_Rect r) {
+void GUI::fillBox(const SDL_Color c, const SDL_Rect r)
+{
   SDL_SetRenderDrawColor(renderer, c.r, c.g, c.b, SDL_ALPHA_OPAQUE);
   SDL_RenderFillRect(renderer, &r);
 }
 
 
-void GUI::drawBox(const SDL_Color c, const SDL_Rect r) {
+void GUI::drawBox(const SDL_Color c, const SDL_Rect r)
+{
   SDL_SetRenderDrawColor(renderer, c.r, c.g, c.b, SDL_ALPHA_OPAQUE);
   SDL_RenderDrawRect(renderer, &r);
 }
@@ -87,6 +92,7 @@ void GUI::drawText(const SDL_Color c, const char* txt, const SDL_Point pt)
   SDL_DestroyTexture(textTexture);
 }
 
+
 void GUI::centerText(const SDL_Color c, const char* txt, const int y)
 {
   int w, x;
@@ -98,7 +104,8 @@ void GUI::centerText(const SDL_Color c, const char* txt, const int y)
 bool GUI::guiShouldRefresh()  { return dialogType == DialogType::INFOTIMER && SDL_GetTicks64() >= next_screen_tick; }
 
 
-void GUI::createGUI(GameScreen screen) {
+void GUI::createGUI(GameScreen screen)
+{
   switch (screen) {
     case GameScreen::Building1:
     building_common:
@@ -192,7 +199,9 @@ void GUI::createGUI(GameScreen screen) {
   }
 }
 
-void GUI::createGUIMenu(std::vector<std::string> choice_strings, const SDL_Rect r0) {
+
+void GUI::createGUIMenu(std::vector<std::string> choice_strings, const SDL_Rect r0)
+{
   // TODO: highlight current selection
   SDL_Point pt { r0.x , r0.y };
   int i = 0;  // TODO: replace with choice type containing "selected" flag
@@ -206,6 +215,7 @@ void GUI::createGUIMenu(std::vector<std::string> choice_strings, const SDL_Rect 
   }
 }
 
+
 /*
 void GUI::createGUIMenu(const std::vector<MenuChoice> choices, Point pt) {
   for (auto& choice : choices) {
@@ -213,6 +223,7 @@ void GUI::createGUIMenu(const std::vector<MenuChoice> choices, Point pt) {
   }
 }
 // */
+
 
 #ifdef PLACEHOLDERS
 #include <iostream>

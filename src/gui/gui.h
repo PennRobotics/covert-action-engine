@@ -28,7 +28,7 @@ public:
     GUI& operator=(const GUI&) = delete;
     void initGUI();
     void createGUI(GameScreen screen);
-///     void createGUIMenu(std::vector<std::string> choice_strings, Point pt);
+    void createGUIMenu(std::vector<std::string> choice_strings, SDL_Point pt);
 ///     void createGUIMenu(std::vector<MenuChoice> choices, Point pt);
 ///     void createGUIText(std::string txt, Point pt);
     void setBGColor(const SDL_Color c);

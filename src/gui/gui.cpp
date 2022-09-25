@@ -89,6 +89,7 @@ void GUI::centerText(const SDL_Color c, const char* txt, const int y) {
 bool GUI::guiShouldRefresh()  { return dialogType == DialogType::INFOTIMER && SDL_GetTicks64() >= next_screen_tick; }
 
 
+#include <iostream>  // TODO-debug
 void GUI::createGUI(GameScreen screen) {
 ///   std::vector<MenuChoice> choices;
   std::vector<std::string> choice_strings;
@@ -101,6 +102,7 @@ void GUI::createGUI(GameScreen screen) {
   SDL_Texture* textTexture;
   SDL_Rect textRect;
   SDL_Rect xy;
+  SDL_Point sxy;
   switch (screen) {
     case GameScreen::Building1:
     building_common:
@@ -123,18 +125,25 @@ void GUI::createGUI(GameScreen screen) {
       break;
     case GameScreen::Splash1:
       setBGColor(CAColor::GREEN);
-      next_screen_tick = 2000 + SDL_GetTicks64();
+      next_screen_tick = 200 + SDL_GetTicks64();
       centerText(CAColor::WHITE, titleText, 5);
       SDL_RenderPresent(renderer);
       break;
     case GameScreen::Splash2:
       setBGColor(CAColor::BLUE);
-      next_screen_tick = 2000 + SDL_GetTicks64();
+      next_screen_tick = 200 + SDL_GetTicks64();
       centerText(CAColor::WHITE, titleTextB, 5);
       SDL_RenderPresent(renderer);
       break;
     case GameScreen::BeginMenu:
+      std::cout << "BM\n";
+      setBGColor(CAColor::BLACK);
       dialogType = DialogType::MINIMENU;
+      sxy = {40, 120};
+      createGUIMenu(
+          {"Review Clues", "Review Suspects", "Inside Information", "News Bulletins", "Organization Summary",
+           "City Summary", "Activity Reports"}, sxy);
+      SDL_RenderPresent(renderer);
       // TODO: Create menu
       break;
     case GameScreen::NewCharacter:
@@ -193,13 +202,17 @@ void GUI::createGUI(GameScreen screen) {
   }
 }
 
-/*
-void GUI::createGUIMenu(std::vector<std::string> choice_strings, Point pt) {
+void GUI::createGUIMenu(std::vector<std::string> choice_strings, const SDL_Point pt0) {
+  SDL_Point pt { pt0 };
   for (auto& choice : choice_strings) {
-    createGUIText(choice, pt++);
+    centerText(CAColor::WHITE, choice.c_str(), pt.y);
+    // TODO-debug:
+    /// createGUIText(choice, pt);
+    pt.y += 8;
   }
 }
 
+/*
 void GUI::createGUIMenu(const std::vector<MenuChoice> choices, Point pt) {
   for (auto& choice : choices) {
     createGUIText(choice.txt, pt++);

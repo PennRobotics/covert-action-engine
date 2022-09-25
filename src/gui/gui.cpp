@@ -61,9 +61,28 @@ void GUI::initGUI() {
 
 }
 
-void GUI::setBGColor(SDL_Color c) {
+void GUI::setBGColor(const SDL_Color c) {
   SDL_SetRenderDrawColor(renderer, c.r, c.g, c.b, c.a);  // TODO: use a colorlist element
   SDL_RenderClear(renderer);
+}
+
+
+void GUI::centerText(const SDL_Color c, const char* txt, const int y) {
+  int w, h;
+  SDL_Surface* textSurface;
+  SDL_Texture* textTexture;
+  SDL_Rect textRect;
+
+  textSurface = TTF_RenderText_Solid(ttf, txt, c);
+  textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
+  SDL_FreeSurface(textSurface);
+  TTF_SizeText(ttf, txt, &w, &h);
+  textRect.h = h;
+  textRect.w = w;
+  textRect.x = (SCREEN_WIDTH - w) >> 1;
+  textRect.y = y;
+  SDL_RenderCopy(renderer, textTexture, nullptr, &textRect);
+  SDL_DestroyTexture(textTexture);
 }
 
 
@@ -105,31 +124,13 @@ void GUI::createGUI(GameScreen screen) {
     case GameScreen::Splash1:
       setBGColor(CAColor::GREEN);
       next_screen_tick = 2000 + SDL_GetTicks64();
-      textSurface = TTF_RenderText_Solid(ttf, titleText, CAColor::WHITE);
-      textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
-      SDL_FreeSurface(textSurface);
-      TTF_SizeText(ttf, titleText, &w, &h);
-      textRect.h = h;
-      textRect.w = w;
-      textRect.x = (SCREEN_WIDTH - w) >> 1;
-      textRect.y = 5;
-      SDL_RenderCopy(renderer, textTexture, nullptr, &textRect);
-      SDL_DestroyTexture(textTexture);
+      centerText(CAColor::WHITE, titleText, 5);
       SDL_RenderPresent(renderer);
       break;
     case GameScreen::Splash2:
       setBGColor(CAColor::BLUE);
       next_screen_tick = 2000 + SDL_GetTicks64();
-      textSurface = TTF_RenderText_Solid(ttf, titleTextB, CAColor::WHITE);
-      textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
-      SDL_FreeSurface(textSurface);
-      TTF_SizeText(ttf, titleTextB, &w, &h);
-      textRect.h = h;
-      textRect.w = w;
-      textRect.x = (SCREEN_WIDTH - w) >> 1;
-      textRect.y = 5;
-      SDL_RenderCopy(renderer, textTexture, nullptr, &textRect);
-      SDL_DestroyTexture(textTexture);
+      centerText(CAColor::WHITE, titleTextB, 5);
       SDL_RenderPresent(renderer);
       break;
     case GameScreen::BeginMenu:

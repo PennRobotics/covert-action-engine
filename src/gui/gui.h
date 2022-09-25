@@ -31,7 +31,8 @@ public:
 ///     void createGUIMenu(std::vector<std::string> choice_strings, Point pt);
 ///     void createGUIMenu(std::vector<MenuChoice> choices, Point pt);
 ///     void createGUIText(std::string txt, Point pt);
-    void setBGColor(SDL_Color c);
+    void setBGColor(const SDL_Color c);
+    void centerText(const SDL_Color c, const char* txt, const int y);
     void displayFrame();
     bool guiShouldRefresh();
 #ifdef PLACEHOLDERS

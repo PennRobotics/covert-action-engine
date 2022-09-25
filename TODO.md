@@ -9,11 +9,15 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 
 # BEST IDENTIFIED BLOCKER-BREAKER
 
-  -- Preprocessor macro PLACEHOLDERS should replace all graphics calls --
-
-# SECOND-BEST
-
   -- Create the entire state machine that advances to the next default on any keypress --
+
+# SECOND-BEST BLOCKER-BREAKER
+
+  -- Display an up-down menu, allow selection, enter/escape returns correct index --
+
+# THIRD PRIORITY
+
+  -- Preprocessor macro PLACEHOLDERS should replace all graphics calls --
 
 # TODO
 

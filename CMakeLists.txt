@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 3.9)
 project(covert-action-engine VERSION 0.1.5)
 
+set(CMAKE_VERBOSE_MAKEFILE on)
+
+set(CMAKE_CXX_FLAGS_DEBUG "-Wall -DPLACEHOLDERS")
+set(CMAKE_CXX_FLAGS_RELEASE "-Wall")
+
 set(CMAKE_CXX_STANDARD 20)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules)

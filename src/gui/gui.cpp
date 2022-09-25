@@ -1,10 +1,7 @@
 // TODO: Anything at all non-graphics related needs to be in a ui.h. GUI should only be the graphics components of UI. This would allow a console-only mode.
 
-/// #define SDL_MAIN_HANDLED
-/// #include <SDL_image.h>
 #include "gui.h"
 
-/// extern std::unique_ptr<GameState> gameState;
 std::unique_ptr<GUI> gui;
 
 namespace CAColor {
@@ -26,23 +23,21 @@ namespace CAColor {
     SDL_Color WHITE = { 0xFF, 0xFF, 0xFF };
 }
 
-static const std::array<SDL_Color, 16> colors = {
+static const SDL_Color colors[] = {
     CAColor::BLACK, CAColor::DKRED, CAColor::DKGREEN, CAColor::BROWN,
     CAColor::DKBLUE, CAColor::BLACK, CAColor::DKCYAN, CAColor::GREY,
     CAColor::DKGREY, CAColor::RED, CAColor::GREEN, CAColor::YELLOW,
-    CAColor::BLUE, CAColor::MAGENTA, CAColor::CYAN, CAColor::WHITE };
+    CAColor::BLUE, CAColor::MAGENTA, CAColor::CYAN, CAColor::WHITE
+};
 
 
 void GUI::initGUI() {
-///   SDL_Init(SDL_INIT_EVERYTHING);  // all of the above subsystems
-
   SDL_CreateWindowAndRenderer(SCREEN_SCALE * SCREEN_WIDTH, SCREEN_SCALE * SCREEN_HEIGHT, 0, &window, &renderer);
-///   SDL_RenderSetScale(renderer, SCREEN_SCALE, SCREEN_SCALE);
   SDL_RenderSetLogicalSize(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
 
   TTF_Init();  // TODO: move to Font class
 
-//* TODO-debug
+// TODO
   const char* fname = "/usr/share/fonts/liberation-mono/LiberationMono-Regular.ttf";
 //  const char* fname = "C:\\Windows\\Fonts\\LiberationMono-Regular.ttf";
   ttf = TTF_OpenFont(fname, 8);
@@ -50,15 +45,9 @@ void GUI::initGUI() {
     fprintf(stderr, "fonterr\n");
     exit(EXIT_FAILURE);
   }
-// */
 
-  /*
-// */
-
-///   SDL_Palette* palette16 = SDL_AllocPalette(16);
-///   SDL_SetPaletteColors(palette16, colorlist, 0, 16);
-
-
+  SDL_Palette* palette16 = SDL_AllocPalette(16);
+  SDL_SetPaletteColors(palette16, colors, 0, 16);  // TODO: figure this out
 }
 
 void GUI::setBGColor(const SDL_Color c) {
@@ -91,22 +80,9 @@ bool GUI::guiShouldRefresh()  { return dialogType == DialogType::INFOTIMER && SD
 
 #include <iostream>  // TODO-debug
 void GUI::createGUI(GameScreen screen) {
-///   std::vector<MenuChoice> choices;
-  std::vector<std::string> choice_strings;
-
-  const char* titleText = "Covert Action";
-  const char* titleTextB = "Credits";
-  int w, h;
-
-  SDL_Surface* textSurface;
-  SDL_Texture* textTexture;
-  SDL_Rect textRect;
-  SDL_Rect xy;
-  SDL_Point sxy;
   switch (screen) {
     case GameScreen::Building1:
     building_common:
-      xy = {40, 120};
 ///       createGUIMenu(buildMenu({"Place wiretap", "Break into building", "Watch the building", "Check Data", "Leave"}), Point(xy));
       break;
     case GameScreen::Building2:
@@ -119,30 +95,29 @@ void GUI::createGUI(GameScreen screen) {
       goto building_common;
     case GameScreen::LoadSave:
 ///       choice_strings = show_game_files();  // TODO-debug
-      xy = {40, 120};
 ///       createGUIMenu(choice_strings, Point(xy));
       // TODO: After user chooses an item: load_game(n); where n = <0..4>
       break;
     case GameScreen::Splash1:
       setBGColor(CAColor::GREEN);
       next_screen_tick = 200 + SDL_GetTicks64();
-      centerText(CAColor::WHITE, titleText, 5);
+      centerText(CAColor::WHITE, "Covert Action", 5);
       SDL_RenderPresent(renderer);
       break;
     case GameScreen::Splash2:
       setBGColor(CAColor::BLUE);
       next_screen_tick = 200 + SDL_GetTicks64();
-      centerText(CAColor::WHITE, titleTextB, 5);
+      centerText(CAColor::WHITE, "Credits", 5);
       SDL_RenderPresent(renderer);
       break;
     case GameScreen::BeginMenu:
       std::cout << "BM\n";
       setBGColor(CAColor::BLACK);
       dialogType = DialogType::MINIMENU;
-      sxy = {40, 120};
+      // drawBox(
       createGUIMenu(
-          {"Review Clues", "Review Suspects", "Inside Information", "News Bulletins", "Organization Summary",
-           "City Summary", "Activity Reports"}, sxy);
+          {"New Character", "Review Suspects", "Inside Information", "News Bulletins", "Organization Summary",
+           "City Summary", "Activity Reports"}, SDL_Point(40, 120));
       SDL_RenderPresent(renderer);
       // TODO: Create menu
       break;
@@ -162,13 +137,11 @@ void GUI::createGUI(GameScreen screen) {
       dialogType = DialogType::INFO;
       break;
     case GameScreen::CIAData:
-      xy = {40, 120};
 ///       createGUIMenu(buildMenu(
 ///           {"Review Clues", "Review Suspects", "Inside Information", "News Bulletins", "Organization Summary",
 ///            "City Summary", "Activity Reports"}), xy);
       break;
     case GameScreen::CIAIntel:
-      xy = {40, 120};
 ///       createGUIMenu(
 ///           buildMenu({"Local Scan", "International Scan", "Active Wire Taps", "Accuse Double Agent", "Check with Sam"}), xy);
       break;

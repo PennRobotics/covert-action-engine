@@ -56,6 +56,7 @@ void GUI::setBGColor(const SDL_Color c) {
 }
 
 
+#include <iostream>  // TODO-debug
 void GUI::centerText(const SDL_Color c, const char* txt, const int y) {
   int w, h;
   SDL_Surface* textSurface;
@@ -70,6 +71,7 @@ void GUI::centerText(const SDL_Color c, const char* txt, const int y) {
   textRect.w = w;
   textRect.x = (SCREEN_WIDTH - w) >> 1;
   textRect.y = y;
+  std::cout << "(h" << h << ", w" << w << ") " << textRect.x << ", " << y << "\n";
   SDL_RenderCopy(renderer, textTexture, nullptr, &textRect);
   SDL_DestroyTexture(textTexture);
 }
@@ -78,7 +80,6 @@ void GUI::centerText(const SDL_Color c, const char* txt, const int y) {
 bool GUI::guiShouldRefresh()  { return dialogType == DialogType::INFOTIMER && SDL_GetTicks64() >= next_screen_tick; }
 
 
-#include <iostream>  // TODO-debug
 void GUI::createGUI(GameScreen screen) {
   switch (screen) {
     case GameScreen::Building1:
@@ -114,10 +115,10 @@ void GUI::createGUI(GameScreen screen) {
       std::cout << "BM\n";
       setBGColor(CAColor::BLACK);
       dialogType = DialogType::MINIMENU;
-      // drawBox(
+      // drawBox(SDL_Rect(x, y, w, h));
+      // createGUIText(CAColor::WHITE, "Do you want to...", SDL_Point(x, y));
       createGUIMenu(
-          {"New Character", "Review Suspects", "Inside Information", "News Bulletins", "Organization Summary",
-           "City Summary", "Activity Reports"}, SDL_Point(40, 120));
+          {" Create a New Character", " Load a Saved Game", " Practice a skill", " Review Hall of Fame"}, SDL_Point(40, 120));
       SDL_RenderPresent(renderer);
       // TODO: Create menu
       break;

@@ -32,6 +32,7 @@ public:
 ///     void createGUIMenu(std::vector<MenuChoice> choices, Point pt);
 ///     void createGUIText(std::string txt, Point pt);
     void setBGColor(const SDL_Color c);
+    void drawBox(const SDL_Color c, const SDL_Rect r);
     void centerText(const SDL_Color c, const char* txt, const int y);
     void displayFrame();
     bool guiShouldRefresh();

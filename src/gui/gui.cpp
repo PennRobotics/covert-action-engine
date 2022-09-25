@@ -56,6 +56,12 @@ void GUI::setBGColor(const SDL_Color c) {
 }
 
 
+void GUI::drawBox(const SDL_Color c, const SDL_Rect r) {
+  SDL_SetRenderDrawColor(renderer, c.r, c.g, c.b, SDL_ALPHA_OPAQUE);
+  SDL_RenderDrawRect(renderer, &r);
+}
+
+
 #include <iostream>  // TODO-debug
 void GUI::centerText(const SDL_Color c, const char* txt, const int y) {
   int w, h;
@@ -115,10 +121,9 @@ void GUI::createGUI(GameScreen screen) {
       std::cout << "BM\n";
       setBGColor(CAColor::BLACK);
       dialogType = DialogType::MINIMENU;
-      // drawBox(SDL_Rect(x, y, w, h));
-      // createGUIText(CAColor::WHITE, "Do you want to...", SDL_Point(x, y));
-      createGUIMenu(
-          {" Create a New Character", " Load a Saved Game", " Practice a skill", " Review Hall of Fame"}, SDL_Point(40, 120));
+      drawBox(CAColor::WHITE, SDL_Rect(97, 76, 125, 46));
+      // createGUIText(CAColor::WHITE, "Do you want to...", SDL_Point(102, 80));
+      createGUIMenu({" Create a New Character", " Load a Saved Game", " Practice a skill", " Review Hall of Fame"}, SDL_Point(102, 88));
       SDL_RenderPresent(renderer);
       // TODO: Create menu
       break;
@@ -181,7 +186,7 @@ void GUI::createGUIMenu(std::vector<std::string> choice_strings, const SDL_Point
   for (auto& choice : choice_strings) {
     centerText(CAColor::WHITE, choice.c_str(), pt.y);
     // TODO-debug:
-    /// createGUIText(choice, pt);
+    /// drawText(CAColor::GREY, choice.c_str(), pt);
     pt.y += 8;
   }
 }

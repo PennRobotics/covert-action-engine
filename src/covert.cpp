@@ -4,13 +4,9 @@
 
 #include "gameplay/gamestate.h"
 #include "gameplay/mainchar.h"
-/// #include "gui/gui.h"
 
 #include <SDL_stdinc.h>
 #include <SDL.h>
-
-//TODO-debug
-#include <iostream>
 
 extern int case_gen();
 extern Agent agent_gen();
@@ -21,7 +17,6 @@ extern Agent agent_gen();
 // TODO: consistency in spec (unique_ptr vs new)
 
 
-// TODO
 std::unique_ptr<MainChar> mainChar;
 std::unique_ptr<GameState> gameState;
 
@@ -51,9 +46,7 @@ int do_covert()
 
   play_music(MidiFile::Intro);
 
-  // TODO-debug
   Agent q = agent_gen();
-  std::cout << q.Name << std::endl;
 
 #ifdef PLACEHOLDERS
   bool onetime = false;

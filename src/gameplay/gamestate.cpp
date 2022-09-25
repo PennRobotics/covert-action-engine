@@ -114,8 +114,7 @@ void GameState::getNextScreen(ScreenExitCondition condition) {
       case MiniGameType::Elec:
         break;
     }
-  } else {
-    // this->inMiniGame is false
+  } else {  // this->inMiniGame is false
     switch (this->currentScreen) {
       case GameScreen::Splash1:
         currentScreen = GameScreen::Splash2;
@@ -135,7 +134,8 @@ void GameState::getNextScreen(ScreenExitCondition condition) {
         currentScreen = GameScreen::UNKNOWN;
         break;
       case GameScreen::SkillPractice:  // TODO
-        (this->modalSequence)++;
+        (this->modalSequence)++;  // TODO: this double-increments currently (FIXME) using ENTER but not ESC
+        std::cout << this->modalSequence << std::endl;
         // TODO: set comingFrom to BeginMenu
         // TODO: how to deal with the transition from not in minigame into the minigame??
         if (this->modalSequence == 3) {

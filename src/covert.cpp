@@ -24,6 +24,8 @@ extern void play_music(MidiFile);
 
 static const SDL_Keycode mapDOWN = SDLK_DOWN;  // TODO: key mapping
 static const SDL_Keycode mapUP = SDLK_UP;
+static const SDL_Keycode mapLEFT = SDLK_LEFT;
+static const SDL_Keycode mapRIGHT = SDLK_RIGHT;
 static const SDL_Keycode mapENTER = SDLK_RETURN;
 static const SDL_Keycode mapESC = SDLK_ESCAPE;
 
@@ -108,11 +110,11 @@ void handler(SDL_Event& e) {
       break;
     case DialogType::SKILLSELECT:
       switch (e.key.keysym.sym) {  // TODO
-        case mapDOWN:
-          printf("down\n");
+        case mapLEFT:
+          printf("L\n");
           break;
-        case mapUP:
-          printf("up\n");
+        case mapRIGHT:
+          printf("R\n");
           break;
       }  // ...keysym.sym
       break;

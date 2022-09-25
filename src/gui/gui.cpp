@@ -56,6 +56,12 @@ void GUI::setBGColor(const SDL_Color c) {
 }
 
 
+void GUI::fillBox(const SDL_Color c, const SDL_Rect r) {
+  SDL_SetRenderDrawColor(renderer, c.r, c.g, c.b, SDL_ALPHA_OPAQUE);
+  SDL_RenderFillRect(renderer, &r);
+}
+
+
 void GUI::drawBox(const SDL_Color c, const SDL_Rect r) {
   SDL_SetRenderDrawColor(renderer, c.r, c.g, c.b, SDL_ALPHA_OPAQUE);
   SDL_RenderDrawRect(renderer, &r);
@@ -141,7 +147,7 @@ void GUI::createGUI(GameScreen screen) {
       dialogType = DialogType::MINIMENU;
       drawBox(CAColor::WHITE, SDL_Rect(97, 76, 125, 46));
       drawText(CAColor::WHITE, "Do you want to...", SDL_Point(102, 80));
-      createGUIMenu({" Create a New Character", " Load a Saved Game", " Practice a skill", " Review Hall of Fame"}, SDL_Point(102, 88));
+      createGUIMenu({" Create a New Character", " Load a Saved Game", " Practice a skill", " Review Hall of Fame"}, SDL_Rect(102, 88, 115, 1));
       SDL_RenderPresent(renderer);
       // TODO: Create menu
       break;
@@ -199,12 +205,17 @@ void GUI::createGUI(GameScreen screen) {
   }
 }
 
-void GUI::createGUIMenu(std::vector<std::string> choice_strings, const SDL_Point pt0) {
+void GUI::createGUIMenu(std::vector<std::string> choice_strings, const SDL_Rect r0) {
   // TODO: highlight current selection
-  SDL_Point pt { pt0 };
+  SDL_Point pt { r0.x , r0.y };
+  int i = 0;  // TODO: replace with choice type containing "selected" flag
   for (auto& choice : choice_strings) {
+    if (i == 0) {
+      fillBox(CAColor::YELLOW, SDL_Rect(pt.x, pt.y, r0.w, 8));
+    }
     drawText(CAColor::GREY, choice.c_str(), pt);
     pt.y += 8;
+    i++;
   }
 }
 

@@ -62,8 +62,28 @@ void GUI::drawBox(const SDL_Color c, const SDL_Rect r) {
 }
 
 
-#include <iostream>  // TODO-debug
-void GUI::centerText(const SDL_Color c, const char* txt, const int y) {
+void GUI::drawText(const SDL_Color c, const char* txt, const SDL_Point pt)
+{
+  int w, h;
+  SDL_Surface* textSurface;
+  SDL_Texture* textTexture;
+  SDL_Rect textRect;
+
+  textSurface = TTF_RenderText_Solid(ttf, txt, c);
+  textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
+  SDL_FreeSurface(textSurface);
+  TTF_SizeText(ttf, txt, &w, &h);
+  textRect.h = h;
+  textRect.w = w;
+  textRect.x = pt.x;
+  textRect.y = pt.y;
+  SDL_RenderCopy(renderer, textTexture, nullptr, &textRect);
+  SDL_DestroyTexture(textTexture);
+}
+
+void GUI::centerText(const SDL_Color c, const char* txt, const int y)
+{
+  // TODO: should call drawText
   int w, h;
   SDL_Surface* textSurface;
   SDL_Texture* textTexture;
@@ -77,7 +97,6 @@ void GUI::centerText(const SDL_Color c, const char* txt, const int y) {
   textRect.w = w;
   textRect.x = (SCREEN_WIDTH - w) >> 1;
   textRect.y = y;
-  std::cout << "(h" << h << ", w" << w << ") " << textRect.x << ", " << y << "\n";
   SDL_RenderCopy(renderer, textTexture, nullptr, &textRect);
   SDL_DestroyTexture(textTexture);
 }
@@ -118,7 +137,6 @@ void GUI::createGUI(GameScreen screen) {
       SDL_RenderPresent(renderer);
       break;
     case GameScreen::BeginMenu:
-      std::cout << "BM\n";
       setBGColor(CAColor::BLACK);
       dialogType = DialogType::MINIMENU;
       drawBox(CAColor::WHITE, SDL_Rect(97, 76, 125, 46));
@@ -184,9 +202,9 @@ void GUI::createGUI(GameScreen screen) {
 void GUI::createGUIMenu(std::vector<std::string> choice_strings, const SDL_Point pt0) {
   SDL_Point pt { pt0 };
   for (auto& choice : choice_strings) {
-    centerText(CAColor::WHITE, choice.c_str(), pt.y);
+    /// centerText(CAColor::WHITE, choice.c_str(), pt.y);
     // TODO-debug:
-    /// drawText(CAColor::GREY, choice.c_str(), pt);
+    drawText(CAColor::GREY, choice.c_str(), pt);
     pt.y += 8;
   }
 }
@@ -196,21 +214,6 @@ void GUI::createGUIMenu(const std::vector<MenuChoice> choices, Point pt) {
   for (auto& choice : choices) {
     createGUIText(choice.txt, pt++);
   }
-}
-
-void GUI::createGUIText(const std::string txt, Point dstRect) {
-  SDL_RectEmpty(&dstRect.dstRect);
-
-  uint32_t flags = 0;
-  int w = 0;
-  int h = 0;
-  int d = 0;
-  uint32_t fmt = 0;
-
-  SDL_Surface* txtSurface = SDL_CreateRGBSurfaceWithFormat(flags, w, h, d, fmt);
-  SDL_Texture* txtTexture = SDL_CreateTextureFromSurface(renderer, txtSurface);
-  SDL_FreeSurface(txtSurface);
-  SDL_RenderCopy(renderer, txtTexture, nullptr, &dstRect.dstRect);
 }
 // */
 

@@ -22,7 +22,6 @@ public:
   GameScreen currentScreen { GameScreen::Splash1 };
   bool inMiniGame;
   bool isTwelve { true };
-  int selectedChoice;
   OriginScreen comingFrom { OriginScreen::UNKNOWNORIGIN };
   int modalSequence { 0 };
   Difficulty gameDifficulty;

@@ -32,6 +32,8 @@ public:
     void updateGUIMenu(std::vector<MenuChoice> choices, SDL_Rect r0);
     void chooseMenuPrev();
     void chooseMenuNext();
+    void selectMenuState();
+    void selectMenuDefault();
     void setBGColor(const SDL_Color c);
     void fillBox(const SDL_Color c, const SDL_Rect r);
     void drawBox(const SDL_Color c, const SDL_Rect r);
@@ -52,5 +54,6 @@ public:
     std::vector<MenuChoice> currentMenu;
     TTF_Font* ttf;
     Uint64 next_screen_tick;
+    int selectedChoice;
     DialogType dialogType { DialogType::INFOTIMER };
 };

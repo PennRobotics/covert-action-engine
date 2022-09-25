@@ -148,6 +148,9 @@ void GUI::createGUI(GameScreen screen)
       break;
     case GameScreen::NewCharacter:
       dialogType = DialogType::TEXTENTRY;
+      setBGColor(CAColor::RED);
+      SDL_RenderPresent(renderer);
+      SDL_Delay(1000);
       break;
     case GameScreen::SkillUpgrade:
       dialogType = DialogType::SKILLSELECT;
@@ -218,7 +221,8 @@ void GUI::createGUIMenu(std::vector<std::string> choice_strings, const SDL_Rect 
 }
 
 
-void GUI::updateGUIMenu(const std::vector<MenuChoice> choices, SDL_Rect r0) {
+void GUI::updateGUIMenu(const std::vector<MenuChoice> choices, SDL_Rect r0)
+{
   SDL_Point pt { r0.x , r0.y };
   for (auto& choice : choices) {
     if (choice.selected) {
@@ -230,7 +234,8 @@ void GUI::updateGUIMenu(const std::vector<MenuChoice> choices, SDL_Rect r0) {
 }
 
 
-void GUI::chooseMenuPrev() {
+void GUI::chooseMenuPrev()
+{
   for (auto& choice : currentMenu) {
     if (choice.selected) {
       choice.selected = false;
@@ -241,7 +246,8 @@ void GUI::chooseMenuPrev() {
 }
 
 
-void GUI::chooseMenuNext() {
+void GUI::chooseMenuNext()
+{
   for (auto& choice : currentMenu) {
     if (choice.selected) {
       choice.selected = false;
@@ -250,6 +256,24 @@ void GUI::chooseMenuNext() {
     }
   }
 }
+
+
+void GUI::selectMenuState()
+{
+  for (auto& choice : currentMenu) {
+    if (choice.selected) {
+      selectedChoice = choice.id;
+      return;
+    }
+  }
+}
+
+
+void GUI::selectMenuDefault()
+{
+  selectedChoice = 0;
+}
+
 
 
 #ifdef PLACEHOLDERS

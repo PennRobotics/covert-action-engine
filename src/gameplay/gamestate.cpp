@@ -95,6 +95,7 @@ void GameState::initMiniGameClasses() {
  */
 
 
+#include <iostream>  // TODO-debug
 void GameState::getNextScreen(ScreenExitCondition condition) {
   // TODO: possibly clear `comingFrom` and set an overrideable default
 
@@ -123,6 +124,7 @@ void GameState::getNextScreen(ScreenExitCondition condition) {
         currentScreen = GameScreen::BeginMenu;
         break;
       case GameScreen::BeginMenu:
+        std::cout << "Leaving menu, choice " << selectedChoice << " active." << std::endl;
         if (this->selectedChoice == 0 ||
             this->selectedChoice == 1)  { currentScreen = GameScreen::NewCharacter; }
         if (this->selectedChoice == 2)  { currentScreen = GameScreen::Load; }
@@ -145,6 +147,7 @@ void GameState::getNextScreen(ScreenExitCondition condition) {
         // TODO: default?
         break;
       case GameScreen::HallOfFame:  // TODO
+        currentScreen = GameScreen::UNKNOWN;
         break;
       case GameScreen::NewCharacter:
         (this->modalSequence)++;

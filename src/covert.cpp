@@ -24,6 +24,8 @@ extern void play_music(MidiFile);
 
 static const SDL_Keycode mapDOWN = SDLK_DOWN;  // TODO: key mapping
 static const SDL_Keycode mapUP = SDLK_UP;
+static const SDL_Keycode mapENTER = SDLK_RETURN;
+static const SDL_Keycode mapESC = SDLK_ESCAPE;
 
 namespace kbd {
 void handler(SDL_Event& e);
@@ -92,6 +94,12 @@ void handler(SDL_Event& e) {
           printf("up\n");
           gameState->chooseMenuPrev();
           break;
+        case mapENTER:
+          gameState->selectMenuState();
+          gameState->getNextScreen();
+        case mapESC:
+          gameState->selectMenuDefault();
+          gameState->getNextScreen();
       }  // ...keysym.sym
       gameState->createGUI(gameState->currentScreen);
       break;

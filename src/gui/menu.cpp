@@ -8,6 +8,7 @@ std::vector<MenuChoice> buildMenu(std::vector<std::string> choice_strings) {
     for (auto& choicestring : choice_strings) {
         this_menu_choice.id = id;
         this_menu_choice.txt = std::move(choicestring);
+        this_menu_choice.selected = !id;  // First choice selected by default
         this_menu_choice.prev = (id > 0) ? &menu_constructor[id - 1] : nullptr;
         this_menu_choice.next = nullptr;
 

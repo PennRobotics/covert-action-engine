@@ -95,7 +95,7 @@ void GUI::drawText(const SDL_Color c, const char* txt, const SDL_Point pt)
 
 void GUI::centerText(const SDL_Color c, const char* txt, const int y)
 {
-  int w, x;
+  int w;
   TTF_SizeText(ttf, txt, &w, nullptr);
   drawText(c, txt, SDL_Point((SCREEN_WIDTH - w) >> 1, y));
 }
@@ -126,7 +126,7 @@ void GUI::createGUI(GameScreen screen)
       break;
     case GameScreen::Splash1:
       setBGColor(CAColor::GREEN);
-      next_screen_tick = 2000 + SDL_GetTicks64();
+      next_screen_tick = 200 + SDL_GetTicks64();
       centerText(CAColor::WHITE, "Covert Action", 5);
       break;
     case GameScreen::Splash2:
@@ -136,6 +136,7 @@ void GUI::createGUI(GameScreen screen)
       break;
     case GameScreen::BeginMenu:
       setBGColor(CAColor::BLACK);
+      _imagePlaceholder(15, 5, 20, 15);
       dialogType = DialogType::MINIMENU;
       drawBox(CAColor::WHITE, SDL_Rect(97, 76, 125, 46));
       drawText(CAColor::WHITE, "Do you want to...", SDL_Point(102, 80));

@@ -29,10 +29,6 @@ namespace kbd {
 void handler(SDL_Event& e);
 }
 
-#ifdef PLACEHOLDERS
-// TODO-debug
-#include "gui/gui.h"
-#endif
 int do_covert()
 {
   mainChar = std::make_unique<MainChar>();
@@ -48,9 +44,6 @@ int do_covert()
 
   Agent q = agent_gen();
 
-#ifdef PLACEHOLDERS
-  bool onetime = false;
-#endif
   bool quit = false;
   SDL_Event e;
   while(!quit) {
@@ -58,13 +51,6 @@ int do_covert()
       gameState->getNextScreen();
       gameState->createGUI(gameState->currentScreen);
     }
-#ifdef PLACEHOLDERS
-  SDL_Delay(100);
-  if (!onetime) {
-    onetime = true;
-    gameState->_imagePlaceholder(15, 5, 20, 15);
-  }
-#endif
     while(SDL_PollEvent(&e) != 0) {
       switch (e.type) {
         case SDL_QUIT:

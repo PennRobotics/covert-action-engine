@@ -11,11 +11,15 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 
   -- Create the entire state machine that advances to the next default on any keypress --
 
-# SECOND-BEST BLOCKER-BREAKER
+# SECOND PRIORITY
+
+  -- Create input parsers for most of the data files --
+
+# THIRD PRIORITY
 
   -- Allow up-down menu selection: enter/escape returns correct index --
 
-# THIRD PRIORITY
+# FOURTH PRIORITY
 
   -- Preprocessor macro PLACEHOLDERS should replace all graphics calls --
 

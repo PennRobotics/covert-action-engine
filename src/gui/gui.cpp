@@ -109,7 +109,7 @@ void GUI::createGUI(GameScreen screen)
   switch (screen) {
     case GameScreen::Building1:
     building_common:
-///       createGUIMenu(buildMenu({"Place wiretap", "Break into building", "Watch the building", "Check Data", "Leave"}), Point(xy));
+///       createGUIMenu(buildMenu({"Place wiretap", "Break into building", "Watch the building", "Check Data", "Leave"}), SDL_Point(xy));
       break;
     case GameScreen::Building2:
       goto building_common;
@@ -121,7 +121,7 @@ void GUI::createGUI(GameScreen screen)
       goto building_common;
     case GameScreen::LoadSave:
 ///       choice_strings = show_game_files();  // TODO-debug
-///       createGUIMenu(choice_strings, Point(xy));
+///       createGUIMenu(choice_strings, SDL_Point(xy));
       // TODO: After user chooses an item: load_game(n); where n = <0..4>
       break;
     case GameScreen::Splash1:
@@ -140,7 +140,10 @@ void GUI::createGUI(GameScreen screen)
       dialogType = DialogType::MINIMENU;
       drawBox(CAColor::WHITE, SDL_Rect(97, 76, 125, 46));
       drawText(CAColor::WHITE, "Do you want to...", SDL_Point(102, 80));
-      createGUIMenu({" Create a New Character", " Load a Saved Game", " Practice a skill", " Review Hall of Fame"}, SDL_Rect(102, 88, 115, 1));
+      if (currentMenu.empty()) {
+        currentMenu = buildMenu({" Create a New Character", " Load a Saved Game", " Practice a skill", " Review Hall of Fame"});
+      }
+      updateGUIMenu(currentMenu, SDL_Rect(102, 88, 115, 1));
       // TODO: Create menu
       break;
     case GameScreen::NewCharacter:
@@ -199,11 +202,11 @@ void GUI::createGUI(GameScreen screen)
 }
 
 
+// TODO: remove if unused
 void GUI::createGUIMenu(std::vector<std::string> choice_strings, const SDL_Rect r0)
 {
-  // TODO: highlight current selection
   SDL_Point pt { r0.x , r0.y };
-  int i = 0;  // TODO: replace with choice type containing "selected" flag
+  int i = 0;
   for (auto& choice : choice_strings) {
     if (i == 0) {
       fillBox(CAColor::YELLOW, SDL_Rect(pt.x, pt.y, r0.w, 8));
@@ -215,13 +218,38 @@ void GUI::createGUIMenu(std::vector<std::string> choice_strings, const SDL_Rect 
 }
 
 
-/*
-void GUI::createGUIMenu(const std::vector<MenuChoice> choices, Point pt) {
+void GUI::updateGUIMenu(const std::vector<MenuChoice> choices, SDL_Rect r0) {
+  SDL_Point pt { r0.x , r0.y };
   for (auto& choice : choices) {
-    createGUIText(choice.txt, pt++);
+    if (choice.selected) {
+      fillBox(CAColor::YELLOW, SDL_Rect(pt.x, pt.y, r0.w, 8));
+    }
+    drawText(CAColor::GREY, choice.txt.c_str(), pt);
+    pt.y += 8;
   }
 }
-// */
+
+
+void GUI::chooseMenuPrev() {
+  for (auto& choice : currentMenu) {
+    if (choice.selected) {
+      choice.selected = false;
+      choice.prev->selected = true;
+      return;
+    }
+  }
+}
+
+
+void GUI::chooseMenuNext() {
+  for (auto& choice : currentMenu) {
+    if (choice.selected) {
+      choice.selected = false;
+      choice.next->selected = true;
+      return;
+    }
+  }
+}
 
 
 #ifdef PLACEHOLDERS

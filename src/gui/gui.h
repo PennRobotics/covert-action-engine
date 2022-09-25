@@ -15,7 +15,7 @@
 /// #include "../disk/loadsave.h"
 #include "../types.h"
 /// #include "point.h"
-/// #include "menu.h"
+#include "menu.h"
 
 /// #include "../gameplay/gamestate.h"
 
@@ -29,7 +29,9 @@ public:
     void initGUI();
     void createGUI(GameScreen screen);
     void createGUIMenu(std::vector<std::string> choice_strings, SDL_Rect r0);
-///     void createGUIMenu(std::vector<MenuChoice> choices, Point pt);
+    void updateGUIMenu(std::vector<MenuChoice> choices, SDL_Rect r0);
+    void chooseMenuPrev();
+    void chooseMenuNext();
     void setBGColor(const SDL_Color c);
     void fillBox(const SDL_Color c, const SDL_Rect r);
     void drawBox(const SDL_Color c, const SDL_Rect r);
@@ -47,6 +49,7 @@ public:
     SDL_Surface* screen_surface = nullptr;
 ///   /* TODO: surfaces and textures and etc. */
 /// private:
+    std::vector<MenuChoice> currentMenu;
     TTF_Font* ttf;
     Uint64 next_screen_tick;
     DialogType dialogType { DialogType::INFOTIMER };

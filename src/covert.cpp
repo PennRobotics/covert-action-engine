@@ -86,11 +86,14 @@ void handler(SDL_Event& e) {
       switch (e.key.keysym.sym) {
         case mapDOWN:
           printf("down\n");
+          gameState->chooseMenuNext();
           break;
         case mapUP:
           printf("up\n");
+          gameState->chooseMenuPrev();
           break;
       }  // ...keysym.sym
+      gameState->createGUI(gameState->currentScreen);
       break;
     case DialogType::TEXTENTRY:
       // TODO

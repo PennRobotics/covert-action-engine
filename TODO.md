@@ -13,7 +13,7 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 
 # SECOND-BEST BLOCKER-BREAKER
 
-  -- Display an up-down menu, allow selection, enter/escape returns correct index --
+  -- Allow up-down menu selection: enter/escape returns correct index --
 
 # THIRD PRIORITY
 

@@ -45,7 +45,7 @@ void GUI::initGUI() {
 //* TODO-debug
   const char* fname = "/usr/share/fonts/liberation-mono/LiberationMono-Regular.ttf";
 //  const char* fname = "C:\\Windows\\Fonts\\LiberationMono-Regular.ttf";
-  ttf = TTF_OpenFont(fname, 16);
+  ttf = TTF_OpenFont(fname, 8);
   if (ttf == NULL) {
     fprintf(stderr, "fonterr\n");
     exit(EXIT_FAILURE);

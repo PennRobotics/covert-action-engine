@@ -9,7 +9,7 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 
 # BEST IDENTIFIED BLOCKER-BREAKER
 
-  -- Create image/animation placeholder, enabled via preprocessor macro, to fill places where graphics will eventually go --
+  -- Preprocessor macro PLACEHOLDERS should replace all graphics calls --
 
 # SECOND-BEST
 

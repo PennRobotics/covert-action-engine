@@ -128,13 +128,11 @@ void GUI::createGUI(GameScreen screen)
       setBGColor(CAColor::GREEN);
       next_screen_tick = 2000 + SDL_GetTicks64();
       centerText(CAColor::WHITE, "Covert Action", 5);
-      SDL_RenderPresent(renderer);
       break;
     case GameScreen::Splash2:
       setBGColor(CAColor::BLUE);
       next_screen_tick = 200 + SDL_GetTicks64();
       centerText(CAColor::WHITE, "Credits", 5);
-      SDL_RenderPresent(renderer);
       break;
     case GameScreen::BeginMenu:
       setBGColor(CAColor::BLACK);
@@ -142,7 +140,6 @@ void GUI::createGUI(GameScreen screen)
       drawBox(CAColor::WHITE, SDL_Rect(97, 76, 125, 46));
       drawText(CAColor::WHITE, "Do you want to...", SDL_Point(102, 80));
       createGUIMenu({" Create a New Character", " Load a Saved Game", " Practice a skill", " Review Hall of Fame"}, SDL_Rect(102, 88, 115, 1));
-      SDL_RenderPresent(renderer);
       // TODO: Create menu
       break;
     case GameScreen::NewCharacter:
@@ -197,6 +194,7 @@ void GUI::createGUI(GameScreen screen)
       exit(EXIT_FAILURE);
       break;
   }
+  SDL_RenderPresent(renderer);
 }
 
 

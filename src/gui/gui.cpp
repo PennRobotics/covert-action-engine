@@ -238,13 +238,16 @@ const unsigned char singlepixel_bmp[] = {
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xc0, 0x98, 0xf8, 0x00
 };
 
-void _imagePlaceholder()
+void GUI::_imagePlaceholder(const int& x, const int& y, const int& w, const int& h)
 {
+  SDL_Surface* ss = SDL_GetWindowSurface(window);
+  SDL_Rect pxRect { x, y, w, h };
   SDL_RWops* pxIO = SDL_RWFromConstMem(singlepixel_bmp, sizeof(singlepixel_bmp));
-  /// char name[62];
-  /// SDL_RWread(pxIO, name, sizeof(name), 1);
   SDL_Surface* pxSurf = SDL_LoadBMP_RW(pxIO, 1);
-  if (!pxSurf)  { std::cout << SDL_GetError() << "\n"; }
-  std::cout << "pxSurf: " << pxSurf << "\n";
+  SDL_Texture* pxTex = SDL_CreateTextureFromSurface(renderer, pxSurf);
+  SDL_FreeSurface(pxSurf);
+  SDL_RenderCopy(renderer, pxTex, nullptr, &pxRect);
+  SDL_DestroyTexture(pxTex);
+  SDL_RenderPresent(renderer);
 }
 #endif

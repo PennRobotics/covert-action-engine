@@ -40,9 +40,6 @@ void handler(SDL_Event& e);
 #endif
 int do_covert()
 {
-#ifdef PLACEHOLDERS
-  _imagePlaceholder();
-#endif
   mainChar = std::make_unique<MainChar>();
 
   gameState = std::make_unique<GameState>();
@@ -58,6 +55,9 @@ int do_covert()
   Agent q = agent_gen();
   std::cout << q.Name << std::endl;
 
+#ifdef PLACEHOLDERS
+  bool onetime = false;
+#endif
   bool quit = false;
   SDL_Event e;
   while(!quit) {
@@ -65,6 +65,13 @@ int do_covert()
       gameState->getNextScreen();
       gameState->createGUI(gameState->currentScreen);
     }
+#ifdef PLACEHOLDERS
+  SDL_Delay(100);
+  if (!onetime) {
+    onetime = true;
+    gameState->_imagePlaceholder(15, 5, 20, 15);
+  }
+#endif
     while(SDL_PollEvent(&e) != 0) {
       switch (e.type) {
         case SDL_QUIT:

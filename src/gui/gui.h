@@ -19,9 +19,6 @@
 
 /// #include "../gameplay/gamestate.h"
 
-#ifdef PLACEHOLDERS
-void _imagePlaceholder();
-#endif
 
 class GUI {
 public:
@@ -37,6 +34,9 @@ public:
     void setBGColor(SDL_Color c);
     void displayFrame();
     bool guiShouldRefresh();
+#ifdef PLACEHOLDERS
+    void _imagePlaceholder(const int&, const int&, const int&, const int&);
+#endif
 ///   void /*TODO*/choiceS  electionCallback()  { NULL; }
 /// protected:
     SDL_Window* window;

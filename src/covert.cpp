@@ -34,8 +34,15 @@ namespace kbd {
 void handler(SDL_Event& e);
 }
 
+#ifdef PLACEHOLDERS
+// TODO-debug
+#include "gui/gui.h"
+#endif
 int do_covert()
 {
+#ifdef PLACEHOLDERS
+  _imagePlaceholder();
+#endif
   mainChar = std::make_unique<MainChar>();
 
   gameState = std::make_unique<GameState>();

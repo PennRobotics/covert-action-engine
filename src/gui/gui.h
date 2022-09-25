@@ -19,6 +19,10 @@
 
 /// #include "../gameplay/gamestate.h"
 
+#ifdef PLACEHOLDERS
+void _imagePlaceholder();
+#endif
+
 class GUI {
 public:
     GUI() = default;

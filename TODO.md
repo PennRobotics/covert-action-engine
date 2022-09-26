@@ -7,23 +7,26 @@ The plan is to develop tools for extracting package data from the original game 
 
 Bases for the development of the engine are the source codes for Freeciv, Master of Orion, C-Dogs SDL, SDLPop (Prince of Persia), cc94 and FreeCol (Colonization), Crown and Cutlass (Pirates!), GE211 by Jesse A. Tov, flat by Linus Probert, Cataclysm-DDA, SuperTux, and devilutionX. These other projects provide guidance in the form of folder/header/object structure, memory management, build technique, data manipulation, object interaction, and ideal layout of SDL calls.
 
-# BEST IDENTIFIED BLOCKER-BREAKER
+### BEST IDENTIFIED BLOCKER-BREAKER
 
   -- Create the entire state machine that advances to the next default on any keypress --
 
-# SECOND PRIORITY
+### SECOND PRIORITY
 
   -- Create input parsers for most of the data files --
 
-# THIRD PRIORITY
+### THIRD PRIORITY
 
   -- Allow up-down menu selection: enter/escape returns correct index --
 
-# FOURTH PRIORITY
+### FOURTH PRIORITY
 
   -- Preprocessor macro PLACEHOLDERS should replace all graphics calls --
 
-# TODO
+
+## TODO
+
+### Overview
 
 - [x] Change name of project but also all references e.g. BUILD.md URL
 - [ ] Documentation
@@ -64,7 +67,7 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 - [ ] Vector graphics
 - [ ] Create various combat AIs
 
-## Implementation
+### Implementation
 
 - [x] remove duplicated (and old) files from directory structure
 - [x] `#pragma once` rather than include guards
@@ -88,7 +91,7 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 - [ ] what is the best SDL_Mixer practice?
 - [ ] how should **CMake**, **configure**, **Makefile**, **meson**/**ninja**, or any other build tool be best implemented?
 
-## Porting
+### Porting
 
 - [ ] figure out all of the different types of GUI elements and keyboard entry modes: free text, up/down menu, pic selection, "any key", etc.
 - [ ] implement PIC and PANO decoders
@@ -129,7 +132,7 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 - [ ] Error Handling
 - [ ] Cross-Platform
 
-## Specific Code
+### Specific Code
 
 - [ ] comingFrom (try to make this automatically defined)
 - [ ] nextscreen is probably not needed. directly assign the next screen based on provided condition argument
@@ -140,7 +143,7 @@ Bases for the development of the engine are the source codes for Freeciv, Master
   - [ ] **cryptography.cpp** should not include **combat.h**
 - [ ] Building1, Building2, etc. should just be Building with building type passed as an enum (simplifies menu creation and screen back-reference)
 
-## Still Missing
+### Still Missing
 
 - [ ] load existing file (This should dictate much of the variable/class structure!)
 - [ ] keyboard mapper / configuration file
@@ -148,7 +151,7 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 - [ ] font (if error during load, use an internal array; possibly switch to _only_ internal going forward)
   - It might be wise to see how other SDL2 projects accomplish this.
 
-## Ideas
+### Ideas
 
 *These are some stretch goals, but these are not active until the project is fully on track to be complete*
 
@@ -171,3 +174,10 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 - [ ] (F. Bouthillier) Safecracking mini-minigame
 - [ ] (F. Bouthillier) Surveillance cameras inside buildings (interacts with Electronics skill)
 - [ ] (F. Bouthillier) Main character starts outside building and enters at own convenience
+
+
+## Build Warnings and Messages 
+
+### Visual Studio Errors
+
+TODO

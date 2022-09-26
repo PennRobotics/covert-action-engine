@@ -27,3 +27,7 @@ make
 0. Right-click the __covert-action-engine__ project in the Solution Explorer, and select *Debug -> Start New Instance*
 
 *Please submit a pull request if you know any method of improving the build process in Visual Studio!*
+
+## Other Platforms
+
+While a Mac, Android, or web-based port would be simply swell, I don't imagine I can manage these in the foreseeable future.

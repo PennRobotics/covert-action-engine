@@ -136,7 +136,9 @@ void GUI::createGUI(GameScreen screen)
       break;
     case GameScreen::BeginMenu:
       setBGColor(CAColor::BLACK);
+#ifdef PLACEHOLDERS
       _imagePlaceholder(15, 5, 20, 15);
+#endif
       dialogType = DialogType::MINIMENU;
       drawBox(CAColor::WHITE, SDL_Rect(97, 76, 125, 46));
       drawText(CAColor::WHITE, "Do you want to...", SDL_Point(102, 80));

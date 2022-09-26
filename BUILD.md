@@ -14,6 +14,6 @@ make
 
 ## Windows (Visual Studio)
 
-(instructions later)
-
-
+0. Test Markdown numbering
+0. Next item
+0. Another

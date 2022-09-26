@@ -180,344 +180,343 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 
 ### Visual Studio Errors
 
-| Severity | Code | Description | Project | File | Line | Suppression State |
-| -------- | ---- | ----------- | ------- | ---- | ---- | ----------------- |
-| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 128 | 
-| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 165 | 
-| Warning | C4100 | 'argv': unreferenced formal parameter | covert-action-engine | C:\Users\bwright\covert-action-engine\src\main.cpp | 7 | 
-| Warning | C4100 | 'argc': unreferenced formal parameter | covert-action-engine | C:\Users\bwright\covert-action-engine\src\main.cpp | 7 | 
-| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 128 | 
-| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 165 | 
-| Warning | C4464 | relative include path contains '..' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\gamestate.h | 5 | 
-| Warning | C4820 | 'SDL_AssertData': '4' bytes padding added after data member 'SDL_AssertData::linenum' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_assert.h | 124 | 
-| Warning | C4820 | 'SDL_RWops::<unnamed-tag>': '4' bytes padding added after data member 'SDL_RWops::<unnamed-tag>::append' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rwops.h | 105 | 
-| Warning | C4820 | 'SDL_RWops': '4' bytes padding added after data member 'SDL_RWops::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rwops.h | 133 | 
-| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::len_mult' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_audio.h | 241 | 
-| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::filter_index' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_audio.h | 244 | 
-| Warning | C4820 | 'SDL_Palette': '4' bytes padding added after data member 'SDL_Palette::ncolors' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_pixels.h | 321 | 
-| Warning | C4820 | 'SDL_PixelFormat': '4' bytes padding added after data member 'SDL_PixelFormat::format' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_pixels.h | 332 | 
-| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::flags' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_surface.h | 75 | 
-| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::pitch' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_surface.h | 78 | 
-| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::locked' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_surface.h | 87 | 
-| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::refcount' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_surface.h | 97 | 
-| Warning | C4820 | 'SDL_Keysym': '2' bytes padding added after data member 'SDL_Keysym::mod' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_keyboard.h | 52 | 
-| Warning | C4820 | 'SDL_Finger': '4' bytes padding added after data member 'SDL_Finger::pressure' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_touch.h | 58 | 
-| Warning | C4820 | 'SDL_TextEditingExtEvent': '4' bytes padding added after data member 'SDL_TextEditingExtEvent::windowID' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_events.h | 257 | 
-| Warning | C4820 | 'SDL_MultiGestureEvent': '4' bytes padding added after data member 'SDL_MultiGestureEvent::padding' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_events.h | 526 | 
-| Warning | C4820 | 'SDL_DropEvent': '4' bytes padding added after data member 'SDL_DropEvent::windowID' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_events.h | 556 | 
-| Warning | C4820 | 'SDL_HapticDirection': '3' bytes padding added after data member 'SDL_HapticDirection::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 462 | 
-| Warning | C4820 | 'SDL_HapticConstant': '2' bytes padding added after data member 'SDL_HapticConstant::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 481 | 
-| Warning | C4820 | 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 564 | 
-| Warning | C4820 | 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::fade_level' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 585 | 
-| Warning | C4820 | 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 616 | 
-| Warning | C4820 | 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::center' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 633 | 
-| Warning | C4820 | 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 652 | 
-| Warning | C4820 | 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::fade_level' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 671 | 
-| Warning | C4820 | 'SDL_HapticLeftRight': '2' bytes padding added after data member 'SDL_HapticLeftRight::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 691 | 
-| Warning | C4820 | 'SDL_HapticCustom': '2' bytes padding added after data member 'SDL_HapticCustom::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 717 | 
-| Warning | C4820 | 'SDL_HapticCustom': '1' bytes padding added after data member 'SDL_HapticCustom::channels' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 729 | 
-| Warning | C4820 | 'SDL_HapticCustom': '4' bytes padding added after data member 'SDL_HapticCustom::samples' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 731 | 
-| Warning | C4820 | 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::product_id' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_hidapi.h | 92 | 
-| Warning | C4820 | 'SDL_hid_device_info': '6' bytes padding added after data member 'SDL_hid_device_info::release_number' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_hidapi.h | 97 | 
-| Warning | C4820 | 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::interface_protocol' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_hidapi.h | 121 | 
-| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::flags' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_messagebox.h | 97 | 
-| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::numbuttons' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_messagebox.h | 102 | 
-| Warning | C4464 | relative include path contains '..' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\gui.h | 14 | 
-| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::count' | covert-action-engine | C:\Users\bwright\SDL2_image-2.6.2\include\SDL_image.h | 2048 | 
-| Warning | C4464 | relative include path contains '..' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\gui.h | 16 | 
-| Warning | C4820 | 'MenuChoice': '3' bytes padding added after data member 'MenuChoice::selected' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\menu.h | 11 | 
-| Warning | C4820 | 'GameState': '2' bytes padding added after data member 'GameState::isTwelve' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\gamestate.h | 25 | 
-| Warning | C4820 | 'MainChar': '4' bytes padding added after data member 'MainChar::apt_elec' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\mainchar.h | 41 | 
-| Warning | C4458 | declaration of 'rank' hides class member | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\mainchar.h | 19 | 
-| Message |  | see declaration of 'MainChar::rank' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\mainchar.h | 36 | 
-| Warning | C4065 | switch statement contains 'default' but no 'case' labels | covert-action-engine | C:\Users\bwright\covert-action-engine\src\covert.cpp | 86 | 
-| Warning | C4514 | 'SDL_memset4': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 529 | 
-| Warning | C4514 | 'SDL_memcpy4': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 757 | 
-| Warning | C4514 | 'SDL_size_mul_overflow': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 768 | 
-| Warning | C4514 | 'SDL_size_add_overflow': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 798 | 
-| Warning | C4514 | 'SDL_SwapFloat': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_endian.h | 297 | 
-| Warning | C4514 | 'SDL_PointInRect': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 110 | 
-| Warning | C4514 | 'SDL_RectEmpty': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 119 | 
-| Warning | C4514 | 'SDL_RectEquals': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 127 | 
-| Warning | C4514 | 'SDL_PointInFRect': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 233 | 
-| Warning | C4514 | 'SDL_FRectEmpty': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 242 | 
-| Warning | C4514 | 'SDL_FRectEquals': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 267 | 
-| Warning | C4514 | 'MainChar::MainChar': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\mainchar.h | 6 | 
-| Warning | C4514 | 'MainChar::setCallsign': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\mainchar.h | 18 | 
-| Warning | C4514 | 'MainChar::setRank': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\mainchar.h | 19 | 
-| Warning | C4514 | 'MainChar::setSkillLevels': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\mainchar.h | 20 | 
-| Warning | C4514 | 'MainChar::getCallsign': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\mainchar.h | 27 | 
-| Warning | C4514 | 'MainChar::getRank': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\mainchar.h | 28 | 
-| Warning | C4514 | 'MainChar::getCombatAptitude': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\mainchar.h | 29 | 
-| Warning | C4514 | 'MainChar::getDrivingAptitude': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\mainchar.h | 30 | 
-| Warning | C4514 | 'MainChar::getCryptoAptitude': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\mainchar.h | 31 | 
-| Warning | C4514 | 'MainChar::getElecAptitude': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\mainchar.h | 32 | 
-| Warning | C4820 | 'Organization': '7' bytes padding added after data member 'Organization::id_char' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\casegenerator.h | 16 | 
-| Warning | C5246 | 'std::array<Organization,3>::_Elems': the initialization of a subobject should be wrapped in braces | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\casegenerator.h | 21 | 
-| Warning | C5246 | 'std::array<Organization,26>::_Elems': the initialization of a subobject should be wrapped in braces | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\casegenerator.h | 32 | 
-| Warning | C4820 | 'Participant': '1' bytes padding added after data member 'Participant::agentletter' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\casegenerator.h | 107 | 
-| Warning | C4820 | 'Participant': '3' bytes padding added after data member 'Participant::city' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\casegenerator.h | 109 | 
-| Warning | C4820 | 'Participant': '7' bytes padding added after data member 'Participant::recruitcity' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\casegenerator.h | 111 | 
-| Warning | C4820 | 'Participant': '3' bytes padding added after data member 'Participant::visibility' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\casegenerator.h | 115 | 
-| Warning | C4514 | 'Participant::getName': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\casegenerator.h | 99 | 
-| Warning | C4514 | 'Participant::getAgentLetter': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\casegenerator.h | 100 | 
-| Warning | C4514 | 'Participant::getRankPoints': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\casegenerator.h | 101 | 
-| Warning | C4514 | 'Participant::getRole': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\casegenerator.h | 102 | 
-| Warning | C4514 | 'MissionSet::MissionSet': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\casegenerator.h | 146 | 
-| Warning | C4464 | relative include path contains '..' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\minigame.h | 3 | 
-| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 128 | 
-| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 165 | 
-| Warning | C5204 | 'MiniGame': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\minigame.h | 12 | 
-| Warning | C4820 | 'Inventory': '3' bytes padding added after data member 'Inventory::mags' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\combat.h | 62 | 
-| Warning | C4820 | 'MiniGameCombat': '3' bytes padding added after data member 'MiniGameCombat::max_guards' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\combat.h | 103 | 
-| Warning | C4265 | 'MiniGameCombat': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\combat.h | 104 | 
-| Warning | C4100 | 'level': unreferenced formal parameter | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\combat.cpp | 15 | 
-| Warning | C4514 | 'MiniGameCombat::operator delete': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\combat.h | 98 | 
-| Warning | C4464 | relative include path contains '..' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\minigame.h | 3 | 
-| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 128 | 
-| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 165 | 
-| Warning | C5204 | 'MiniGame': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\minigame.h | 12 | 
-| Warning | C4820 | 'Car': '1' bytes padding added after data member 'Car::suspicion' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\driving.h | 20 | 
-| Warning | C4820 | 'MiniGameDriving': '3' bytes padding added after data member 'MiniGameDriving::unseen_timer' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\driving.h | 46 | 
-| Warning | C5204 | 'MiniGameDriving': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\driving.h | 46 | 
-| Warning | C4100 | 'level': unreferenced formal parameter | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\driving.cpp | 14 | 
-| Warning | C4464 | relative include path contains '..' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\minigame.h | 3 | 
-| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 128 | 
-| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 165 | 
-| Warning | C5204 | 'MiniGame': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\minigame.h | 12 | 
-| Warning | C4820 | 'MiniGameCryptography': '2' bytes padding added after data member 'MiniGameCryptography::user_decipher' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\cryptography.h | 27 | 
-| Warning | C4365 | 'argument': conversion from 'int' to 'std::array<char,26>::size_type', signed/unsigned mismatch | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\cryptography.cpp | 36 | 
-| Warning | C4244 | '=': conversion from 'int' to '_Ty', possible loss of data | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\cryptography.cpp | 36 | 
-| Warning | C4100 | 'level': unreferenced formal parameter | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\cryptography.cpp | 13 | 
-| Warning | C4100 | 'key': unreferenced formal parameter | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\cryptography.cpp | 51 | 
-| Message |  | see reference to function template instantiation 'void MiniGameCryptography::test_convert_message<std::array<char,26>>(const _T0 &)' being compiled | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\cryptography.cpp | 40 | 
-| Warning | C4464 | relative include path contains '..' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\minigame.h | 3 | 
-| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 128 | 
-| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 165 | 
-| Warning | C5204 | 'MiniGame': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\minigame.h | 12 | 
-| Warning | C4820 | 'Junc': '2' bytes padding added after data member 'Junc::locked' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\electronics.h | 34 | 
-| Warning | C4820 | 'MiniGameElectronics': '2' bytes padding added after data member 'MiniGameElectronics::sy' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\electronics.h | 47 | 
-| Warning | C4820 | 'MiniGameElectronics': '4' bytes padding added after data member 'MiniGameElectronics::holding' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\electronics.h | 50 | 
-| Warning | C5204 | 'MiniGameElectronics': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\electronics.h | 40 | 
-| Warning | C4101 | 'num_locked': unreferenced local variable | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\electronics.cpp | 14 | 
-| Warning | C4101 | 'num_swaps': unreferenced local variable | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\electronics.cpp | 18 | 
-| Warning | C4101 | 'num_jumps': unreferenced local variable | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\electronics.cpp | 17 | 
-| Warning | C4101 | 'num_hidden': unreferenced local variable | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\electronics.cpp | 15 | 
-| Warning | C4101 | 'num_alarms': unreferenced local variable | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\electronics.cpp | 16 | 
-| Warning | C4820 | 'SDL_AssertData': '4' bytes padding added after data member 'SDL_AssertData::linenum' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_assert.h | 124 | 
-| Warning | C4820 | 'SDL_RWops::<unnamed-tag>': '4' bytes padding added after data member 'SDL_RWops::<unnamed-tag>::append' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rwops.h | 105 | 
-| Warning | C4820 | 'SDL_RWops': '4' bytes padding added after data member 'SDL_RWops::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rwops.h | 133 | 
-| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::len_mult' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_audio.h | 241 | 
-| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::filter_index' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_audio.h | 244 | 
-| Warning | C4820 | 'SDL_Palette': '4' bytes padding added after data member 'SDL_Palette::ncolors' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_pixels.h | 321 | 
-| Warning | C4820 | 'SDL_PixelFormat': '4' bytes padding added after data member 'SDL_PixelFormat::format' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_pixels.h | 332 | 
-| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::flags' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_surface.h | 75 | 
-| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::pitch' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_surface.h | 78 | 
-| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::locked' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_surface.h | 87 | 
-| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::refcount' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_surface.h | 97 | 
-| Warning | C4820 | 'SDL_Keysym': '2' bytes padding added after data member 'SDL_Keysym::mod' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_keyboard.h | 52 | 
-| Warning | C4820 | 'SDL_Finger': '4' bytes padding added after data member 'SDL_Finger::pressure' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_touch.h | 58 | 
-| Warning | C4820 | 'SDL_TextEditingExtEvent': '4' bytes padding added after data member 'SDL_TextEditingExtEvent::windowID' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_events.h | 257 | 
-| Warning | C4820 | 'SDL_MultiGestureEvent': '4' bytes padding added after data member 'SDL_MultiGestureEvent::padding' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_events.h | 526 | 
-| Warning | C4820 | 'SDL_DropEvent': '4' bytes padding added after data member 'SDL_DropEvent::windowID' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_events.h | 556 | 
-| Warning | C4820 | 'SDL_HapticDirection': '3' bytes padding added after data member 'SDL_HapticDirection::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 462 | 
-| Warning | C4820 | 'SDL_HapticConstant': '2' bytes padding added after data member 'SDL_HapticConstant::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 481 | 
-| Warning | C4820 | 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 564 | 
-| Warning | C4820 | 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::fade_level' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 585 | 
-| Warning | C4820 | 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 616 | 
-| Warning | C4820 | 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::center' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 633 | 
-| Warning | C4820 | 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 652 | 
-| Warning | C4820 | 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::fade_level' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 671 | 
-| Warning | C4820 | 'SDL_HapticLeftRight': '2' bytes padding added after data member 'SDL_HapticLeftRight::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 691 | 
-| Warning | C4820 | 'SDL_HapticCustom': '2' bytes padding added after data member 'SDL_HapticCustom::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 717 | 
-| Warning | C4820 | 'SDL_HapticCustom': '1' bytes padding added after data member 'SDL_HapticCustom::channels' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 729 | 
-| Warning | C4820 | 'SDL_HapticCustom': '4' bytes padding added after data member 'SDL_HapticCustom::samples' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 731 | 
-| Warning | C4820 | 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::product_id' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_hidapi.h | 92 | 
-| Warning | C4820 | 'SDL_hid_device_info': '6' bytes padding added after data member 'SDL_hid_device_info::release_number' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_hidapi.h | 97 | 
-| Warning | C4820 | 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::interface_protocol' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_hidapi.h | 121 | 
-| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::flags' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_messagebox.h | 97 | 
-| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::numbuttons' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_messagebox.h | 102 | 
-| Warning | C4514 | 'SDL_memset4': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 529 | 
-| Warning | C4514 | 'SDL_memcpy4': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 757 | 
-| Warning | C4514 | 'SDL_size_mul_overflow': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 768 | 
-| Warning | C4514 | 'SDL_size_add_overflow': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 798 | 
-| Warning | C4514 | 'SDL_SwapFloat': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_endian.h | 297 | 
-| Warning | C4514 | 'SDL_PointInRect': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 110 | 
-| Warning | C4514 | 'SDL_RectEmpty': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 119 | 
-| Warning | C4514 | 'SDL_RectEquals': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 127 | 
-| Warning | C4514 | 'SDL_PointInFRect': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 233 | 
-| Warning | C4514 | 'SDL_FRectEmpty': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 242 | 
-| Warning | C4514 | 'SDL_FRectEquals': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 267 | 
-| Warning | C4820 | 'SDL_RWops::<unnamed-tag>': '4' bytes padding added after data member 'SDL_RWops::<unnamed-tag>::append' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rwops.h | 105 | 
-| Warning | C4820 | 'SDL_RWops': '4' bytes padding added after data member 'SDL_RWops::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rwops.h | 133 | 
-| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::len_mult' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_audio.h | 241 | 
-| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::filter_index' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_audio.h | 244 | 
-| Warning | C4820 | 'Mix_Chunk': '4' bytes padding added after data member 'Mix_Chunk::allocated' | covert-action-engine | C:\Users\bwright\SDL2_mixer-2.6.2\include\SDL_mixer.h | 230 | 
-| Warning | C4820 | 'Mix_Chunk': '3' bytes padding added after data member 'Mix_Chunk::volume' | covert-action-engine | C:\Users\bwright\SDL2_mixer-2.6.2\include\SDL_mixer.h | 233 | 
-| Warning | C4464 | relative include path contains '..' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\sound\music.h | 4 | 
-| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 128 | 
-| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 165 | 
-| Warning | C4100 | 'midi': unreferenced formal parameter | covert-action-engine | C:\Users\bwright\covert-action-engine\src\sound\music.cpp | 10 | 
-| Warning | C4514 | 'SDL_memset4': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 529 | 
-| Warning | C4514 | 'SDL_memcpy4': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 757 | 
-| Warning | C4514 | 'SDL_size_mul_overflow': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 768 | 
-| Warning | C4514 | 'SDL_size_add_overflow': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 798 | 
-| Warning | C4514 | 'SDL_SwapFloat': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_endian.h | 297 | 
-| Warning | C4820 | 'SDL_AssertData': '4' bytes padding added after data member 'SDL_AssertData::linenum' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_assert.h | 124 | 
-| Warning | C4820 | 'SDL_RWops::<unnamed-tag>': '4' bytes padding added after data member 'SDL_RWops::<unnamed-tag>::append' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rwops.h | 105 | 
-| Warning | C4820 | 'SDL_RWops': '4' bytes padding added after data member 'SDL_RWops::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rwops.h | 133 | 
-| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::len_mult' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_audio.h | 241 | 
-| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::filter_index' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_audio.h | 244 | 
-| Warning | C4820 | 'SDL_Palette': '4' bytes padding added after data member 'SDL_Palette::ncolors' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_pixels.h | 321 | 
-| Warning | C4820 | 'SDL_PixelFormat': '4' bytes padding added after data member 'SDL_PixelFormat::format' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_pixels.h | 332 | 
-| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::flags' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_surface.h | 75 | 
-| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::pitch' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_surface.h | 78 | 
-| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::locked' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_surface.h | 87 | 
-| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::refcount' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_surface.h | 97 | 
-| Warning | C4820 | 'SDL_Keysym': '2' bytes padding added after data member 'SDL_Keysym::mod' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_keyboard.h | 52 | 
-| Warning | C4820 | 'SDL_Finger': '4' bytes padding added after data member 'SDL_Finger::pressure' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_touch.h | 58 | 
-| Warning | C4820 | 'SDL_TextEditingExtEvent': '4' bytes padding added after data member 'SDL_TextEditingExtEvent::windowID' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_events.h | 257 | 
-| Warning | C4820 | 'SDL_MultiGestureEvent': '4' bytes padding added after data member 'SDL_MultiGestureEvent::padding' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_events.h | 526 | 
-| Warning | C4820 | 'SDL_DropEvent': '4' bytes padding added after data member 'SDL_DropEvent::windowID' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_events.h | 556 | 
-| Warning | C4820 | 'SDL_HapticDirection': '3' bytes padding added after data member 'SDL_HapticDirection::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 462 | 
-| Warning | C4820 | 'SDL_HapticConstant': '2' bytes padding added after data member 'SDL_HapticConstant::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 481 | 
-| Warning | C4820 | 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 564 | 
-| Warning | C4820 | 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::fade_level' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 585 | 
-| Warning | C4820 | 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 616 | 
-| Warning | C4820 | 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::center' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 633 | 
-| Warning | C4820 | 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 652 | 
-| Warning | C4820 | 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::fade_level' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 671 | 
-| Warning | C4820 | 'SDL_HapticLeftRight': '2' bytes padding added after data member 'SDL_HapticLeftRight::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 691 | 
-| Warning | C4820 | 'SDL_HapticCustom': '2' bytes padding added after data member 'SDL_HapticCustom::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 717 | 
-| Warning | C4820 | 'SDL_HapticCustom': '1' bytes padding added after data member 'SDL_HapticCustom::channels' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 729 | 
-| Warning | C4820 | 'SDL_HapticCustom': '4' bytes padding added after data member 'SDL_HapticCustom::samples' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 731 | 
-| Warning | C4820 | 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::product_id' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_hidapi.h | 92 | 
-| Warning | C4820 | 'SDL_hid_device_info': '6' bytes padding added after data member 'SDL_hid_device_info::release_number' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_hidapi.h | 97 | 
-| Warning | C4820 | 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::interface_protocol' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_hidapi.h | 121 | 
-| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::flags' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_messagebox.h | 97 | 
-| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::numbuttons' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_messagebox.h | 102 | 
-| Warning | C4464 | relative include path contains '..' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\gui.h | 14 | 
-| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::count' | covert-action-engine | C:\Users\bwright\SDL2_image-2.6.2\include\SDL_image.h | 2048 | 
-| Warning | C4464 | relative include path contains '..' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\gui.h | 16 | 
-| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 128 | 
-| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 165 | 
-| Warning | C4820 | 'MenuChoice': '3' bytes padding added after data member 'MenuChoice::selected' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\menu.h | 11 | 
-| Warning | C4061 | enumerator 'GameScreen::CIABanned' in switch of enum 'GameScreen' is not explicitly handled by a case label | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\gui.cpp | 205 | 
-| Message |  | see declaration of 'GameScreen' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 48 | 
-| Warning | C4061 | enumerator 'GameScreen::ReviewWiretaps' in switch of enum 'GameScreen' is not explicitly handled by a case label | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\gui.cpp | 205 | 
-| Message |  | see declaration of 'GameScreen' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 48 | 
-| Warning | C4061 | enumerator 'GameScreen::CodedMessages' in switch of enum 'GameScreen' is not explicitly handled by a case label | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\gui.cpp | 205 | 
-| Message |  | see declaration of 'GameScreen' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 48 | 
-| Warning | C4061 | enumerator 'GameScreen::CrimeChronology' in switch of enum 'GameScreen' is not explicitly handled by a case label | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\gui.cpp | 205 | 
-| Message |  | see declaration of 'GameScreen' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 48 | 
-| Warning | C4061 | enumerator 'GameScreen::Airport' in switch of enum 'GameScreen' is not explicitly handled by a case label | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\gui.cpp | 205 | 
-| Message |  | see declaration of 'GameScreen' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 48 | 
-| Warning | C4061 | enumerator 'GameScreen::MiniGameCombatStart' in switch of enum 'GameScreen' is not explicitly handled by a case label | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\gui.cpp | 205 | 
-| Message |  | see declaration of 'GameScreen' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 48 | 
-| Warning | C4061 | enumerator 'GameScreen::MiniGameDrivingStart' in switch of enum 'GameScreen' is not explicitly handled by a case label | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\gui.cpp | 205 | 
-| Message |  | see declaration of 'GameScreen' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 48 | 
-| Warning | C4061 | enumerator 'GameScreen::DrivingCarSelect' in switch of enum 'GameScreen' is not explicitly handled by a case label | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\gui.cpp | 205 | 
-| Message |  | see declaration of 'GameScreen' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 48 | 
-| Warning | C4061 | enumerator 'GameScreen::MiniGameCryptoStart' in switch of enum 'GameScreen' is not explicitly handled by a case label | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\gui.cpp | 205 | 
-| Message |  | see declaration of 'GameScreen' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 48 | 
-| Warning | C4061 | enumerator 'GameScreen::MiniGameElecStart' in switch of enum 'GameScreen' is not explicitly handled by a case label | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\gui.cpp | 205 | 
-| Message |  | see declaration of 'GameScreen' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 48 | 
-| Warning | C4061 | enumerator 'GameScreen::UNKNOWN' in switch of enum 'GameScreen' is not explicitly handled by a case label | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\gui.cpp | 205 | 
-| Message |  | see declaration of 'GameScreen' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 48 | 
-| Warning | C4514 | 'SDL_memset4': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 529 | 
-| Warning | C4514 | 'SDL_memcpy4': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 757 | 
-| Warning | C4514 | 'SDL_size_mul_overflow': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 768 | 
-| Warning | C4514 | 'SDL_size_add_overflow': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 798 | 
-| Warning | C4514 | 'SDL_SwapFloat': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_endian.h | 297 | 
-| Warning | C4514 | 'SDL_PointInRect': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 110 | 
-| Warning | C4514 | 'SDL_RectEmpty': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 119 | 
-| Warning | C4514 | 'SDL_RectEquals': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 127 | 
-| Warning | C4514 | 'SDL_PointInFRect': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 233 | 
-| Warning | C4514 | 'SDL_FRectEmpty': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 242 | 
-| Warning | C4514 | 'SDL_FRectEquals': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 267 | 
-| Warning | C4820 | 'SDL_Palette': '4' bytes padding added after data member 'SDL_Palette::ncolors' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_pixels.h | 321 | 
-| Warning | C4820 | 'SDL_PixelFormat': '4' bytes padding added after data member 'SDL_PixelFormat::format' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_pixels.h | 332 | 
-| Warning | C4820 | 'SDL_RWops::<unnamed-tag>': '4' bytes padding added after data member 'SDL_RWops::<unnamed-tag>::append' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rwops.h | 105 | 
-| Warning | C4820 | 'SDL_RWops': '4' bytes padding added after data member 'SDL_RWops::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rwops.h | 133 | 
-| Warning | C4514 | 'SDL_memset4': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 529 | 
-| Warning | C4514 | 'SDL_memcpy4': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 757 | 
-| Warning | C4514 | 'SDL_size_mul_overflow': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 768 | 
-| Warning | C4514 | 'SDL_size_add_overflow': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 798 | 
-| Warning | C4514 | 'SDL_SwapFloat': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_endian.h | 297 | 
-| Warning | C4514 | 'SDL_PointInRect': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 110 | 
-| Warning | C4514 | 'SDL_RectEmpty': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 119 | 
-| Warning | C4514 | 'SDL_RectEquals': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 127 | 
-| Warning | C4514 | 'SDL_PointInFRect': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 233 | 
-| Warning | C4514 | 'SDL_FRectEmpty': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 242 | 
-| Warning | C4514 | 'SDL_FRectEquals': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 267 | 
-| Warning | C4514 | 'Point::Point': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\point.h | 8 | 
-| Warning | C4514 | 'Point::operator ++': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\point.h | 11 | 
-| Warning | C4514 | 'Point::getX': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\point.h | 13 | 
-| Warning | C4514 | 'Point::getY': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\point.h | 14 | 
-| Warning | C4464 | relative include path contains '..' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\gamestate.h | 5 | 
-| Warning | C4820 | 'SDL_AssertData': '4' bytes padding added after data member 'SDL_AssertData::linenum' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_assert.h | 124 | 
-| Warning | C4820 | 'SDL_RWops::<unnamed-tag>': '4' bytes padding added after data member 'SDL_RWops::<unnamed-tag>::append' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rwops.h | 105 | 
-| Warning | C4820 | 'SDL_RWops': '4' bytes padding added after data member 'SDL_RWops::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rwops.h | 133 | 
-| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::len_mult' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_audio.h | 241 | 
-| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::filter_index' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_audio.h | 244 | 
-| Warning | C4820 | 'SDL_Palette': '4' bytes padding added after data member 'SDL_Palette::ncolors' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_pixels.h | 321 | 
-| Warning | C4820 | 'SDL_PixelFormat': '4' bytes padding added after data member 'SDL_PixelFormat::format' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_pixels.h | 332 | 
-| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::flags' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_surface.h | 75 | 
-| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::pitch' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_surface.h | 78 | 
-| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::locked' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_surface.h | 87 | 
-| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::refcount' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_surface.h | 97 | 
-| Warning | C4820 | 'SDL_Keysym': '2' bytes padding added after data member 'SDL_Keysym::mod' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_keyboard.h | 52 | 
-| Warning | C4820 | 'SDL_Finger': '4' bytes padding added after data member 'SDL_Finger::pressure' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_touch.h | 58 | 
-| Warning | C4820 | 'SDL_TextEditingExtEvent': '4' bytes padding added after data member 'SDL_TextEditingExtEvent::windowID' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_events.h | 257 | 
-| Warning | C4820 | 'SDL_MultiGestureEvent': '4' bytes padding added after data member 'SDL_MultiGestureEvent::padding' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_events.h | 526 | 
-| Warning | C4820 | 'SDL_DropEvent': '4' bytes padding added after data member 'SDL_DropEvent::windowID' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_events.h | 556 | 
-| Warning | C4820 | 'SDL_HapticDirection': '3' bytes padding added after data member 'SDL_HapticDirection::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 462 | 
-| Warning | C4820 | 'SDL_HapticConstant': '2' bytes padding added after data member 'SDL_HapticConstant::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 481 | 
-| Warning | C4820 | 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 564 | 
-| Warning | C4820 | 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::fade_level' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 585 | 
-| Warning | C4820 | 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 616 | 
-| Warning | C4820 | 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::center' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 633 | 
-| Warning | C4820 | 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 652 | 
-| Warning | C4820 | 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::fade_level' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 671 | 
-| Warning | C4820 | 'SDL_HapticLeftRight': '2' bytes padding added after data member 'SDL_HapticLeftRight::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 691 | 
-| Warning | C4820 | 'SDL_HapticCustom': '2' bytes padding added after data member 'SDL_HapticCustom::type' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 717 | 
-| Warning | C4820 | 'SDL_HapticCustom': '1' bytes padding added after data member 'SDL_HapticCustom::channels' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 729 | 
-| Warning | C4820 | 'SDL_HapticCustom': '4' bytes padding added after data member 'SDL_HapticCustom::samples' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_haptic.h | 731 | 
-| Warning | C4820 | 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::product_id' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_hidapi.h | 92 | 
-| Warning | C4820 | 'SDL_hid_device_info': '6' bytes padding added after data member 'SDL_hid_device_info::release_number' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_hidapi.h | 97 | 
-| Warning | C4820 | 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::interface_protocol' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_hidapi.h | 121 | 
-| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::flags' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_messagebox.h | 97 | 
-| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::numbuttons' | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_messagebox.h | 102 | 
-| Warning | C4464 | relative include path contains '..' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\gui.h | 14 | 
-| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::count' | covert-action-engine | C:\Users\bwright\SDL2_image-2.6.2\include\SDL_image.h | 2048 | 
-| Warning | C4464 | relative include path contains '..' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\gui.h | 16 | 
-| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 128 | 
-| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 165 | 
-| Warning | C4820 | 'MenuChoice': '3' bytes padding added after data member 'MenuChoice::selected' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\menu.h | 11 | 
-| Warning | C4820 | 'GameState': '2' bytes padding added after data member 'GameState::isTwelve' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\gamestate.h | 25 | 
-| Warning | C4061 | enumerator 'GameScreen::DrivingCarSelect' in switch of enum 'GameScreen' is not explicitly handled by a case label | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\gamestate.cpp | 291 | 
-| Message |  | see declaration of 'GameScreen' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 48 | 
-| Warning | C4100 | 'miniGame': unreferenced formal parameter | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\gamestate.cpp | 295 | 
-| Warning | C4514 | 'SDL_memset4': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 529 | 
-| Warning | C4514 | 'SDL_memcpy4': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 757 | 
-| Warning | C4514 | 'SDL_size_mul_overflow': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 768 | 
-| Warning | C4514 | 'SDL_size_add_overflow': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_stdinc.h | 798 | 
-| Warning | C4514 | 'SDL_SwapFloat': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_endian.h | 297 | 
-| Warning | C4514 | 'SDL_PointInRect': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 110 | 
-| Warning | C4514 | 'SDL_RectEmpty': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 119 | 
-| Warning | C4514 | 'SDL_RectEquals': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 127 | 
-| Warning | C4514 | 'SDL_PointInFRect': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 233 | 
-| Warning | C4514 | 'SDL_FRectEmpty': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 242 | 
-| Warning | C4514 | 'SDL_FRectEquals': unreferenced inline function has been removed | covert-action-engine | C:\Users\bwright\SDL2-2.24.0\include\SDL_rect.h | 267 | 
-| Warning | C4464 | relative include path contains '..' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gameplay\agentgenerator.h | 3 | 
-| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 128 | 
-| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\types.h | 165 | 
-| Warning | C4820 | 'MenuChoice': '3' bytes padding added after data member 'MenuChoice::selected' | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\menu.h | 11 | 
-| Warning | C4365 | 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\menu.cpp | 19 | 
-| Warning | C4365 | 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\menu.cpp | 19 | 
-| Warning | C4365 | 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\menu.cpp | 22 | 
-| Warning | C4365 | 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\menu.cpp | 22 | 
-| Warning | C4365 | 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\menu.cpp | 24 | 
-| Warning | C4365 | 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch | covert-action-engine | C:\Users\bwright\covert-action-engine\src\gui\menu.cpp | 24 | 
-| Warning | C4700 | uninitialized local variable 'd' used | covert-action-engine | C:\Users\bwright\covert-action-engine\src\minigame\electronics.cpp | 73 | 
-
+| Severity | Code | Description | File | Line |
+| -------- | ---- | ----------- | ---- | ---- |
+| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | src\types.h | 128 |
+| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | src\types.h | 165 |
+| Warning | C4100 | 'argv': unreferenced formal parameter | src\main.cpp | 7 |
+| Warning | C4100 | 'argc': unreferenced formal parameter | src\main.cpp | 7 |
+| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | src\types.h | 128 |
+| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | src\types.h | 165 |
+| Warning | C4464 | relative include path contains '..' | src\gameplay\gamestate.h | 5 |
+| Warning | C4820 | 'SDL_AssertData': '4' bytes padding added after data member 'SDL_AssertData::linenum' | SDL2-2.24.0\include\SDL_assert.h | 124 |
+| Warning | C4820 | 'SDL_RWops::<unnamed-tag>': '4' bytes padding added after data member 'SDL_RWops::<unnamed-tag>::append' | SDL2-2.24.0\include\SDL_rwops.h | 105 |
+| Warning | C4820 | 'SDL_RWops': '4' bytes padding added after data member 'SDL_RWops::type' | SDL2-2.24.0\include\SDL_rwops.h | 133 |
+| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::len_mult' | SDL2-2.24.0\include\SDL_audio.h | 241 |
+| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::filter_index' | SDL2-2.24.0\include\SDL_audio.h | 244 |
+| Warning | C4820 | 'SDL_Palette': '4' bytes padding added after data member 'SDL_Palette::ncolors' | SDL2-2.24.0\include\SDL_pixels.h | 321 |
+| Warning | C4820 | 'SDL_PixelFormat': '4' bytes padding added after data member 'SDL_PixelFormat::format' | SDL2-2.24.0\include\SDL_pixels.h | 332 |
+| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::flags' | SDL2-2.24.0\include\SDL_surface.h | 75 |
+| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::pitch' | SDL2-2.24.0\include\SDL_surface.h | 78 |
+| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::locked' | SDL2-2.24.0\include\SDL_surface.h | 87 |
+| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::refcount' | SDL2-2.24.0\include\SDL_surface.h | 97 |
+| Warning | C4820 | 'SDL_Keysym': '2' bytes padding added after data member 'SDL_Keysym::mod' | SDL2-2.24.0\include\SDL_keyboard.h | 52 |
+| Warning | C4820 | 'SDL_Finger': '4' bytes padding added after data member 'SDL_Finger::pressure' | SDL2-2.24.0\include\SDL_touch.h | 58 |
+| Warning | C4820 | 'SDL_TextEditingExtEvent': '4' bytes padding added after data member 'SDL_TextEditingExtEvent::windowID' | SDL2-2.24.0\include\SDL_events.h | 257 |
+| Warning | C4820 | 'SDL_MultiGestureEvent': '4' bytes padding added after data member 'SDL_MultiGestureEvent::padding' | SDL2-2.24.0\include\SDL_events.h | 526 |
+| Warning | C4820 | 'SDL_DropEvent': '4' bytes padding added after data member 'SDL_DropEvent::windowID' | SDL2-2.24.0\include\SDL_events.h | 556 |
+| Warning | C4820 | 'SDL_HapticDirection': '3' bytes padding added after data member 'SDL_HapticDirection::type' | SDL2-2.24.0\include\SDL_haptic.h | 462 |
+| Warning | C4820 | 'SDL_HapticConstant': '2' bytes padding added after data member 'SDL_HapticConstant::type' | SDL2-2.24.0\include\SDL_haptic.h | 481 |
+| Warning | C4820 | 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::type' | SDL2-2.24.0\include\SDL_haptic.h | 564 |
+| Warning | C4820 | 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::fade_level' | SDL2-2.24.0\include\SDL_haptic.h | 585 |
+| Warning | C4820 | 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::type' | SDL2-2.24.0\include\SDL_haptic.h | 616 |
+| Warning | C4820 | 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::center' | SDL2-2.24.0\include\SDL_haptic.h | 633 |
+| Warning | C4820 | 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::type' | SDL2-2.24.0\include\SDL_haptic.h | 652 |
+| Warning | C4820 | 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::fade_level' | SDL2-2.24.0\include\SDL_haptic.h | 671 |
+| Warning | C4820 | 'SDL_HapticLeftRight': '2' bytes padding added after data member 'SDL_HapticLeftRight::type' | SDL2-2.24.0\include\SDL_haptic.h | 691 |
+| Warning | C4820 | 'SDL_HapticCustom': '2' bytes padding added after data member 'SDL_HapticCustom::type' | SDL2-2.24.0\include\SDL_haptic.h | 717 |
+| Warning | C4820 | 'SDL_HapticCustom': '1' bytes padding added after data member 'SDL_HapticCustom::channels' | SDL2-2.24.0\include\SDL_haptic.h | 729 |
+| Warning | C4820 | 'SDL_HapticCustom': '4' bytes padding added after data member 'SDL_HapticCustom::samples' | SDL2-2.24.0\include\SDL_haptic.h | 731 |
+| Warning | C4820 | 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::product_id' | SDL2-2.24.0\include\SDL_hidapi.h | 92 |
+| Warning | C4820 | 'SDL_hid_device_info': '6' bytes padding added after data member 'SDL_hid_device_info::release_number' | SDL2-2.24.0\include\SDL_hidapi.h | 97 |
+| Warning | C4820 | 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::interface_protocol' | SDL2-2.24.0\include\SDL_hidapi.h | 121 |
+| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::flags' | SDL2-2.24.0\include\SDL_messagebox.h | 97 |
+| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::numbuttons' | SDL2-2.24.0\include\SDL_messagebox.h | 102 |
+| Warning | C4464 | relative include path contains '..' | src\gui\gui.h | 14 |
+| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::count' | SDL2_image-2.6.2\include\SDL_image.h | 2048 |
+| Warning | C4464 | relative include path contains '..' | src\gui\gui.h | 16 |
+| Warning | C4820 | 'MenuChoice': '3' bytes padding added after data member 'MenuChoice::selected' | src\gui\menu.h | 11 |
+| Warning | C4820 | 'GameState': '2' bytes padding added after data member 'GameState::isTwelve' | src\gameplay\gamestate.h | 25 |
+| Warning | C4820 | 'MainChar': '4' bytes padding added after data member 'MainChar::apt_elec' | src\gameplay\mainchar.h | 41 |
+| Warning | C4458 | declaration of 'rank' hides class member | src\gameplay\mainchar.h | 19 |
+| Message |  | see declaration of 'MainChar::rank' | src\gameplay\mainchar.h | 36 |
+| Warning | C4065 | switch statement contains 'default' but no 'case' labels | src\covert.cpp | 86 |
+| Warning | C4514 | 'SDL_memset4': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 529 |
+| Warning | C4514 | 'SDL_memcpy4': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 757 |
+| Warning | C4514 | 'SDL_size_mul_overflow': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 768 |
+| Warning | C4514 | 'SDL_size_add_overflow': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 798 |
+| Warning | C4514 | 'SDL_SwapFloat': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_endian.h | 297 |
+| Warning | C4514 | 'SDL_PointInRect': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 110 |
+| Warning | C4514 | 'SDL_RectEmpty': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 119 |
+| Warning | C4514 | 'SDL_RectEquals': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 127 |
+| Warning | C4514 | 'SDL_PointInFRect': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 233 |
+| Warning | C4514 | 'SDL_FRectEmpty': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 242 |
+| Warning | C4514 | 'SDL_FRectEquals': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 267 |
+| Warning | C4514 | 'MainChar::MainChar': unreferenced inline function has been removed | src\gameplay\mainchar.h | 6 |
+| Warning | C4514 | 'MainChar::setCallsign': unreferenced inline function has been removed | src\gameplay\mainchar.h | 18 |
+| Warning | C4514 | 'MainChar::setRank': unreferenced inline function has been removed | src\gameplay\mainchar.h | 19 |
+| Warning | C4514 | 'MainChar::setSkillLevels': unreferenced inline function has been removed | src\gameplay\mainchar.h | 20 |
+| Warning | C4514 | 'MainChar::getCallsign': unreferenced inline function has been removed | src\gameplay\mainchar.h | 27 |
+| Warning | C4514 | 'MainChar::getRank': unreferenced inline function has been removed | src\gameplay\mainchar.h | 28 |
+| Warning | C4514 | 'MainChar::getCombatAptitude': unreferenced inline function has been removed | src\gameplay\mainchar.h | 29 |
+| Warning | C4514 | 'MainChar::getDrivingAptitude': unreferenced inline function has been removed | src\gameplay\mainchar.h | 30 |
+| Warning | C4514 | 'MainChar::getCryptoAptitude': unreferenced inline function has been removed | src\gameplay\mainchar.h | 31 |
+| Warning | C4514 | 'MainChar::getElecAptitude': unreferenced inline function has been removed | src\gameplay\mainchar.h | 32 |
+| Warning | C4820 | 'Organization': '7' bytes padding added after data member 'Organization::id_char' | src\gameplay\casegenerator.h | 16 |
+| Warning | C5246 | 'std::array<Organization,3>::_Elems': the initialization of a subobject should be wrapped in braces | src\gameplay\casegenerator.h | 21 |
+| Warning | C5246 | 'std::array<Organization,26>::_Elems': the initialization of a subobject should be wrapped in braces | src\gameplay\casegenerator.h | 32 |
+| Warning | C4820 | 'Participant': '1' bytes padding added after data member 'Participant::agentletter' | src\gameplay\casegenerator.h | 107 |
+| Warning | C4820 | 'Participant': '3' bytes padding added after data member 'Participant::city' | src\gameplay\casegenerator.h | 109 |
+| Warning | C4820 | 'Participant': '7' bytes padding added after data member 'Participant::recruitcity' | src\gameplay\casegenerator.h | 111 |
+| Warning | C4820 | 'Participant': '3' bytes padding added after data member 'Participant::visibility' | src\gameplay\casegenerator.h | 115 |
+| Warning | C4514 | 'Participant::getName': unreferenced inline function has been removed | src\gameplay\casegenerator.h | 99 |
+| Warning | C4514 | 'Participant::getAgentLetter': unreferenced inline function has been removed | src\gameplay\casegenerator.h | 100 |
+| Warning | C4514 | 'Participant::getRankPoints': unreferenced inline function has been removed | src\gameplay\casegenerator.h | 101 |
+| Warning | C4514 | 'Participant::getRole': unreferenced inline function has been removed | src\gameplay\casegenerator.h | 102 |
+| Warning | C4514 | 'MissionSet::MissionSet': unreferenced inline function has been removed | src\gameplay\casegenerator.h | 146 |
+| Warning | C4464 | relative include path contains '..' | src\minigame\minigame.h | 3 |
+| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | src\types.h | 128 |
+| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | src\types.h | 165 |
+| Warning | C5204 | 'MiniGame': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly | src\minigame\minigame.h | 12 |
+| Warning | C4820 | 'Inventory': '3' bytes padding added after data member 'Inventory::mags' | src\minigame\combat.h | 62 |
+| Warning | C4820 | 'MiniGameCombat': '3' bytes padding added after data member 'MiniGameCombat::max_guards' | src\minigame\combat.h | 103 |
+| Warning | C4265 | 'MiniGameCombat': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly | src\minigame\combat.h | 104 |
+| Warning | C4100 | 'level': unreferenced formal parameter | src\minigame\combat.cpp | 15 |
+| Warning | C4514 | 'MiniGameCombat::operator delete': unreferenced inline function has been removed | src\minigame\combat.h | 98 |
+| Warning | C4464 | relative include path contains '..' | src\minigame\minigame.h | 3 |
+| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | src\types.h | 128 |
+| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | src\types.h | 165 |
+| Warning | C5204 | 'MiniGame': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly | src\minigame\minigame.h | 12 |
+| Warning | C4820 | 'Car': '1' bytes padding added after data member 'Car::suspicion' | src\minigame\driving.h | 20 |
+| Warning | C4820 | 'MiniGameDriving': '3' bytes padding added after data member 'MiniGameDriving::unseen_timer' | src\minigame\driving.h | 46 |
+| Warning | C5204 | 'MiniGameDriving': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly | src\minigame\driving.h | 46 |
+| Warning | C4100 | 'level': unreferenced formal parameter | src\minigame\driving.cpp | 14 |
+| Warning | C4464 | relative include path contains '..' | src\minigame\minigame.h | 3 |
+| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | src\types.h | 128 |
+| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | src\types.h | 165 |
+| Warning | C5204 | 'MiniGame': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly | src\minigame\minigame.h | 12 |
+| Warning | C4820 | 'MiniGameCryptography': '2' bytes padding added after data member 'MiniGameCryptography::user_decipher' | src\minigame\cryptography.h | 27 |
+| Warning | C4365 | 'argument': conversion from 'int' to 'std::array<char,26>::size_type', signed/unsigned mismatch | src\minigame\cryptography.cpp | 36 |
+| Warning | C4244 | '=': conversion from 'int' to '_Ty', possible loss of data | src\minigame\cryptography.cpp | 36 |
+| Warning | C4100 | 'level': unreferenced formal parameter | src\minigame\cryptography.cpp | 13 |
+| Warning | C4100 | 'key': unreferenced formal parameter | src\minigame\cryptography.cpp | 51 |
+| Message |  | see reference to function template instantiation 'void MiniGameCryptography::test_convert_message<std::array<char,26>>(const _T0 &)' being compiled | src\minigame\cryptography.cpp | 40 |
+| Warning | C4464 | relative include path contains '..' | src\minigame\minigame.h | 3 |
+| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | src\types.h | 128 |
+| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | src\types.h | 165 |
+| Warning | C5204 | 'MiniGame': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly | src\minigame\minigame.h | 12 |
+| Warning | C4820 | 'Junc': '2' bytes padding added after data member 'Junc::locked' | src\minigame\electronics.h | 34 |
+| Warning | C4820 | 'MiniGameElectronics': '2' bytes padding added after data member 'MiniGameElectronics::sy' | src\minigame\electronics.h | 47 |
+| Warning | C4820 | 'MiniGameElectronics': '4' bytes padding added after data member 'MiniGameElectronics::holding' | src\minigame\electronics.h | 50 |
+| Warning | C5204 | 'MiniGameElectronics': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly | src\minigame\electronics.h | 40 |
+| Warning | C4101 | 'num_locked': unreferenced local variable | src\minigame\electronics.cpp | 14 |
+| Warning | C4101 | 'num_swaps': unreferenced local variable | src\minigame\electronics.cpp | 18 |
+| Warning | C4101 | 'num_jumps': unreferenced local variable | src\minigame\electronics.cpp | 17 |
+| Warning | C4101 | 'num_hidden': unreferenced local variable | src\minigame\electronics.cpp | 15 |
+| Warning | C4101 | 'num_alarms': unreferenced local variable | src\minigame\electronics.cpp | 16 |
+| Warning | C4820 | 'SDL_AssertData': '4' bytes padding added after data member 'SDL_AssertData::linenum' | SDL2-2.24.0\include\SDL_assert.h | 124 |
+| Warning | C4820 | 'SDL_RWops::<unnamed-tag>': '4' bytes padding added after data member 'SDL_RWops::<unnamed-tag>::append' | SDL2-2.24.0\include\SDL_rwops.h | 105 |
+| Warning | C4820 | 'SDL_RWops': '4' bytes padding added after data member 'SDL_RWops::type' | SDL2-2.24.0\include\SDL_rwops.h | 133 |
+| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::len_mult' | SDL2-2.24.0\include\SDL_audio.h | 241 |
+| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::filter_index' | SDL2-2.24.0\include\SDL_audio.h | 244 |
+| Warning | C4820 | 'SDL_Palette': '4' bytes padding added after data member 'SDL_Palette::ncolors' | SDL2-2.24.0\include\SDL_pixels.h | 321 |
+| Warning | C4820 | 'SDL_PixelFormat': '4' bytes padding added after data member 'SDL_PixelFormat::format' | SDL2-2.24.0\include\SDL_pixels.h | 332 |
+| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::flags' | SDL2-2.24.0\include\SDL_surface.h | 75 |
+| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::pitch' | SDL2-2.24.0\include\SDL_surface.h | 78 |
+| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::locked' | SDL2-2.24.0\include\SDL_surface.h | 87 |
+| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::refcount' | SDL2-2.24.0\include\SDL_surface.h | 97 |
+| Warning | C4820 | 'SDL_Keysym': '2' bytes padding added after data member 'SDL_Keysym::mod' | SDL2-2.24.0\include\SDL_keyboard.h | 52 |
+| Warning | C4820 | 'SDL_Finger': '4' bytes padding added after data member 'SDL_Finger::pressure' | SDL2-2.24.0\include\SDL_touch.h | 58 |
+| Warning | C4820 | 'SDL_TextEditingExtEvent': '4' bytes padding added after data member 'SDL_TextEditingExtEvent::windowID' | SDL2-2.24.0\include\SDL_events.h | 257 |
+| Warning | C4820 | 'SDL_MultiGestureEvent': '4' bytes padding added after data member 'SDL_MultiGestureEvent::padding' | SDL2-2.24.0\include\SDL_events.h | 526 |
+| Warning | C4820 | 'SDL_DropEvent': '4' bytes padding added after data member 'SDL_DropEvent::windowID' | SDL2-2.24.0\include\SDL_events.h | 556 |
+| Warning | C4820 | 'SDL_HapticDirection': '3' bytes padding added after data member 'SDL_HapticDirection::type' | SDL2-2.24.0\include\SDL_haptic.h | 462 |
+| Warning | C4820 | 'SDL_HapticConstant': '2' bytes padding added after data member 'SDL_HapticConstant::type' | SDL2-2.24.0\include\SDL_haptic.h | 481 |
+| Warning | C4820 | 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::type' | SDL2-2.24.0\include\SDL_haptic.h | 564 |
+| Warning | C4820 | 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::fade_level' | SDL2-2.24.0\include\SDL_haptic.h | 585 |
+| Warning | C4820 | 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::type' | SDL2-2.24.0\include\SDL_haptic.h | 616 |
+| Warning | C4820 | 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::center' | SDL2-2.24.0\include\SDL_haptic.h | 633 |
+| Warning | C4820 | 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::type' | SDL2-2.24.0\include\SDL_haptic.h | 652 |
+| Warning | C4820 | 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::fade_level' | SDL2-2.24.0\include\SDL_haptic.h | 671 |
+| Warning | C4820 | 'SDL_HapticLeftRight': '2' bytes padding added after data member 'SDL_HapticLeftRight::type' | SDL2-2.24.0\include\SDL_haptic.h | 691 |
+| Warning | C4820 | 'SDL_HapticCustom': '2' bytes padding added after data member 'SDL_HapticCustom::type' | SDL2-2.24.0\include\SDL_haptic.h | 717 |
+| Warning | C4820 | 'SDL_HapticCustom': '1' bytes padding added after data member 'SDL_HapticCustom::channels' | SDL2-2.24.0\include\SDL_haptic.h | 729 |
+| Warning | C4820 | 'SDL_HapticCustom': '4' bytes padding added after data member 'SDL_HapticCustom::samples' | SDL2-2.24.0\include\SDL_haptic.h | 731 |
+| Warning | C4820 | 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::product_id' | SDL2-2.24.0\include\SDL_hidapi.h | 92 |
+| Warning | C4820 | 'SDL_hid_device_info': '6' bytes padding added after data member 'SDL_hid_device_info::release_number' | SDL2-2.24.0\include\SDL_hidapi.h | 97 |
+| Warning | C4820 | 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::interface_protocol' | SDL2-2.24.0\include\SDL_hidapi.h | 121 |
+| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::flags' | SDL2-2.24.0\include\SDL_messagebox.h | 97 |
+| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::numbuttons' | SDL2-2.24.0\include\SDL_messagebox.h | 102 |
+| Warning | C4514 | 'SDL_memset4': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 529 |
+| Warning | C4514 | 'SDL_memcpy4': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 757 |
+| Warning | C4514 | 'SDL_size_mul_overflow': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 768 |
+| Warning | C4514 | 'SDL_size_add_overflow': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 798 |
+| Warning | C4514 | 'SDL_SwapFloat': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_endian.h | 297 |
+| Warning | C4514 | 'SDL_PointInRect': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 110 |
+| Warning | C4514 | 'SDL_RectEmpty': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 119 |
+| Warning | C4514 | 'SDL_RectEquals': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 127 |
+| Warning | C4514 | 'SDL_PointInFRect': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 233 |
+| Warning | C4514 | 'SDL_FRectEmpty': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 242 |
+| Warning | C4514 | 'SDL_FRectEquals': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 267 |
+| Warning | C4820 | 'SDL_RWops::<unnamed-tag>': '4' bytes padding added after data member 'SDL_RWops::<unnamed-tag>::append' | SDL2-2.24.0\include\SDL_rwops.h | 105 |
+| Warning | C4820 | 'SDL_RWops': '4' bytes padding added after data member 'SDL_RWops::type' | SDL2-2.24.0\include\SDL_rwops.h | 133 |
+| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::len_mult' | SDL2-2.24.0\include\SDL_audio.h | 241 |
+| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::filter_index' | SDL2-2.24.0\include\SDL_audio.h | 244 |
+| Warning | C4820 | 'Mix_Chunk': '4' bytes padding added after data member 'Mix_Chunk::allocated' | SDL2_mixer-2.6.2\include\SDL_mixer.h | 230 |
+| Warning | C4820 | 'Mix_Chunk': '3' bytes padding added after data member 'Mix_Chunk::volume' | SDL2_mixer-2.6.2\include\SDL_mixer.h | 233 |
+| Warning | C4464 | relative include path contains '..' | src\sound\music.h | 4 |
+| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | src\types.h | 128 |
+| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | src\types.h | 165 |
+| Warning | C4100 | 'midi': unreferenced formal parameter | src\sound\music.cpp | 10 |
+| Warning | C4514 | 'SDL_memset4': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 529 |
+| Warning | C4514 | 'SDL_memcpy4': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 757 |
+| Warning | C4514 | 'SDL_size_mul_overflow': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 768 |
+| Warning | C4514 | 'SDL_size_add_overflow': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 798 |
+| Warning | C4514 | 'SDL_SwapFloat': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_endian.h | 297 |
+| Warning | C4820 | 'SDL_AssertData': '4' bytes padding added after data member 'SDL_AssertData::linenum' | SDL2-2.24.0\include\SDL_assert.h | 124 |
+| Warning | C4820 | 'SDL_RWops::<unnamed-tag>': '4' bytes padding added after data member 'SDL_RWops::<unnamed-tag>::append' | SDL2-2.24.0\include\SDL_rwops.h | 105 |
+| Warning | C4820 | 'SDL_RWops': '4' bytes padding added after data member 'SDL_RWops::type' | SDL2-2.24.0\include\SDL_rwops.h | 133 |
+| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::len_mult' | SDL2-2.24.0\include\SDL_audio.h | 241 |
+| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::filter_index' | SDL2-2.24.0\include\SDL_audio.h | 244 |
+| Warning | C4820 | 'SDL_Palette': '4' bytes padding added after data member 'SDL_Palette::ncolors' | SDL2-2.24.0\include\SDL_pixels.h | 321 |
+| Warning | C4820 | 'SDL_PixelFormat': '4' bytes padding added after data member 'SDL_PixelFormat::format' | SDL2-2.24.0\include\SDL_pixels.h | 332 |
+| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::flags' | SDL2-2.24.0\include\SDL_surface.h | 75 |
+| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::pitch' | SDL2-2.24.0\include\SDL_surface.h | 78 |
+| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::locked' | SDL2-2.24.0\include\SDL_surface.h | 87 |
+| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::refcount' | SDL2-2.24.0\include\SDL_surface.h | 97 |
+| Warning | C4820 | 'SDL_Keysym': '2' bytes padding added after data member 'SDL_Keysym::mod' | SDL2-2.24.0\include\SDL_keyboard.h | 52 |
+| Warning | C4820 | 'SDL_Finger': '4' bytes padding added after data member 'SDL_Finger::pressure' | SDL2-2.24.0\include\SDL_touch.h | 58 |
+| Warning | C4820 | 'SDL_TextEditingExtEvent': '4' bytes padding added after data member 'SDL_TextEditingExtEvent::windowID' | SDL2-2.24.0\include\SDL_events.h | 257 |
+| Warning | C4820 | 'SDL_MultiGestureEvent': '4' bytes padding added after data member 'SDL_MultiGestureEvent::padding' | SDL2-2.24.0\include\SDL_events.h | 526 |
+| Warning | C4820 | 'SDL_DropEvent': '4' bytes padding added after data member 'SDL_DropEvent::windowID' | SDL2-2.24.0\include\SDL_events.h | 556 |
+| Warning | C4820 | 'SDL_HapticDirection': '3' bytes padding added after data member 'SDL_HapticDirection::type' | SDL2-2.24.0\include\SDL_haptic.h | 462 |
+| Warning | C4820 | 'SDL_HapticConstant': '2' bytes padding added after data member 'SDL_HapticConstant::type' | SDL2-2.24.0\include\SDL_haptic.h | 481 |
+| Warning | C4820 | 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::type' | SDL2-2.24.0\include\SDL_haptic.h | 564 |
+| Warning | C4820 | 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::fade_level' | SDL2-2.24.0\include\SDL_haptic.h | 585 |
+| Warning | C4820 | 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::type' | SDL2-2.24.0\include\SDL_haptic.h | 616 |
+| Warning | C4820 | 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::center' | SDL2-2.24.0\include\SDL_haptic.h | 633 |
+| Warning | C4820 | 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::type' | SDL2-2.24.0\include\SDL_haptic.h | 652 |
+| Warning | C4820 | 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::fade_level' | SDL2-2.24.0\include\SDL_haptic.h | 671 |
+| Warning | C4820 | 'SDL_HapticLeftRight': '2' bytes padding added after data member 'SDL_HapticLeftRight::type' | SDL2-2.24.0\include\SDL_haptic.h | 691 |
+| Warning | C4820 | 'SDL_HapticCustom': '2' bytes padding added after data member 'SDL_HapticCustom::type' | SDL2-2.24.0\include\SDL_haptic.h | 717 |
+| Warning | C4820 | 'SDL_HapticCustom': '1' bytes padding added after data member 'SDL_HapticCustom::channels' | SDL2-2.24.0\include\SDL_haptic.h | 729 |
+| Warning | C4820 | 'SDL_HapticCustom': '4' bytes padding added after data member 'SDL_HapticCustom::samples' | SDL2-2.24.0\include\SDL_haptic.h | 731 |
+| Warning | C4820 | 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::product_id' | SDL2-2.24.0\include\SDL_hidapi.h | 92 |
+| Warning | C4820 | 'SDL_hid_device_info': '6' bytes padding added after data member 'SDL_hid_device_info::release_number' | SDL2-2.24.0\include\SDL_hidapi.h | 97 |
+| Warning | C4820 | 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::interface_protocol' | SDL2-2.24.0\include\SDL_hidapi.h | 121 |
+| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::flags' | SDL2-2.24.0\include\SDL_messagebox.h | 97 |
+| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::numbuttons' | SDL2-2.24.0\include\SDL_messagebox.h | 102 |
+| Warning | C4464 | relative include path contains '..' | src\gui\gui.h | 14 |
+| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::count' | SDL2_image-2.6.2\include\SDL_image.h | 2048 |
+| Warning | C4464 | relative include path contains '..' | src\gui\gui.h | 16 |
+| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | src\types.h | 128 |
+| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | src\types.h | 165 |
+| Warning | C4820 | 'MenuChoice': '3' bytes padding added after data member 'MenuChoice::selected' | src\gui\menu.h | 11 |
+| Warning | C4061 | enumerator 'GameScreen::CIABanned' in switch of enum 'GameScreen' is not explicitly handled by a case label | src\gui\gui.cpp | 205 |
+| Message |  | see declaration of 'GameScreen' | src\types.h | 48 |
+| Warning | C4061 | enumerator 'GameScreen::ReviewWiretaps' in switch of enum 'GameScreen' is not explicitly handled by a case label | src\gui\gui.cpp | 205 |
+| Message |  | see declaration of 'GameScreen' | src\types.h | 48 |
+| Warning | C4061 | enumerator 'GameScreen::CodedMessages' in switch of enum 'GameScreen' is not explicitly handled by a case label | src\gui\gui.cpp | 205 |
+| Message |  | see declaration of 'GameScreen' | src\types.h | 48 |
+| Warning | C4061 | enumerator 'GameScreen::CrimeChronology' in switch of enum 'GameScreen' is not explicitly handled by a case label | src\gui\gui.cpp | 205 |
+| Message |  | see declaration of 'GameScreen' | src\types.h | 48 |
+| Warning | C4061 | enumerator 'GameScreen::Airport' in switch of enum 'GameScreen' is not explicitly handled by a case label | src\gui\gui.cpp | 205 |
+| Message |  | see declaration of 'GameScreen' | src\types.h | 48 |
+| Warning | C4061 | enumerator 'GameScreen::MiniGameCombatStart' in switch of enum 'GameScreen' is not explicitly handled by a case label | src\gui\gui.cpp | 205 |
+| Message |  | see declaration of 'GameScreen' | src\types.h | 48 |
+| Warning | C4061 | enumerator 'GameScreen::MiniGameDrivingStart' in switch of enum 'GameScreen' is not explicitly handled by a case label | src\gui\gui.cpp | 205 |
+| Message |  | see declaration of 'GameScreen' | src\types.h | 48 |
+| Warning | C4061 | enumerator 'GameScreen::DrivingCarSelect' in switch of enum 'GameScreen' is not explicitly handled by a case label | src\gui\gui.cpp | 205 |
+| Message |  | see declaration of 'GameScreen' | src\types.h | 48 |
+| Warning | C4061 | enumerator 'GameScreen::MiniGameCryptoStart' in switch of enum 'GameScreen' is not explicitly handled by a case label | src\gui\gui.cpp | 205 |
+| Message |  | see declaration of 'GameScreen' | src\types.h | 48 |
+| Warning | C4061 | enumerator 'GameScreen::MiniGameElecStart' in switch of enum 'GameScreen' is not explicitly handled by a case label | src\gui\gui.cpp | 205 |
+| Message |  | see declaration of 'GameScreen' | src\types.h | 48 |
+| Warning | C4061 | enumerator 'GameScreen::UNKNOWN' in switch of enum 'GameScreen' is not explicitly handled by a case label | src\gui\gui.cpp | 205 |
+| Message |  | see declaration of 'GameScreen' | src\types.h | 48 |
+| Warning | C4514 | 'SDL_memset4': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 529 |
+| Warning | C4514 | 'SDL_memcpy4': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 757 |
+| Warning | C4514 | 'SDL_size_mul_overflow': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 768 |
+| Warning | C4514 | 'SDL_size_add_overflow': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 798 |
+| Warning | C4514 | 'SDL_SwapFloat': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_endian.h | 297 |
+| Warning | C4514 | 'SDL_PointInRect': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 110 |
+| Warning | C4514 | 'SDL_RectEmpty': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 119 |
+| Warning | C4514 | 'SDL_RectEquals': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 127 |
+| Warning | C4514 | 'SDL_PointInFRect': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 233 |
+| Warning | C4514 | 'SDL_FRectEmpty': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 242 |
+| Warning | C4514 | 'SDL_FRectEquals': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 267 |
+| Warning | C4820 | 'SDL_Palette': '4' bytes padding added after data member 'SDL_Palette::ncolors' | SDL2-2.24.0\include\SDL_pixels.h | 321 |
+| Warning | C4820 | 'SDL_PixelFormat': '4' bytes padding added after data member 'SDL_PixelFormat::format' | SDL2-2.24.0\include\SDL_pixels.h | 332 |
+| Warning | C4820 | 'SDL_RWops::<unnamed-tag>': '4' bytes padding added after data member 'SDL_RWops::<unnamed-tag>::append' | SDL2-2.24.0\include\SDL_rwops.h | 105 |
+| Warning | C4820 | 'SDL_RWops': '4' bytes padding added after data member 'SDL_RWops::type' | SDL2-2.24.0\include\SDL_rwops.h | 133 |
+| Warning | C4514 | 'SDL_memset4': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 529 |
+| Warning | C4514 | 'SDL_memcpy4': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 757 |
+| Warning | C4514 | 'SDL_size_mul_overflow': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 768 |
+| Warning | C4514 | 'SDL_size_add_overflow': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 798 |
+| Warning | C4514 | 'SDL_SwapFloat': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_endian.h | 297 |
+| Warning | C4514 | 'SDL_PointInRect': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 110 |
+| Warning | C4514 | 'SDL_RectEmpty': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 119 |
+| Warning | C4514 | 'SDL_RectEquals': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 127 |
+| Warning | C4514 | 'SDL_PointInFRect': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 233 |
+| Warning | C4514 | 'SDL_FRectEmpty': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 242 |
+| Warning | C4514 | 'SDL_FRectEquals': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 267 |
+| Warning | C4514 | 'Point::Point': unreferenced inline function has been removed | src\gui\point.h | 8 |
+| Warning | C4514 | 'Point::operator ++': unreferenced inline function has been removed | src\gui\point.h | 11 |
+| Warning | C4514 | 'Point::getX': unreferenced inline function has been removed | src\gui\point.h | 13 |
+| Warning | C4514 | 'Point::getY': unreferenced inline function has been removed | src\gui\point.h | 14 |
+| Warning | C4464 | relative include path contains '..' | src\gameplay\gamestate.h | 5 |
+| Warning | C4820 | 'SDL_AssertData': '4' bytes padding added after data member 'SDL_AssertData::linenum' | SDL2-2.24.0\include\SDL_assert.h | 124 |
+| Warning | C4820 | 'SDL_RWops::<unnamed-tag>': '4' bytes padding added after data member 'SDL_RWops::<unnamed-tag>::append' | SDL2-2.24.0\include\SDL_rwops.h | 105 |
+| Warning | C4820 | 'SDL_RWops': '4' bytes padding added after data member 'SDL_RWops::type' | SDL2-2.24.0\include\SDL_rwops.h | 133 |
+| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::len_mult' | SDL2-2.24.0\include\SDL_audio.h | 241 |
+| Warning | C4820 | 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::filter_index' | SDL2-2.24.0\include\SDL_audio.h | 244 |
+| Warning | C4820 | 'SDL_Palette': '4' bytes padding added after data member 'SDL_Palette::ncolors' | SDL2-2.24.0\include\SDL_pixels.h | 321 |
+| Warning | C4820 | 'SDL_PixelFormat': '4' bytes padding added after data member 'SDL_PixelFormat::format' | SDL2-2.24.0\include\SDL_pixels.h | 332 |
+| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::flags' | SDL2-2.24.0\include\SDL_surface.h | 75 |
+| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::pitch' | SDL2-2.24.0\include\SDL_surface.h | 78 |
+| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::locked' | SDL2-2.24.0\include\SDL_surface.h | 87 |
+| Warning | C4820 | 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::refcount' | SDL2-2.24.0\include\SDL_surface.h | 97 |
+| Warning | C4820 | 'SDL_Keysym': '2' bytes padding added after data member 'SDL_Keysym::mod' | SDL2-2.24.0\include\SDL_keyboard.h | 52 |
+| Warning | C4820 | 'SDL_Finger': '4' bytes padding added after data member 'SDL_Finger::pressure' | SDL2-2.24.0\include\SDL_touch.h | 58 |
+| Warning | C4820 | 'SDL_TextEditingExtEvent': '4' bytes padding added after data member 'SDL_TextEditingExtEvent::windowID' | SDL2-2.24.0\include\SDL_events.h | 257 |
+| Warning | C4820 | 'SDL_MultiGestureEvent': '4' bytes padding added after data member 'SDL_MultiGestureEvent::padding' | SDL2-2.24.0\include\SDL_events.h | 526 |
+| Warning | C4820 | 'SDL_DropEvent': '4' bytes padding added after data member 'SDL_DropEvent::windowID' | SDL2-2.24.0\include\SDL_events.h | 556 |
+| Warning | C4820 | 'SDL_HapticDirection': '3' bytes padding added after data member 'SDL_HapticDirection::type' | SDL2-2.24.0\include\SDL_haptic.h | 462 |
+| Warning | C4820 | 'SDL_HapticConstant': '2' bytes padding added after data member 'SDL_HapticConstant::type' | SDL2-2.24.0\include\SDL_haptic.h | 481 |
+| Warning | C4820 | 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::type' | SDL2-2.24.0\include\SDL_haptic.h | 564 |
+| Warning | C4820 | 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::fade_level' | SDL2-2.24.0\include\SDL_haptic.h | 585 |
+| Warning | C4820 | 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::type' | SDL2-2.24.0\include\SDL_haptic.h | 616 |
+| Warning | C4820 | 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::center' | SDL2-2.24.0\include\SDL_haptic.h | 633 |
+| Warning | C4820 | 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::type' | SDL2-2.24.0\include\SDL_haptic.h | 652 |
+| Warning | C4820 | 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::fade_level' | SDL2-2.24.0\include\SDL_haptic.h | 671 |
+| Warning | C4820 | 'SDL_HapticLeftRight': '2' bytes padding added after data member 'SDL_HapticLeftRight::type' | SDL2-2.24.0\include\SDL_haptic.h | 691 |
+| Warning | C4820 | 'SDL_HapticCustom': '2' bytes padding added after data member 'SDL_HapticCustom::type' | SDL2-2.24.0\include\SDL_haptic.h | 717 |
+| Warning | C4820 | 'SDL_HapticCustom': '1' bytes padding added after data member 'SDL_HapticCustom::channels' | SDL2-2.24.0\include\SDL_haptic.h | 729 |
+| Warning | C4820 | 'SDL_HapticCustom': '4' bytes padding added after data member 'SDL_HapticCustom::samples' | SDL2-2.24.0\include\SDL_haptic.h | 731 |
+| Warning | C4820 | 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::product_id' | SDL2-2.24.0\include\SDL_hidapi.h | 92 |
+| Warning | C4820 | 'SDL_hid_device_info': '6' bytes padding added after data member 'SDL_hid_device_info::release_number' | SDL2-2.24.0\include\SDL_hidapi.h | 97 |
+| Warning | C4820 | 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::interface_protocol' | SDL2-2.24.0\include\SDL_hidapi.h | 121 |
+| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::flags' | SDL2-2.24.0\include\SDL_messagebox.h | 97 |
+| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::numbuttons' | SDL2-2.24.0\include\SDL_messagebox.h | 102 |
+| Warning | C4464 | relative include path contains '..' | src\gui\gui.h | 14 |
+| Warning | C4820 | '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::count' | SDL2_image-2.6.2\include\SDL_image.h | 2048 |
+| Warning | C4464 | relative include path contains '..' | src\gui\gui.h | 16 |
+| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | src\types.h | 128 |
+| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | src\types.h | 165 |
+| Warning | C4820 | 'MenuChoice': '3' bytes padding added after data member 'MenuChoice::selected' | src\gui\menu.h | 11 |
+| Warning | C4820 | 'GameState': '2' bytes padding added after data member 'GameState::isTwelve' | src\gameplay\gamestate.h | 25 |
+| Warning | C4061 | enumerator 'GameScreen::DrivingCarSelect' in switch of enum 'GameScreen' is not explicitly handled by a case label | src\gameplay\gamestate.cpp | 291 |
+| Message |  | see declaration of 'GameScreen' | src\types.h | 48 |
+| Warning | C4100 | 'miniGame': unreferenced formal parameter | src\gameplay\gamestate.cpp | 295 |
+| Warning | C4514 | 'SDL_memset4': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 529 |
+| Warning | C4514 | 'SDL_memcpy4': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 757 |
+| Warning | C4514 | 'SDL_size_mul_overflow': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 768 |
+| Warning | C4514 | 'SDL_size_add_overflow': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_stdinc.h | 798 |
+| Warning | C4514 | 'SDL_SwapFloat': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_endian.h | 297 |
+| Warning | C4514 | 'SDL_PointInRect': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 110 |
+| Warning | C4514 | 'SDL_RectEmpty': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 119 |
+| Warning | C4514 | 'SDL_RectEquals': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 127 |
+| Warning | C4514 | 'SDL_PointInFRect': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 233 |
+| Warning | C4514 | 'SDL_FRectEmpty': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 242 |
+| Warning | C4514 | 'SDL_FRectEquals': unreferenced inline function has been removed | SDL2-2.24.0\include\SDL_rect.h | 267 |
+| Warning | C4464 | relative include path contains '..' | src\gameplay\agentgenerator.h | 3 |
+| Warning | C4820 | 'City': '4' bytes padding added after data member 'City::align' | src\types.h | 128 |
+| Warning | C4820 | 'Agent': '2' bytes padding added after data member 'Agent::Photo' | src\types.h | 165 |
+| Warning | C4820 | 'MenuChoice': '3' bytes padding added after data member 'MenuChoice::selected' | src\gui\menu.h | 11 |
+| Warning | C4365 | 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch | src\gui\menu.cpp | 19 |
+| Warning | C4365 | 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch | src\gui\menu.cpp | 19 |
+| Warning | C4365 | 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch | src\gui\menu.cpp | 22 |
+| Warning | C4365 | 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch | src\gui\menu.cpp | 22 |
+| Warning | C4365 | 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch | src\gui\menu.cpp | 24 |
+| Warning | C4365 | 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch | src\gui\menu.cpp | 24 |
+| Warning | C4700 | uninitialized local variable 'd' used | src\minigame\electronics.cpp | 73 |

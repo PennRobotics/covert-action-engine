@@ -35,7 +35,17 @@ Furthermore, we can consider soundtracks from many of the 80s and 90s Roland-era
 
 Couple all that with some Broadway inspiration (Curtains, Clue, Baker Street, The Mystery of Edwin Drood) and we are sure to have a lot of material as inspiration.
 
-Also, maybe there is some royalty-free music that is close enough for right now.
+Also, maybe there is some royalty-free music that is close enough for right now:
+
+- https://freepd.com/electronic.php (e.g. "Goodnightmare")
+- https://freepd.com/scoring.php (e.g. "Patron Saint of Heists")
+- https://freepd.com/epic.php
+- https://audionautix.com/
+- https://freemusicarchive.org/
+- http://dig.ccmixter.org/files/mactonite/63370
+- https://cctrax.com/crennwiick/the-world-s-recreation
+- https://freesound.org/people/BaDoink/sounds/541808/
+- https://freesound.org/people/BaDoink/sounds/578699/
 
 (Of course, if someone has the original data files, then the plan is to just parse and play those---at least MIDI to start with. If this is successful, I would consider extending support for Roland MT-32 via Munt.)
 

@@ -28,17 +28,29 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 
 ### Overview
 
+- [ ] Remove redundancies in/between the TODO sub-lists
 - [x] Change name of project but also all references e.g. BUILD.md URL
 - [ ] Documentation
 - [ ] Font
+  - [x] Imported
+  - [ ] Inline
 - [ ] Sound
+  - [x] Proof-of-concept
+  - [ ] Background music
+  - [ ] Sound Effects
+- [ ] Complete the state machine
 - [ ] Menu system
+  - [x] Proof-of-concept
+  - [ ] Generic up-down
+  - [ ] Skill left-right
+  - [ ] Face selection
+  - [ ] Entry kit selection
 - [ ] Case Data
   - [ ] Clues
   - [ ] Evidence
   - [ ] Mentions
 - [ ] Settings file
-  - [ ] Granular randomization
+  - [ ] Granular randomization (allow easy adjustments to each random assignment until original engine can be reversed)
   - [ ] "Into Hiding" criteria
   - [ ] Scan info revealed (Hotel, Local, International)
   - [ ] Accuracies
@@ -61,10 +73,17 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 - [ ] Room generator
   - Are the rooms/layouts truly random or in any way predictable?
 - [ ] Determine when each participant goes into hiding
-- [ ] Strip MIDI and record with HD soundfont
-- [ ] Strip sprites where necessary
-- [ ] Localization
-- [ ] Vector graphics
+- [ ] (not for public release) Strip MIDI/Roland and record with HD soundfont
+- [ ] (not for public release) Get sprite/picture data from executables, if any exist here
+- [ ] (stretch goal) Localization
+- [ ] Graphics
+  - [x] Placeholder proof-of-concept
+  - [ ] Placeholder intercepts calls to each draw function
+  - [ ] Implement draw function for _.png_
+  - [ ] Implement draw function for _.pic_
+  - [ ] Implement draw function for _.pan_
+  - [ ] (stretch goal) Ensure best use of memory and support for GPU/software rendering
+  - [ ] (stretch goal) Replace raster graphics with vector graphics
 - [ ] Create various combat AIs
 
 ### Implementation

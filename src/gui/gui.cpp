@@ -97,7 +97,7 @@ void GUI::centerText(const SDL_Color c, const char* txt, const int y)
 {
   int w;
   TTF_SizeText(ttf, txt, &w, nullptr);
-  drawText(c, txt, SDL_Point((SCREEN_WIDTH - w) >> 1, y));
+  drawText(c, txt, SDL_Point{(SCREEN_WIDTH - w) >> 1, y});
 }
 
 
@@ -140,12 +140,12 @@ void GUI::createGUI(GameScreen screen)
       _imagePlaceholder(15, 5, 20, 15);
 #endif
       dialogType = DialogType::MINIMENU;
-      drawBox(CAColor::WHITE, SDL_Rect(97, 76, 125, 46));
-      drawText(CAColor::WHITE, "Do you want to...", SDL_Point(102, 80));
+      drawBox(CAColor::WHITE, SDL_Rect{97, 76, 125, 46});
+      drawText(CAColor::WHITE, "Do you want to...", SDL_Point{102, 80});
       if (currentMenu.empty()) {
         currentMenu = buildMenu({" Create a New Character", " Load a Saved Game", " Practice a skill", " Review Hall of Fame"});
       }
-      updateGUIMenu(currentMenu, SDL_Rect(102, 88, 115, 1));
+      updateGUIMenu(currentMenu, SDL_Rect{102, 88, 115, 1});
       // TODO: Create menu
       break;
     case GameScreen::NewCharacter:
@@ -214,7 +214,7 @@ void GUI::createGUIMenu(std::vector<std::string> choice_strings, const SDL_Rect 
   int i = 0;
   for (auto& choice : choice_strings) {
     if (i == 0) {
-      fillBox(CAColor::YELLOW, SDL_Rect(pt.x, pt.y, r0.w, 8));
+      fillBox(CAColor::YELLOW, SDL_Rect{pt.x, pt.y, r0.w, 8});
     }
     drawText(CAColor::GREY, choice.c_str(), pt);
     pt.y += 8;
@@ -228,7 +228,7 @@ void GUI::updateGUIMenu(const std::vector<MenuChoice> choices, SDL_Rect r0)
   SDL_Point pt { r0.x , r0.y };
   for (auto& choice : choices) {
     if (choice.selected) {
-      fillBox(CAColor::YELLOW, SDL_Rect(pt.x, pt.y, r0.w, 8));
+      fillBox(CAColor::YELLOW, SDL_Rect{pt.x, pt.y, r0.w, 8});
     }
     drawText(CAColor::GREY, choice.txt.c_str(), pt);
     pt.y += 8;

@@ -197,6 +197,69 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 
 ## Build Warnings and Messages 
 
+### Clang Error
+
+```
+./src/sound/music.cpp:16:31: warning: format specifies type 'long long' but the argument has type 'uint64_t' (aka 'unsigned long') [-Wformat]
+  fprintf(stdout, "AB%lld\n", (uint64_t) wave[0]);
+                     ~~~~     ^~~~~~~~~~~~~~~~~~
+                     %lu
+1 warning generated.
+./src/gui/gui.cpp:100:20: error: no matching constructor for initialization of 'SDL_Point'
+  drawText(c, txt, SDL_Point((SCREEN_WIDTH - w) >> 1, y));
+                   ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/SDL2/SDL_rect.h:48:16: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 2 were provided
+typedef struct SDL_Point
+               ^
+/usr/include/SDL2/SDL_rect.h:48:16: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 2 were provided
+/usr/include/SDL2/SDL_rect.h:48:16: note: candidate constructor (the implicit default constructor) not viable: requires 0 arguments, but 2 were provided
+./src/gui/gui.cpp:139:7: error: use of undeclared identifier '_imagePlaceholder'
+      _imagePlaceholder(15, 5, 20, 15);
+      ^
+./src/gui/gui.cpp:141:31: error: no matching constructor for initialization of 'SDL_Rect'
+      drawBox(CAColor::WHITE, SDL_Rect(97, 76, 125, 46));
+                              ^        ~~~~~~~~~~~~~~~
+/usr/include/SDL2/SDL_rect.h:78:16: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 4 were provided
+typedef struct SDL_Rect
+               ^
+/usr/include/SDL2/SDL_rect.h:78:16: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 4 were provided
+/usr/include/SDL2/SDL_rect.h:78:16: note: candidate constructor (the implicit default constructor) not viable: requires 0 arguments, but 4 were provided
+./src/gui/gui.cpp:142:53: error: no matching constructor for initialization of 'SDL_Point'
+      drawText(CAColor::WHITE, "Do you want to...", SDL_Point(102, 80));
+                                                    ^         ~~~~~~~
+/usr/include/SDL2/SDL_rect.h:48:16: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 2 were provided
+typedef struct SDL_Point
+               ^
+/usr/include/SDL2/SDL_rect.h:48:16: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 2 were provided
+/usr/include/SDL2/SDL_rect.h:48:16: note: candidate constructor (the implicit default constructor) not viable: requires 0 arguments, but 2 were provided
+./src/gui/gui.cpp:146:34: error: no matching constructor for initialization of 'SDL_Rect'
+      updateGUIMenu(currentMenu, SDL_Rect(102, 88, 115, 1));
+                                 ^        ~~~~~~~~~~~~~~~
+/usr/include/SDL2/SDL_rect.h:78:16: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 4 were provided
+typedef struct SDL_Rect
+               ^
+/usr/include/SDL2/SDL_rect.h:78:16: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 4 were provided
+/usr/include/SDL2/SDL_rect.h:78:16: note: candidate constructor (the implicit default constructor) not viable: requires 0 arguments, but 4 were provided
+./src/gui/gui.cpp:215:32: error: no matching constructor for initialization of 'SDL_Rect'
+      fillBox(CAColor::YELLOW, SDL_Rect(pt.x, pt.y, r0.w, 8));
+                               ^        ~~~~~~~~~~~~~~~~~~~
+/usr/include/SDL2/SDL_rect.h:78:16: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 4 were provided
+typedef struct SDL_Rect
+               ^
+/usr/include/SDL2/SDL_rect.h:78:16: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 4 were provided
+/usr/include/SDL2/SDL_rect.h:78:16: note: candidate constructor (the implicit default constructor) not viable: requires 0 arguments, but 4 were provided
+./src/gui/gui.cpp:229:32: error: no matching constructor for initialization of 'SDL_Rect'
+      fillBox(CAColor::YELLOW, SDL_Rect(pt.x, pt.y, r0.w, 8));
+                               ^        ~~~~~~~~~~~~~~~~~~~
+/usr/include/SDL2/SDL_rect.h:78:16: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 4 were provided
+typedef struct SDL_Rect
+               ^
+/usr/include/SDL2/SDL_rect.h:78:16: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 4 were provided
+/usr/include/SDL2/SDL_rect.h:78:16: note: candidate constructor (the implicit default constructor) not viable: requires 0 arguments, but 4 were provided
+7 errors generated.
+make: *** [Makefile:94: all] Error 2
+```
+
 ### Visual Studio Errors
 
 | Severity | Code | Description | File | Line |

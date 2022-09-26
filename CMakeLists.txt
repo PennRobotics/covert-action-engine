@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.9)
 project(covert-action-engine VERSION 0.1.5)
 
+set(CMAKE_C_COMPILER /usr/bin/clang)
+set(CMAKE_CXX_COMPILER /usr/bin/clang++)
+
 set(CMAKE_VERBOSE_MAKEFILE on)
 
 set(CMAKE_CXX_FLAGS_DEBUG "-Wall -DPLACEHOLDERS")

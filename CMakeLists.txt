@@ -10,6 +10,21 @@ set(CMAKE_CXX_STANDARD 20)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules)
 
+if(MSVC)
+	set(ZLIB_LIBRARY "..\\zlib-1.2.3-lib")
+	set(ZLIB_INCLUDE_DIR "..\\zlib-1.2.3\\include")
+	set(PNG_LIBRARY "..\\libpng-1.2.37-lib")
+	set(PNG_PNG_INCLUDE_DIR "..\\libpng-1.2.37-lib\\include")
+	set(SDL2_LIBRARY "..\\SDL2-2.24.0")
+	set(SDL2_INCLUDE_DIR "..\\SDL2-2.24.0\\include")
+	set(SDL2_IMAGE_LIBRARY "..\\SDL2_image-2.6.2")
+	set(SDL2_IMAGE_INCLUDE_DIR "..\\SDL2_image-2.6.2\\include")
+	set(SDL2_MIXER_LIBRARY "..\\SDL2_mixer-2.6.2")
+	set(SDL2_MIXER_INCLUDE_DIR "..\\SDL2_mixer-2.6.2\\include")
+	set(SDL2_TTF_LIBRARY "..\\SDL2_ttf-2.20.1")
+	set(SDL2_TTF_INCLUDE_DIR "..\\SDL2_ttf-2.20.1\\include")
+endif()
+
 add_executable(
         ${PROJECT_NAME}
         src/main.cpp
@@ -41,6 +56,11 @@ find_package(SDL2_ttf REQUIRED)
 
 include_directories(${SDL2_INCLUDE_DIR} ${SDL2_IMAGE_INCLUDE_DIR} ${SDL2_MIXER_INCLUDE_DIR} ${SDL2_TTF_INCLUDE_DIR})
 target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES} ${SDL2_MIXER_LIBRARIES} ${SDL2_TTF_LIBRARIES})
+
+if(MSVC)
+	target_compile_options(${PROJECT_NAME} PUBLIC "/ZI")
+	target_link_options(${PROJECT_NAME} PUBLIC "/INCREMENTAL")
+endif()
 
 # Copy resources into same directory as binary
 if (NOT CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_CURRENT_BINARY_DIR)

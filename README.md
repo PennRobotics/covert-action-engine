@@ -12,7 +12,7 @@ I made this repository to practice in several domains:
 
 Currently, I build this using CMake on Fedora 36 with a few libsdl-org package (SDL2, TTF, Mixer, Image) as well as zlib and libpng. If there are other dependencies, those will either be in the CMakeLists.txt file or can be installed with a package manager or compiled from source.
 
-With significant manual configuration, this will build on Windows 10 using Visual Studio.
+With significant manual configuration, this will [build on Windows 10 using Visual Studio](BUILD.md).
 
 Once this project is 70 to 90 percent feature-complete, I would add documentation and binaries for all major platforms. Until then, you're mostly on your own building everything. Let me know if you need instructions. I'm not a cruel person, I'm simply putting this off for now because it takes time from source development, and I am not going to benefit from writing build instructions for myself.
 

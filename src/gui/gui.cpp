@@ -104,7 +104,7 @@ void GUI::drawText(const SDL_Color c, const char* txt, const SDL_Point pt)
   SDL_RenderCopy(renderer, textTexture, nullptr, &textRect);
   SDL_DestroyTexture(textTexture);
 #else
-  fprintf(stdout, txt);
+  fprintf(stdout, "%s\n", txt);
 #endif
 }
 
@@ -128,6 +128,10 @@ bool GUI::guiShouldRefresh()  { return true; }
 
 void GUI::createGUI(GameScreen screen)
 {
+#ifdef NO_SDL
+  constexpr char* screenstring[] = {"Splash1", "Splash2", "BeginMenu", "NewCharacter", "Load", "SkillPractice", "HallOfFame", "SkillUpgrade", "Chief", "MastermindLineup", "ShowNewClues", "CIAContact", "CIAMainMenu", "CIAData", "ReviewClues", "ReviewSuspects", "ReviewInsideInfo", "ReviewNews", "ReviewOrg", "ReviewCity", "ReviewActivity", "CIAIntel", "CIABanned", "ReviewWiretaps", "CIASam", "CIACrypto", "CodedMessages", "CrimeChronology", "CityMainMenu", "Airport", "Hotel", "LoadSave", "Building1", "Building2", "Building3", "Building4", "Building5", "Typewriter", "MiniGameCombatStart", "CombatArrest", "CombatRecover", "CombatCaptive", "MiniGameDrivingStart", "DrivingCarSelect", "MiniGameCryptoStart", "MiniGameElecStart", "GameExit"};
+  fprintf(stdout, " [ %s ]\n", screenstring[(int)screen]);
+#endif
   switch (screen) {
     case GameScreen::Building1:
     building_common:
@@ -225,6 +229,8 @@ void GUI::createGUI(GameScreen screen)
   }
 #ifndef NO_SDL
   SDL_RenderPresent(renderer);
+#else
+  fprintf(stdout, "-----\n");
 #endif
 }
 

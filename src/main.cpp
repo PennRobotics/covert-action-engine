@@ -6,11 +6,11 @@
 
 int main( int argc, char* argv[] ) {
 #ifdef PLACEHOLDERS
-#pragma message("DEBUG: use image placeholders")
+#pragma message "DEBUG: use image placeholders"
   std::cout << "Image placeholders are enabled.\n";
 #endif
 #ifdef NO_SDL
-#pragma message("DEBUG: disable SDL")
+#pragma message "DEBUG: disable SDL"
   std::cout << "SDL functions are bypassed.\n";
 #endif
 

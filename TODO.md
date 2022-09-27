@@ -84,6 +84,7 @@ Bases for the development of the engine are the source codes for Freeciv, Master
   - [ ] Implement draw function for _.pan_
   - [ ] (stretch goal) Ensure best use of memory and support for GPU/software rendering
   - [ ] (stretch goal) Replace raster graphics with vector graphics
+- [ ] Implement non-graphical UI
 - [ ] Create various combat AIs
 
 ### Implementation

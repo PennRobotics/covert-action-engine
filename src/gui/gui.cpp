@@ -1,4 +1,8 @@
 // TODO: Anything at all non-graphics related needs to be in a ui.h. GUI should only be the graphics components of UI. This would allow a console-only mode.
+#ifdef NO_SDL
+#include <cstdint>
+uint64_t SDL_GetTicks64()  { return 0; }
+#endif
 
 #include "gui.h"
 
@@ -110,8 +114,6 @@ void GUI::centerText(const SDL_Color c, const char* txt, const int y)
   int w;
 #ifndef NO_SDL
   TTF_SizeText(ttf, txt, &w, nullptr);
-#else
-#define  SCREEN_WIDTH  160
 #endif
   drawText(c, txt, SDL_Point{(SCREEN_WIDTH - w) >> 1, y});
 }

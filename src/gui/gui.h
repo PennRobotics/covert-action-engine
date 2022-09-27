@@ -55,12 +55,14 @@ public:
     SDL_Window* window;
     SDL_Renderer* renderer;
     SDL_Surface* screen_surface = nullptr;
+    TTF_Font* ttf;
+    Uint64 next_screen_tick;
+#else
+	uint64_t next_screen_tick;  // TODO
 #endif
 ///   /* TODO: surfaces and textures and etc. */
 /// private:
     std::vector<MenuChoice> currentMenu;
-    TTF_Font* ttf;
-    Uint64 next_screen_tick;
     int selectedChoice;
     DialogType dialogType { DialogType::INFOTIMER };
 };

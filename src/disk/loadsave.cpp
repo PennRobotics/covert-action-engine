@@ -31,7 +31,7 @@ std::vector<std::string> show_game_files() {
     }
     return game_names;
 #else
-	return std::vector<string>{"A", "B", "C", "D"};
+	return std::vector<std::string>{"A", "B", "C", "D"};
 #endif
 }
 

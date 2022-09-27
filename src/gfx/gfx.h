@@ -5,7 +5,7 @@
 #ifndef NO_SDL
 #include <SDL_image.h>
 #else
-typedef struct SDL_Color  { uint8_t r,g,b,a }  SDL_Color;
+typedef struct SDL_Color  { uint8_t r,g,b,a; }  SDL_Color;
 #endif
 
 void render_bg(SDL_Color& c);

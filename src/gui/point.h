@@ -1,7 +1,11 @@
 #pragma once
 
+#ifndef NO_SDL
 #include <SDL_rect.h>
+#endif
 
+// TODO: replace with SDL_Point
+/*
 class Point {
 public:
     Point() = default;
@@ -16,3 +20,4 @@ public:
 /// private:
     SDL_Rect dstRect {0, 0, 320, 200};
 };
+// */

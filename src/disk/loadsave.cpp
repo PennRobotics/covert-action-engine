@@ -1,12 +1,16 @@
 #include "loadsave.h"
 
+#ifndef NO_SDL
 #include <SDL.h>
+#endif
 
 #include <stdexcept>
 
 #define SAVE_FILE_LIST {"CV0.SVE", "CV1.SVE", "CV2.SVE", "CV3.SVE", "CV4.SVE"}
 
 std::vector<std::string> show_game_files() {
+// TODO
+#ifndef NO_SDL
     SDL_RWops* reader;
     std::vector<std::string> game_names;
     std::string game_name;
@@ -26,8 +30,13 @@ std::vector<std::string> show_game_files() {
         game_names.push_back(game_name);
     }
     return game_names;
+#else
+	return std::vector<string>{"A", "B", "C", "D"};
+#endif
 }
 
+// TODO
+#ifndef NO_SDL
 FileStatus load_game(int game_idx) {
     int i = 0;
     char* fname = (char*)malloc(7);
@@ -71,3 +80,4 @@ int save_game(const char* fname) {
     }
     return 0;
 }
+#endif

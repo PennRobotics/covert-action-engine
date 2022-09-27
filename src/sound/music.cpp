@@ -1,3 +1,4 @@
+#ifndef NO_SDL
 #define SDL_MAIN_HANDLED
 #include <SDL_mixer.h>
 /// #include <SDL.h>
@@ -22,3 +23,4 @@ void play_music(MidiFile midi) {
   Mix_FreeChunk(wave[0]);
   Mix_CloseAudio();
 }
+#endif

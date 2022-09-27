@@ -33,6 +33,7 @@ static const SDL_Color colors[] = {
 
 void GUI::initGUI()
 {
+#ifndef NO_SDL
   SDL_CreateWindowAndRenderer(SCREEN_SCALE * SCREEN_WIDTH, SCREEN_SCALE * SCREEN_HEIGHT, 0, &window, &renderer);
   SDL_RenderSetLogicalSize(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
 
@@ -49,32 +50,40 @@ void GUI::initGUI()
 
   SDL_Palette* palette16 = SDL_AllocPalette(16);
   SDL_SetPaletteColors(palette16, colors, 0, 16);  // TODO: figure this out
+#endif
 }
 
 
 void GUI::setBGColor(const SDL_Color c)
 {
+#ifndef NO_SDL
   SDL_SetRenderDrawColor(renderer, c.r, c.g, c.b, c.a);  // TODO: use a colorlist element
   SDL_RenderClear(renderer);
+#endif
 }
 
 
 void GUI::fillBox(const SDL_Color c, const SDL_Rect r)
 {
+#ifndef NO_SDL
   SDL_SetRenderDrawColor(renderer, c.r, c.g, c.b, SDL_ALPHA_OPAQUE);
   SDL_RenderFillRect(renderer, &r);
+#endif
 }
 
 
 void GUI::drawBox(const SDL_Color c, const SDL_Rect r)
 {
+#ifndef NO_SDL
   SDL_SetRenderDrawColor(renderer, c.r, c.g, c.b, SDL_ALPHA_OPAQUE);
   SDL_RenderDrawRect(renderer, &r);
+#endif
 }
 
 
 void GUI::drawText(const SDL_Color c, const char* txt, const SDL_Point pt)
 {
+#ifndef NO_SDL
   int w, h;
   SDL_Surface* textSurface;
   SDL_Texture* textTexture;
@@ -90,18 +99,29 @@ void GUI::drawText(const SDL_Color c, const char* txt, const SDL_Point pt)
   textRect.y = pt.y;
   SDL_RenderCopy(renderer, textTexture, nullptr, &textRect);
   SDL_DestroyTexture(textTexture);
+#else
+  fprintf(stdout, txt);
+#endif
 }
 
 
 void GUI::centerText(const SDL_Color c, const char* txt, const int y)
 {
   int w;
+#ifndef NO_SDL
   TTF_SizeText(ttf, txt, &w, nullptr);
+#else
+#define  SCREEN_WIDTH  160
+#endif
   drawText(c, txt, SDL_Point{(SCREEN_WIDTH - w) >> 1, y});
 }
 
 
+#ifndef NO_SDL
 bool GUI::guiShouldRefresh()  { return dialogType == DialogType::INFOTIMER && SDL_GetTicks64() >= next_screen_tick; }
+#else
+bool GUI::guiShouldRefresh()  { return true; }
+#endif
 
 
 void GUI::createGUI(GameScreen screen)
@@ -151,8 +171,6 @@ void GUI::createGUI(GameScreen screen)
     case GameScreen::NewCharacter:
       dialogType = DialogType::TEXTENTRY;
       setBGColor(CAColor::RED);
-      SDL_RenderPresent(renderer);
-      SDL_Delay(1000);
       break;
     case GameScreen::SkillUpgrade:
       dialogType = DialogType::SKILLSELECT;
@@ -203,7 +221,9 @@ void GUI::createGUI(GameScreen screen)
       exit(EXIT_FAILURE);
       break;
   }
+#ifndef NO_SDL
   SDL_RenderPresent(renderer);
+#endif
 }
 
 
@@ -297,6 +317,7 @@ const unsigned char singlepixel_bmp[] = {
 
 void GUI::_imagePlaceholder(const int& x, const int& y, const int& w, const int& h)
 {
+#ifndef NO_SDL
   SDL_Surface* ss = SDL_GetWindowSurface(window);
   SDL_Rect pxRect { x, y, w, h };
   SDL_RWops* pxIO = SDL_RWFromConstMem(singlepixel_bmp, sizeof(singlepixel_bmp));
@@ -306,5 +327,8 @@ void GUI::_imagePlaceholder(const int& x, const int& y, const int& w, const int&
   SDL_RenderCopy(renderer, pxTex, nullptr, &pxRect);
   SDL_DestroyTexture(pxTex);
   SDL_RenderPresent(renderer);
+#else
+  fprintf(stdout, "<img subst>\n");
+#endif  // !NO_SDL
 }
-#endif
+#endif  // PLACEHOLDERS

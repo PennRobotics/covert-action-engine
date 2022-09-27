@@ -17,3 +17,4 @@ namespace kbd {
 }  /* namespace kbd */
 
 int main() { kbd::load_default_keymap(); return 0; }
+

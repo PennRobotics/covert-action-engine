@@ -26,6 +26,8 @@ doxygen dox.cfg
 
 ## More Info
 
+[[Wiki|wiki]] 
+
 [BUILD.md](BUILD.md) - contains commands for compiling from source  
 [RANDOM.md](RANDOM.md) - assorted thoughts on content creation to avoid copyright/license violation  
 [REFERENCES.md](REFERENCES.md) - links to resources useful during programming  

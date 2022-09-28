@@ -173,6 +173,7 @@ void GameState::getNextScreen(ScreenExitCondition condition) {
         currentScreen = GameScreen::Chief;
         break;
       case GameScreen::ShowNewClues:
+		// TODO: when clues and updates (messages, etc.) are finished, set isTwelve to false
         if (this->comingFrom == OriginScreen::ChiefInfoHandout) {
           this->comingFrom = OriginScreen::ChiefKickMaxOut;
           currentScreen = GameScreen::Chief;

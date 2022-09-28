@@ -200,9 +200,39 @@ void GUI::createGUI(GameScreen screen)
 ///           buildMenu({"Local Scan", "International Scan", "Active Wire Taps", "Accuse Double Agent", "Check with Sam"}), xy);
       break;
 
-      /* UNUSED CASES */
     case GameScreen::Chief:
+      setBGColor(CAColor::BLACK);
+#ifdef PLACEHOLDERS
+      _imagePlaceholder(15, 5, 20, 15);
+#endif
+      dialogType = DialogType::INFO;
+      drawBox(CAColor::WHITE, SDL_Rect{1, 101, 318, 98});
+      drawText(CAColor::WHITE, "Chief says ...", SDL_Point{4, 104});
+	  break;
+      /* UNUSED CASES */
     case GameScreen::MastermindLineup:
+      dialogType = DialogType::MENU;
+      setBGColor(CAColor::BLACK);
+      drawText(CAColor::WHITE, "Max, I'm sure you recognize the head of", SDL_Point{40, 16});
+      drawText(CAColor::WHITE, "the TODO among these faces", SDL_Point{40, 24});
+#ifdef PLACEHOLDERS
+      _imagePlaceholder( 28,  32, 44, 44);
+      _imagePlaceholder( 83,  32, 44, 44);
+      _imagePlaceholder(138,  32, 44, 44);
+      _imagePlaceholder(193,  32, 44, 44);
+      _imagePlaceholder(248,  32, 44, 44);
+      _imagePlaceholder( 28,  88, 44, 44);
+      _imagePlaceholder( 83,  88, 44, 44);
+      _imagePlaceholder(138,  88, 44, 44);
+      _imagePlaceholder(193,  88, 44, 44);
+      _imagePlaceholder(248,  88, 44, 44);
+      _imagePlaceholder( 28, 144, 44, 44);
+      _imagePlaceholder( 83, 144, 44, 44);
+      _imagePlaceholder(138, 144, 44, 44);
+      _imagePlaceholder(193, 144, 44, 44);
+      _imagePlaceholder(248, 144, 44, 44);
+#endif
+	  break;
     case GameScreen::ShowNewClues:
     case GameScreen::CIAContact:
     case GameScreen::CIAMainMenu:

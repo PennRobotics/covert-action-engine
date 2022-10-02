@@ -72,7 +72,7 @@ As the graphics is undoubtedly going to be a pain---the animations seem to be co
 These are being cycled through _while nothing is happening_ (animations, user input).
 
 ```asm
-int  16
+int  0x16
 je   0x00000055 ($+3)
 sub  ax,ax
 retf

@@ -20,12 +20,12 @@ Running `call 00000474` is evidently `strcmp` implemented using the command `rep
 
 ```asm
 xor bp,bp
-push word [033A]
-push word [0338]
-push word [0336]
-call 00000010
+push word [0x033A]
+push word [0x0338]
+push word [0x0336]
+call 0x00000010
 push ax
-call 0000036A
+call 0x0000036A
 ```
 
 This pushed 3BAE, 3B94, 1 and called 0x10, which then loaded 04C0 and 099D into 0000:04F0 and 0000:04F2. Lots more pushing: 0, 0, E3, E4, 0; then, a `call 00000F0E` which eventually did more environmental variable work.
@@ -73,7 +73,7 @@ These are being cycled through _while nothing is happening_ (animations, user in
 
 ```asm
 int  16
-je   00000055 ($+3)
+je   0x00000055 ($+3)
 sub  ax,ax
 retf
 sub  ax,ax

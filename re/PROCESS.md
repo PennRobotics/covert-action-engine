@@ -28,6 +28,8 @@ push ax
 call 0x0000036A
 ```
 
+(It turned out not to be significant at all, yet.)
+
 This pushed 3BAE, 3B94, 1 and called 0x10, which then loaded 04C0 and 099D into 0000:04F0 and 0000:04F2. Lots more pushing: 0, 0, E3, E4, 0; then, a `call 00000F0E` which eventually did more environmental variable work.
 
 Pushing ahead to a `call 000008D2` (or `call 000008F4` (or `call 914` (or `call 982`)))... I then decided to hold F11 until something significant occurred. There was a lot more environmental variable processing (sound blaster values, etc.) and then a `(F000:D10B) loop 0000D10B` which lasted a few hundred cycles, and a few instructions later, `int 21` (**AH 4B**: ... _exec_)

@@ -60,3 +60,29 @@ Now, at 19F9:07BE, again is `int 21` (**AH 30**) and a resize memory block and a
 
 -----
 
+As the graphics is undoubtedly going to be a pain---the animations seem to be compressed, indexed, and probably containing P- or B-frames---I selected _continue_ until the first selection menu. At this point, the program is waiting for the user to select from a menu. The memory segments being used are:
+
+| Segment | Guess               |
+| ======= | =================== |
+|  1CBE   | check for keystroke |
+|  214C   | function redirects  |
+|  224C   | main loop?          |
+|  F000   | keyboard handler    |
+
+These are being cycled through _while nothing is happening_ (animations, user input).
+
+```asm
+int  16
+je   00000055 ($+3)
+sub  ax,ax
+retf
+sub  ax,ax
+not  ax
+retf
+```
+
+The top `retf` executes when a key is pressed. The other executes when no key is pressed.
+
+| Segment | Guess               |
+| ======= | =================== |
+|  199E   | After pressing enter to create new char |

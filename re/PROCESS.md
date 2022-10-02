@@ -86,3 +86,5 @@ The top `retf` executes when a key is pressed. The other executes when no key is
 | Segment | Guess |
 | ------- | ----- |
 |  199E   | After pressing enter to create new char |
+
+There's a lot of `stosb` after reaching 199E that copies non-text data. Maybe that's a graphics-related segment? In any case, it takes a few _continue_ commands to update a screen after setting a breakpoint at 199E:015B. Setting at 199E:0180? That seems to be the exit point for the draw sequence. (The machine code at this point is `EF 07 1F 5F 5E 5D CB`.)

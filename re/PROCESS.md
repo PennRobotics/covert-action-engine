@@ -1,5 +1,4 @@
-COVERT.EXE
-==========
+## COVERT.EXE
 
 * Enable **dosbox-x** debugger (by starting in a console with the debugger enabled in the menu)
 * Set speed to 1 cycle/ms
@@ -51,6 +50,9 @@ EDX=000019E9  ESP=000007FC                                   100209055
 ```
 
 (**ESP** became 800 and **CS** 19F9 after the interrupt returned.)
+
+
+## INTRO.EXE
 
 Now, at 19F9:07BE, again is `int 21` (**AH 30**) and a resize memory block and another `repe stosb`. So, I hold down F11 until something happens... And at 19F9:0C16, I take a look at ES:SI, and there are the strings that are going to be copied to the screen: VGA, MCGA, "Shhh! No sounds please." I skip along until `int 10` (**AX 0920**: _write character_ to page "0" with attribute 4Fh). With a couple of breakpoints at 19F9:07A0 and 19F9:07A3, we finally witness the I/O selection menu!!
 

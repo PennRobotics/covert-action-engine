@@ -81,7 +81,7 @@ not  ax
 retf
 ```
 
-The top `retf` executes when a key is pressed. The other executes when no key is pressed.
+The top `retf` executes when a key is pressed. The other executes when no key is pressed. It seems each keystroke will cause a stop at the breakpoint twice.
 
 | Segment | Guess |
 | ------- | ----- |

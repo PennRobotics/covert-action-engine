@@ -91,3 +91,15 @@ The top `retf` executes when a key is pressed. The other executes when no key is
 |  199E   | Drawing |
 
 There's a lot of `stosb` after reaching 199E that copies non-text data. Maybe that's a graphics-related segment? In any case, it takes a few _continue_ commands to update a screen after setting a breakpoint at 199E:015B. Setting at 199E:0180? That seems to be the exit point for the draw sequence. (The machine code at this point is `EF 07 1F 5F 5E 5D CB`.)
+
+-----
+
+I skipped ahead to the chief. Unfortunately, I should have looked closer for the transition between new character and chief, since that should contain all the logic for building the case and all agent details. Placing a breakpoint at 224C:C09E and data dump at A000:0FD0, you can see the mapping between pixel data.
+
+## BUG.EXE
+
+| Segment | Guess |
+| ------- | ----- |
+|  2234   |   ?   |
+
+By placing a breakpoint at 2234:6F1E, one `go`--`break` cycle will update the animation by one frame. There is a lot contained in this segment.

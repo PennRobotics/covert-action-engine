@@ -4,6 +4,7 @@
 * Set speed to 1 cycle/ms
 * Run `COVERT.EXE` and immediately press the debugger hotkey.
 * Step until the entry is found. It can be recognized from its disassembly as it begins with `mov ah,30` and `int 21`, which are the instructions to get the DOS version, and are shortly followed by `int 20`, which exits if the DOS version is too low.
+* With breakpoint placed, set speed back to default.
 
 ```text
 EAX=00000000  ESI=000001F4  DS=0813   ES=0813   FS=0000   GS=0000   SS=0CD8 Real

@@ -125,6 +125,10 @@ The crypto game happens in segment 2200. Driving is at 222B. Combat at 2234 (sam
 _This is the biggest obstacle to a more efficient workflow!_
 Refer to https://wiki.scummvm.org/index.php/HOWTO-Reverse_Engineering#From_IDA_to_the_Debugger
 
+- **TODO: locate every exec() in Ghidra**
+- **TODO: autoexec.bat**
+- **TODO: Write down list of helpful breakpoints for skipping graphics/timer/etc.**
+
 
 # Decompiler Analysis
 

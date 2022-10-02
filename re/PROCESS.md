@@ -94,7 +94,13 @@ There's a lot of `stosb` after reaching 199E that copies non-text data. Maybe th
 
 -----
 
-I skipped ahead to the chief. Unfortunately, I should have looked closer for the transition between new character and chief, since that should contain all the logic for building the case and all agent details. Placing a breakpoint at 224C:C09E and data dump at A000:0FD0, you can see the mapping between pixel data.
+I skipped ahead to the chief. The first time through, I should have looked closer for the transition between new character and chief, since that should contain all the logic for building the case and all agent details. At 224C:C0AC, the value stored at ss:[BB22] is decremented. When it finally reaches zero, a few instructions later there is `call FFFFC42A`. Not long after, there's a nop loop at F000:0000CA45. Eventually, pushed onto the stack are 5, 0xC8, 0x140, 0, 0, 0x4B46... notably 0xC8 and 0x140 are 200 and 320, which is the screen resolution for this program. At 224C:074F, there is a call to 214C:0602. A few lines later... `mov  word [AC1C],0000`. Dumping that address (ds:AC1C, or 3224:AC1C) we see: `\0\0\0\0Blueprints\0\0\0\0\0\0\0\0Alarm Bypass\0\0\0`... **_CLUE DATA!!!_**
+
+During the chief animation, by placing a breakpoint at 224C:C09E and data dump at A000:0FD0, you can see the mapping between pixel data.
+
+### Faces
+
+The face generator can be caught in action by breaking at 199E:0180. Here, each face appears half-populated before being completed at the next halt. It might be a bald head with only a pair of lips or a head with masked facial hair and no other hair or even half a head.
 
 ## BUG.EXE
 

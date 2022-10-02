@@ -113,9 +113,17 @@ The face generator can be caught in action by breaking at 199E:0180. Here, each 
 By placing a breakpoint at 2234:6F1E, one `go`--`break` cycle will update the animation by one frame. There is a lot contained in this segment.
 
 
+## Others
+
+The crypto game happens in segment 2200. Driving is at 222B. Combat at 2234 (same as BUG.EXE). Clue uses at least segment 2243 (and the key handler and redirect segments). Save/load dialog happens in F000.
+
+
 # Mapping DOS Addresses to Decompiled Functions
 
      !!! TODO !!!
+
+_This is the biggest obstacle to a more efficient workflow!_
+_Refer to https://wiki.scummvm.org/index.php/HOWTO-Reverse_Engineering#From_IDA_to_the_Debugger _
 
 
 # Decompiler Analysis

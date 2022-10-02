@@ -1,3 +1,5 @@
+# Invasive Debugging
+
 ## COVERT.EXE
 
 * Enable **dosbox-x** debugger (by starting in a console with the debugger enabled in the menu)
@@ -109,3 +111,13 @@ The face generator can be caught in action by breaking at 199E:0180. Here, each 
 |  2234   |   ?   |
 
 By placing a breakpoint at 2234:6F1E, one `go`--`break` cycle will update the animation by one frame. There is a lot contained in this segment.
+
+
+# Mapping DOS Addresses to Decompiled Functions
+
+     !!! TODO !!!
+
+
+# Decompiler Analysis
+
+     !!! TODO !!!

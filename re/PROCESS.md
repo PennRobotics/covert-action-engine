@@ -129,6 +129,11 @@ Refer to https://wiki.scummvm.org/index.php/HOWTO-Reverse_Engineering#From_IDA_t
 - **TODO: autoexec.bat**
 - **TODO: Write down list of helpful breakpoints for skipping graphics/timer/etc.**
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+## EGRAPHIC.EXE
+
+Someone on the internet suspected **MGRAPHIC.EXE** is the main graphics functions because it has the smallest memory footprint, so it was probably native graphics support. As a first mapping between **dosbox-x** and **Ghidra**, we search each of the graphics functions for the hex sequence above (`EF 07 1F 5F 5E 5D CB`). This only appears in **EGRAPHIC.EXE**
 
 # Decompiler Analysis
 

@@ -154,7 +154,7 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 
 ### Specific Code
 
-- [ ] comingFrom (try to make this automatically defined)
+- [ ] origScreen (try to make this automatically defined)
 - [ ] nextscreen is probably not needed. directly assign the next screen based on provided condition argument
 - [ ] generate *n* double agents
 - [ ] add remaining original font glyphs

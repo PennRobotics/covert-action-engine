@@ -15,6 +15,7 @@ public:
   void startGUI();
   void enterMiniGame(MiniGameType miniGame);
   void getNextScreen(ScreenExitCondition condition = ScreenExitCondition::None);
+  GameScreen goBackFrom(OriginScreen os);
   Difficulty getGameDifficulty();  // TODO
   void setGameDifficulty(Difficulty gameDifficulty);
 
@@ -22,7 +23,7 @@ public:
   GameScreen currentScreen { GameScreen::Splash1 };
   bool inMiniGame;
   bool isTwelve { true };
-  OriginScreen comingFrom { OriginScreen::UNKNOWNORIGIN };
+  OriginScreen origScreen { OriginScreen::UNKNOWNORIGIN };
   int modalSequence { 0 };
   Difficulty gameDifficulty;
 };

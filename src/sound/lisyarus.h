@@ -21,7 +21,7 @@
  *           +----------------+
  */
 
-#include "psemek/geom/constants.hpp"
+///#include "psemek/geom/constants.hpp"
 /// #include "psemek/util/pimpl.hpp"
 /// #include "psemek/io/stream.hpp"
 
@@ -53,7 +53,7 @@ inline float  from_db(float db)  { return std::pow(10.f, db / 10.f); }
 struct duration {
     duration() : samples_{0}  {}
     duration(std::int64_t samples) : samples_{samples}  {}
-    duration(std::size_t samples) : samples_{samples}  {}
+    duration(std::size_t samples) : samples_{static_cast<int64_t>(samples)}  {}
     duration(float seconds) : samples_{seconds_to_samples(seconds)}  {}
     duration(const duration& other) = default;
 

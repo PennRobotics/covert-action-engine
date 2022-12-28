@@ -26,6 +26,16 @@ Bases for the development of the engine are the source codes for Freeciv, Master
 
 ## TODO
 
+### Structure and Programming
+
+- [ ] clang-tidy
+- [ ] Tests / Fuzzing / (opt.) CI / Build
+- [ ] All warnings as errors
+- [ ] Enable all warnings
+- [ ] Try all possible build configs and targets
+- [ ] ASAN, UB, memory (valgrind, Dr. Memory), thread, etc.
+
+
 ### Overview
 
 - [ ] Remove redundancies in/between the TODO sub-lists

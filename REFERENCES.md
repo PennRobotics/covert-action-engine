@@ -12,6 +12,7 @@ References
 
 - [Historical Source Code!](https://github.com/historicalsource?tab=repositories)
 - [(another)](https://github.com/historicalsource/DRGNSRC)
+- [(one in assembly)](https://github.com/historicalsource/pinballfantasies)
 - [Open Watcom v2](https://github.com/open-watcom/open-watcom-v2/tree/master/bld/graphlib/asm)
 - [VGALIB](https://github.com/drwonky/VGALIB)
 - [VGA Hardware](https://wiki.osdev.org/VGA_Hardware)
@@ -25,3 +26,6 @@ References
 
 https://github.com/debugcom/Hacking-F117A
 
+## Resources in Col
+
+https://github.com/eb4x/viceroy/blob/master/savegame.h

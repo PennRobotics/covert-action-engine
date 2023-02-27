@@ -16,7 +16,6 @@ References
 ## Graphics
 
 - [PIC decoder](https://github.com/ogamespec/PicDecoder)
-
 - [Historical Source Code!](https://github.com/historicalsource?tab=repositories)
 - [(another)](https://github.com/historicalsource/DRGNSRC)
 - [(one in assembly)](https://github.com/historicalsource/pinballfantasies)

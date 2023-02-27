@@ -1,4 +1,5 @@
 // TODO: replace all tabs with spaces, fix any obvious grammar/spelling issues
+// TODO: see about appropriateness of Black Book fns: https://www.phatcode.net/res/224/files/html/index.html
 
 typedef void TODOTYPE;  // TODO
 

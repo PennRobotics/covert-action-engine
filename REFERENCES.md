@@ -4,6 +4,13 @@ References
 ## Assorted
 
 - [Doxygen](https://caiorss.github.io/C-Cpp-Notes/Doxygen-documentation.html)
+- http://www.doshaven.eu/programming-tools/ / http://www.doshaven.eu/sources/
+
+## Compilation
+
+- https://www.youtube.com/watch?v=f9kaOk0a664
+- https://www.youtube.com/watch?v=GVvr7SXM0XM
+- https://www.youtube.com/playlist?list=PLGJnX2KGgaw2L7Uv5NThlL48G9y4rJx1X
 
 
 ## Graphics

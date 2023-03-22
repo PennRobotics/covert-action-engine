@@ -26,8 +26,7 @@ doxygen dox.cfg
 
 ## More Info
 
-[Wiki](https://github.com/PennRobotics/covert-action-engine/wiki) -
-describes build flags and file organization
+[Wiki](https://github.com/PennRobotics/covert-action-engine/wiki) - describes build flags and file organization
 
 [BUILD.md](BUILD.md) - contains commands for compiling from source  
 [RANDOM.md](RANDOM.md) - assorted thoughts on content creation to avoid copyright/license violation  

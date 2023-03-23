@@ -1,3 +1,5 @@
+# TODO: move wiki from old repo (cae) to current repo, delete old repo
+
 Covert Action Engine
 ====================
 

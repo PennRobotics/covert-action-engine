@@ -1,4 +1,5 @@
-# TODO: move wiki from old repo (cae) to current repo, delete old repo
+Up-to-date repository should exist at https://gitlab.com/PennRobotics/covert-action-engine
+
 
 Covert Action Engine
 ====================
